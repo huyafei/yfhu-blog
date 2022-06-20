@@ -619,7 +619,7 @@ jstk<span class="token punctuation">.</span><span class="token function">arrEleC
   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="url" tabindex="-1"><a class="header-anchor" href="#url" aria-hidden="true">#</a> Url</h3>
-<h4 id="" tabindex="-1"><a class="header-anchor" href="#" aria-hidden="true">#</a> </h4>
+<h4 id="geturlparam" tabindex="-1"><a class="header-anchor" href="#geturlparam" aria-hidden="true">#</a> getUrlParam</h4>
 <ul>
 <li>说明：</li>
 </ul>
@@ -2000,7 +2000,7 @@ jstk<span class="token punctuation">.</span><span class="token function">verifyF
 </ul>
 <div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>jstk<span class="token punctuation">.</span><span class="token function">removeCookie</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="dom" tabindex="-1"><a class="header-anchor" href="#dom" aria-hidden="true">#</a> Dom</h3>
-<h4 id="-1" tabindex="-1"><a class="header-anchor" href="#-1" aria-hidden="true">#</a> $</h4>
+<h4 id="" tabindex="-1"><a class="header-anchor" href="#" aria-hidden="true">#</a> $</h4>
 <ul>
 <li>说明：</li>
 </ul>

@@ -606,7 +606,7 @@ jstk.arrEleCount(arr, 1)
 
 ### Url
 
-#### 
+#### getUrlParam
 
 - 说明：
 

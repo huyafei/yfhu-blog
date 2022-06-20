@@ -202,8 +202,8 @@ export const data = {
           "children": [
             {
               "level": 4,
-              "title": "",
-              "slug": "",
+              "title": "getUrlParam",
+              "slug": "geturlparam",
               "children": []
             },
             {
@@ -604,7 +604,7 @@ export const data = {
             {
               "level": 4,
               "title": "$",
-              "slug": "-1",
+              "slug": "",
               "children": []
             },
             {
@@ -693,8 +693,14 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1655722971000,
+    "contributors": [
+      {
+        "name": "yfhu",
+        "email": "879649442@qq.com",
+        "commits": 1
+      }
+    ]
   },
   "filePathRelative": "js-toolkit/README.md"
 }
