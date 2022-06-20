@@ -1,5 +1,5 @@
 const {defaultTheme} = require('@vuepress/theme-default')
-const {pwaPlugin} = require('@vuepress/plugin-pwa')
+// const {pwaPlugin} = require('@vuepress/plugin-pwa')
 const {searchPlugin} = require('@vuepress/plugin-search')
 
 module.exports = {
@@ -21,8 +21,8 @@ module.exports = {
     code: {
       lineNumbers: true //代码块显示行号
     },
-    extractHeaders:{
-      level:[2,3,4]
+    extractHeaders: {
+      level: [2, 3, 4]
     }
   },
   //主题
@@ -112,10 +112,10 @@ module.exports = {
      * https://v2.vuepress.vuejs.org/zh/reference/plugin/pwa.html
      * 使你的 VuePress 站点成为一个 渐进式 Web 应用 (PWA)
      */
-    pwaPlugin({
-      serviceWorker: true,
-      updatePopup: true
-    }),
+    // pwaPlugin({
+    //   serviceWorker: true,
+    //   updatePopup: true
+    // }),
     /**
      * https://v2.vuepress.vuejs.org/zh/reference/plugin/search.html#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95
      * 搜索

@@ -21,6 +21,20 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "",
+    "headers": [
+      {
+        "level": 4,
+        "title": "guide页面",
+        "slug": "guide页面",
+        "children": []
+      }
+    ],
+    "path": "/guide/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "开始",
     "headers": [
       {
@@ -219,8 +233,8 @@ export const searchIndex = [
             "children": [
               {
                 "level": 4,
-                "title": "",
-                "slug": "",
+                "title": "getUrlParam",
+                "slug": "geturlparam",
                 "children": []
               },
               {
@@ -621,7 +635,7 @@ export const searchIndex = [
               {
                 "level": 4,
                 "title": "$",
-                "slug": "-1",
+                "slug": "",
                 "children": []
               },
               {
@@ -710,20 +724,6 @@ export const searchIndex = [
       }
     ],
     "path": "/js-toolkit/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 4,
-        "title": "guide页面",
-        "slug": "guide页面",
-        "children": []
-      }
-    ],
-    "path": "/guide/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1234,16 +1234,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}

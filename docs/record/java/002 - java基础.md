@@ -44,7 +44,7 @@
   - 打开命令窗口，在命令窗口中使用 java.exe 命令运行java程序，语法格式：
     java 类名 【注意：java 后必须跟类名】
     
-![java编译和运行过程](images/002/by_yx.png)
+![java编译和运行过程](/static/images/java/002/by_yx.png)
 
 #### 开始第一个java程序的开发
 - [JDK 下载](https://www.oracle.com/java/technologies/downloads/)

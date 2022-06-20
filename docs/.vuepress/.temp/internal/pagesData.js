@@ -3,10 +3,10 @@ export const pagesData = {
   "v-8daa1a0e": () => import(/* webpackChunkName: "v-8daa1a0e" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/index.html.js").then(({ data }) => data),
   // path: /cli/
   "v-74457188": () => import(/* webpackChunkName: "v-74457188" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/cli/index.html.js").then(({ data }) => data),
-  // path: /js-toolkit/
-  "v-6bd5191c": () => import(/* webpackChunkName: "v-6bd5191c" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/js-toolkit/index.html.js").then(({ data }) => data),
   // path: /guide/
   "v-fffb8e28": () => import(/* webpackChunkName: "v-fffb8e28" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/guide/index.html.js").then(({ data }) => data),
+  // path: /js-toolkit/
+  "v-6bd5191c": () => import(/* webpackChunkName: "v-6bd5191c" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/js-toolkit/index.html.js").then(({ data }) => data),
   // path: /record/
   "v-aae6de36": () => import(/* webpackChunkName: "v-aae6de36" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/index.html.js").then(({ data }) => data),
   // path: /ven-ui/

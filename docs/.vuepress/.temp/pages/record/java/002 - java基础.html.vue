@@ -56,7 +56,7 @@ java 类名 【注意：java 后必须跟类名】</li>
 </ul>
 </li>
 </ul>
-<p><img src="images/002/by_yx.png" alt="java编译和运行过程"></p>
+<p><img src="/static/images/java/002/by_yx.png" alt="java编译和运行过程"></p>
 <h4 id="开始第一个java程序的开发" tabindex="-1"><a class="header-anchor" href="#开始第一个java程序的开发" aria-hidden="true">#</a> 开始第一个java程序的开发</h4>
 <ul>
 <li><a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noopener noreferrer">JDK 下载<ExternalLinkIcon/></a></li>

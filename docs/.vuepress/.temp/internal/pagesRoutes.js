@@ -3,8 +3,8 @@ import { Vuepress } from '@vuepress/client'
 const routeItems = [
   ["v-8daa1a0e","/",{"title":""},["/index.html","/README.md"]],
   ["v-74457188","/cli/",{"title":""},["/cli/index.html","/cli/README.md"]],
-  ["v-6bd5191c","/js-toolkit/",{"title":"开始"},["/js-toolkit/index.html","/js-toolkit/README.md"]],
   ["v-fffb8e28","/guide/",{"title":""},["/guide/index.html","/guide/README.md"]],
+  ["v-6bd5191c","/js-toolkit/",{"title":"开始"},["/js-toolkit/index.html","/js-toolkit/README.md"]],
   ["v-aae6de36","/record/",{"title":""},["/record/index.html","/record/README.md"]],
   ["v-7ea28bd4","/ven-ui/",{"title":""},["/ven-ui/index.html","/ven-ui/README.md"]],
   ["v-e9b146ea","/vue-widget/",{"title":""},["/vue-widget/index.html","/vue-widget/README.md"]],

@@ -94,41 +94,43 @@ localStorage.clear()
 ```
 ### 区别
 对cookie、sessionStorage和localStorage进行简单表格化整理
+// cookie、sessionStorage和localStorage的区别
 
-<table>
-	<tr>
-	    <th></th>
-	    <th>cookie</th>
-	    <th>sessionStorage</th>  
-        <th>localStorage</th> 
-	</tr >
-	<tr >
-	    <td>储存大小</td>
-	    <td>4k左右</td>
-	    <td colspan="2" ><=5M</td>
-	</tr>
-	<tr >
-        <td>储存方式</td>
-        <td colspan="3">本地保存</td>
-    </tr>
-    <tr >
-        <td>服务器读取</td>
-        <td >可以读写</td>
-        <td >不可以</td>
-        <td >不可以</td>
-    </tr>
-    <tr >
-        <td>作用域（数据共享）</td>
-        <td>同源窗口<br>或指定path路径</td>
-        <td>同源同窗口</td>
-        <td>同源窗口</td>
-    </tr>
-	<tr >
-        <td>期效性</td>
-        <td>设置失效时间</td>
-        <td>当前窗口关闭前</td>
-        <td>永久保存</td>
-    </tr>
+
+\<table\>
+	\<tr\>
+	    \<th\>\</th\>
+	    \<th\>cookie\</th\>
+	    \<th\>sessionStorage\</th\>  
+        \<th\>localStorage\</th\> 
+	\</tr\>
+	\<tr \>
+	    \<td\>储存大小\</td\>
+	    \<td\>4k左右\</td\>
+	    \<td colspan="2" \>\<=5M\</td\>
+	\</tr\>
+	\<tr\>
+        \<td\>储存方式\</td\>
+        \<td colspan="3"\>本地保存\</td\>
+    \</tr\>
+    \<tr\>
+        \<td\>服务器读取\</td\>
+        \<td \>可以读写\</td\>
+        \<td \>不可以\</td\>
+        \<td \>不可以\</td\>
+    \</tr\>
+    \<tr\>
+        \<td\>作用域（数据共享）\</td\>
+        \<td\>同源窗口\<br\>或指定path路径\</td\>
+        \<td\>同源同窗口\</td\>
+        \<td\>同源窗口\</td\>
+    \</tr\>
+	\<tr\>
+        \<td\>期效性\</td\>
+        \<td\>设置失效时间\</td\>
+        \<td\>当前窗口关闭前\</td\>
+        \<td\>永久保存\</td\>
+    \</tr\>
     
-</table>
+\</table\>
 
