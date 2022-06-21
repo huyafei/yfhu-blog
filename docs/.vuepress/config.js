@@ -5,7 +5,7 @@ const {searchPlugin} = require('@vuepress/plugin-search')
 module.exports = {
   base: '/yfhu-blog/', // 这是部署到github相关的配置
   //网站的标题
-  title: 'vensst',
+  title: 'yfhu-blog',
   //网站的描述，它将会以 <meta> 标签渲染到当前页面的 HTML 中
   description: '这是一段描述',
   //额外的需要被注入到当前页面的 HTML <head> 中的标签，每个标签都可以以 [tagName, { attrName: attrValue }, innerHTML?]
