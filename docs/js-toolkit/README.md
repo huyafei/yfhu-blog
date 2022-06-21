@@ -2183,7 +2183,7 @@ downloadFile("a.png","....")
 
 ### Other
 
-#### resizeFont
+#### resizeFontSize
 
 - 说明：
 
@@ -2191,8 +2191,8 @@ downloadFile("a.png","....")
 
 - 参数：
 
-  - val {number} 字体大小
-  - initWidth {number} 初始宽度
+  - val {number} 初始字体大小 默认：16
+  - initWidth {number} 初始宽度 默认：1920
 
 - 返回值：
 
@@ -2201,8 +2201,121 @@ downloadFile("a.png","....")
 - 示例：
 
 ```js
-jstk.resizeFont(16,1920)
+jstk.resizeFont()
+jstk.resizeFont(14,1366)
+```
+
+#### resizeViewScale
+
+- 说明：
+
+浏览器窗口变化页面缩放（数据可视化大屏用）
+
+- 参数：
+
+  - @param options {object} 参数 {id: 元素id, width : 标准/设计稿/实际宽度 默认：1920, height : 标准/设计稿/实际高度  默认：1080,mode: 缩放模式(scaleToFill：拉满全屏缩放 默认, aspectFit：等比缩放)}
+
+- 示例：
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="./index.css">
+	<script src="../lib/index.js"></script>
+	<style>
+    #app-main {
+      height: 100%;
+      width: 100%;
+    }
+
+    .top {
+      height: 50px;
+      width: 100%;
+      background-color: #f00;
+    }
+
+    .left {
+      background-color: #1e6acb;
+      position: absolute;
+      left: 0;
+      top: 50px;
+      width: 200px;
+      height: calc(100% - 50px);
+    }
+
+    .right {
+      background-color: #f0bd14;
+      position: absolute;
+      left: 200px;
+      top: 50px;
+      width: calc(100% - 200px);
+      height: calc(100% - 50px);
+    }
+	</style>
+</head>
+<body >
+<div id="app-main" style="position:absolute;left:0;top:0;right:0;bottom:0;width: 1920px;height:1080px;">
+	<div class="top">
+		头部
+	</div>
+	<div class="left">
+		左侧
+	</div>
+	<div class="right">
+		右侧
+	</div>
+</div>
+<script>
+  let initResize = function () {
+    let opt = {
+      id: '#app-main',
+      width: 1920,
+      height: 1080,
+      mode: "scaleToFill" // 或者 "aspectFit"
+    }
+    window.onresize = function () {
+      jstk.resizeViewScale(opt)
+    }
+    jstk.resizeViewScale(opt)
+  }
+  initResize()
+</script>
+</body>
+</html>
+
 ```
 
 
 
+#### dayjs
+
+- 说明：
+
+内部引入了dayjs，可以使用dayjs的方法，详情请查看dayjs文档[前往](https://dayjs.gitee.io/zh-CN/)
+
+- 示例：
+
+```js
+jstk.dayjs().format() 
+// 默认返回的是 ISO8601 格式字符串 '2020-04-02T08:02:17-05:00'
+jstk.dayjs().format("YYYY-MM-DD HH:mm:ss")
+// '2020-04-02 08:02:17'
+```
+
+#### 
+
+- 说明：
+
+内部引入了js-cookie，可以使用js-cookie的方法，详情请查看js-cookie文档[前往](https://github.com/js-cookie/js-cookie#readme)
+
+
+- 示例：
+
+```js
+jstk.Cookies.set( "name", "张三", { expires: 1 } );
+jstk.Cookies.get("name")
+// "张三"
+```
