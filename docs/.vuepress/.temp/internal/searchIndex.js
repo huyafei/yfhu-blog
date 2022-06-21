@@ -82,6 +82,30 @@ export const searchIndex = [
                 "title": "thousandSeparator",
                 "slug": "thousandseparator",
                 "children": []
+              },
+              {
+                "level": 4,
+                "title": "add",
+                "slug": "add",
+                "children": []
+              },
+              {
+                "level": 4,
+                "title": "subtract",
+                "slug": "subtract",
+                "children": []
+              },
+              {
+                "level": 4,
+                "title": "multiply",
+                "slug": "multiply",
+                "children": []
+              },
+              {
+                "level": 4,
+                "title": "divide",
+                "slug": "divide",
+                "children": []
               }
             ]
           },
@@ -732,8 +756,8 @@ export const searchIndex = [
               },
               {
                 "level": 4,
-                "title": "",
-                "slug": "-1",
+                "title": "Cookies",
+                "slug": "cookies",
                 "children": []
               }
             ]
@@ -1252,16 +1276,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}

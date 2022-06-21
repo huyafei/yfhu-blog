@@ -735,27 +735,14 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1655782234000,
+    "updatedTime": 1655823371000,
     "contributors": [
       {
         "name": "yfhu",
         "email": "879649442@qq.com",
-        "commits": 3
+        "commits": 4
       }
     ]
   },
   "filePathRelative": "js-toolkit/README.md"
-}
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
 }
