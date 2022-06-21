@@ -51,6 +51,30 @@ export const data = {
               "title": "thousandSeparator",
               "slug": "thousandseparator",
               "children": []
+            },
+            {
+              "level": 4,
+              "title": "add",
+              "slug": "add",
+              "children": []
+            },
+            {
+              "level": 4,
+              "title": "subtract",
+              "slug": "subtract",
+              "children": []
+            },
+            {
+              "level": 4,
+              "title": "multiply",
+              "slug": "multiply",
+              "children": []
+            },
+            {
+              "level": 4,
+              "title": "divide",
+              "slug": "divide",
+              "children": []
             }
           ]
         },
@@ -683,8 +707,26 @@ export const data = {
           "children": [
             {
               "level": 4,
-              "title": "resizeFont",
-              "slug": "resizefont",
+              "title": "resizeFontSize",
+              "slug": "resizefontsize",
+              "children": []
+            },
+            {
+              "level": 4,
+              "title": "resizeViewScale",
+              "slug": "resizeviewscale",
+              "children": []
+            },
+            {
+              "level": 4,
+              "title": "dayjs",
+              "slug": "dayjs",
+              "children": []
+            },
+            {
+              "level": 4,
+              "title": "Cookies",
+              "slug": "cookies",
               "children": []
             }
           ]
@@ -693,12 +735,12 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1655724154000,
+    "updatedTime": 1655782234000,
     "contributors": [
       {
         "name": "yfhu",
         "email": "879649442@qq.com",
-        "commits": 2
+        "commits": 3
       }
     ]
   },

@@ -714,8 +714,26 @@ export const searchIndex = [
             "children": [
               {
                 "level": 4,
-                "title": "resizeFont",
-                "slug": "resizefont",
+                "title": "resizeFontSize",
+                "slug": "resizefontsize",
+                "children": []
+              },
+              {
+                "level": 4,
+                "title": "resizeViewScale",
+                "slug": "resizeviewscale",
+                "children": []
+              },
+              {
+                "level": 4,
+                "title": "dayjs",
+                "slug": "dayjs",
+                "children": []
+              },
+              {
+                "level": 4,
+                "title": "",
+                "slug": "-1",
                 "children": []
               }
             ]

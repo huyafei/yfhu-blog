@@ -101,6 +101,98 @@ jstk<span class="token punctuation">.</span><span class="token function">randomN
 </ul>
 <div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>jstk<span class="token punctuation">.</span><span class="token function">thousandSeparator</span><span class="token punctuation">(</span><span class="token number">369527.279527</span><span class="token punctuation">)</span>
 <span class="token comment">// 369,527.279527</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="add" tabindex="-1"><a class="header-anchor" href="#add" aria-hidden="true">#</a> add</h4>
+<ul>
+<li>说明：</li>
+</ul>
+<p>两个数相加</p>
+<ul>
+<li>
+<p>参数：</p>
+<ul>
+<li>a {number} 第一个数</li>
+<li>b {number} 第二个数</li>
+</ul>
+</li>
+<li>
+<p>返回值：</p>
+<p>{*} 相加后的数字</p>
+</li>
+<li>
+<p>示例：</p>
+</li>
+</ul>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>jstk<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">0.4</span><span class="token punctuation">,</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+<span class="token comment">// 0.5</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="subtract" tabindex="-1"><a class="header-anchor" href="#subtract" aria-hidden="true">#</a> subtract</h4>
+<ul>
+<li>说明：</li>
+</ul>
+<p>两个数相减</p>
+<ul>
+<li>
+<p>参数：</p>
+<ul>
+<li>a {number} 第一个数</li>
+<li>b {number} 第二个数</li>
+</ul>
+</li>
+<li>
+<p>返回值：</p>
+<p>{*} 相减后的数字</p>
+</li>
+<li>
+<p>示例：</p>
+</li>
+</ul>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>jstk<span class="token punctuation">.</span><span class="token function">subtract</span><span class="token punctuation">(</span><span class="token number">0.4</span><span class="token punctuation">,</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+<span class="token comment">// 0.3</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="multiply" tabindex="-1"><a class="header-anchor" href="#multiply" aria-hidden="true">#</a> multiply</h4>
+<ul>
+<li>说明：</li>
+</ul>
+<p>两个数相乘</p>
+<ul>
+<li>
+<p>参数：</p>
+<ul>
+<li>a {number} 第一个数</li>
+<li>b {number} 第二个数</li>
+</ul>
+</li>
+<li>
+<p>返回值：</p>
+<p>{*} 相乘后的数字</p>
+</li>
+<li>
+<p>示例：</p>
+</li>
+</ul>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>jstk<span class="token punctuation">.</span><span class="token function">multiply</span><span class="token punctuation">(</span><span class="token number">0.4</span><span class="token punctuation">,</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+<span class="token comment">// 0.04</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="divide" tabindex="-1"><a class="header-anchor" href="#divide" aria-hidden="true">#</a> divide</h4>
+<ul>
+<li>说明：</li>
+</ul>
+<p>两个相除</p>
+<ul>
+<li>
+<p>参数：</p>
+<ul>
+<li>a {number} 第一个数</li>
+<li>b {number} 第二个数</li>
+</ul>
+</li>
+<li>
+<p>返回值：</p>
+<p>{*} 相除后的数字</p>
+</li>
+<li>
+<p>示例：</p>
+</li>
+</ul>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>jstk<span class="token punctuation">.</span><span class="token function">divide</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment">// 4</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="string" tabindex="-1"><a class="header-anchor" href="#string" aria-hidden="true">#</a> String</h3>
 <h4 id="strhidecode" tabindex="-1"><a class="header-anchor" href="#strhidecode" aria-hidden="true">#</a> strHideCode</h4>
 <ul>
@@ -2250,7 +2342,7 @@ jstk<span class="token punctuation">.</span><span class="token function">$</span
 </ul>
 <div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token function">downloadFile</span><span class="token punctuation">(</span><span class="token string">"a.png"</span><span class="token punctuation">,</span><span class="token string">"...."</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="other" tabindex="-1"><a class="header-anchor" href="#other" aria-hidden="true">#</a> Other</h3>
-<h4 id="resizefont" tabindex="-1"><a class="header-anchor" href="#resizefont" aria-hidden="true">#</a> resizeFont</h4>
+<h4 id="resizefontsize" tabindex="-1"><a class="header-anchor" href="#resizefontsize" aria-hidden="true">#</a> resizeFontSize</h4>
 <ul>
 <li>说明：</li>
 </ul>
@@ -2259,8 +2351,8 @@ jstk<span class="token punctuation">.</span><span class="token function">$</span
 <li>
 <p>参数：</p>
 <ul>
-<li>val {number} 字体大小</li>
-<li>initWidth {number} 初始宽度</li>
+<li>val {number} 初始字体大小 默认：16</li>
+<li>initWidth {number} 初始宽度 默认：1920</li>
 </ul>
 </li>
 <li>
@@ -2271,5 +2363,113 @@ jstk<span class="token punctuation">.</span><span class="token function">$</span
 <p>示例：</p>
 </li>
 </ul>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>jstk<span class="token punctuation">.</span><span class="token function">resizeFont</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">1920</span><span class="token punctuation">)</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div></template>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>jstk<span class="token punctuation">.</span><span class="token function">resizeFont</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+jstk<span class="token punctuation">.</span><span class="token function">resizeFont</span><span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">,</span><span class="token number">1366</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="resizeviewscale" tabindex="-1"><a class="header-anchor" href="#resizeviewscale" aria-hidden="true">#</a> resizeViewScale</h4>
+<ul>
+<li>说明：</li>
+</ul>
+<p>浏览器窗口变化页面缩放（数据可视化大屏用）</p>
+<ul>
+<li>
+<p>参数：</p>
+<ul>
+<li>@param options {object} 参数 {id: 元素id, width : 标准/设计稿/实际宽度 默认：1920, height : 标准/设计稿/实际高度  默认：1080,mode: 缩放模式(scaleToFill：拉满全屏缩放 默认, aspectFit：等比缩放)}</li>
+</ul>
+</li>
+<li>
+<p>示例：</p>
+</li>
+</ul>
+<div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./index.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../lib/index.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">#app-main</span> <span class="token punctuation">{</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.top</span> <span class="token punctuation">{</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> #f00<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.left</span> <span class="token punctuation">{</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> #1e6acb<span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+      <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+      <span class="token property">top</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% - 50px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.right</span> <span class="token punctuation">{</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> #f0bd14<span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+      <span class="token property">left</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+      <span class="token property">top</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% - 200px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100% - 50px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+	</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app-main<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">position</span><span class="token punctuation">:</span>absolute<span class="token punctuation">;</span><span class="token property">left</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token property">top</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token property">right</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token property">bottom</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token property">width</span><span class="token punctuation">:</span> 1920px<span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span>1080px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		头部
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>left<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		左侧
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		右侧
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">let</span> <span class="token function-variable function">initResize</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> opt <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'#app-main'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">1920</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">1080</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">"scaleToFill"</span> <span class="token comment">// 或者 "aspectFit"</span>
+    <span class="token punctuation">}</span>
+    window<span class="token punctuation">.</span><span class="token function-variable function">onresize</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      jstk<span class="token punctuation">.</span><span class="token function">resizeViewScale</span><span class="token punctuation">(</span>opt<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    jstk<span class="token punctuation">.</span><span class="token function">resizeViewScale</span><span class="token punctuation">(</span>opt<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">initResize</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="dayjs" tabindex="-1"><a class="header-anchor" href="#dayjs" aria-hidden="true">#</a> dayjs</h4>
+<ul>
+<li>说明：</li>
+</ul>
+<p>内部引入了dayjs，可以使用dayjs的方法，详情请查看dayjs文档<a href="https://dayjs.gitee.io/zh-CN/" target="_blank" rel="noopener noreferrer">前往<ExternalLinkIcon/></a></p>
+<ul>
+<li>示例：</li>
+</ul>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>jstk<span class="token punctuation">.</span><span class="token function">dayjs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token comment">// 默认返回的是 ISO8601 格式字符串 '2020-04-02T08:02:17-05:00'</span>
+jstk<span class="token punctuation">.</span><span class="token function">dayjs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"YYYY-MM-DD HH:mm:ss"</span><span class="token punctuation">)</span>
+<span class="token comment">// '2020-04-02 08:02:17'</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="cookies" tabindex="-1"><a class="header-anchor" href="#cookies" aria-hidden="true">#</a> Cookies</h4>
+<ul>
+<li>说明：</li>
+</ul>
+<p>内部引入了js-cookie，可以使用js-cookie的方法，详情请查看js-cookie文档<a href="https://github.com/js-cookie/js-cookie#readme" target="_blank" rel="noopener noreferrer">前往<ExternalLinkIcon/></a></p>
+<ul>
+<li>示例：</li>
+</ul>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>jstk<span class="token punctuation">.</span>Cookies<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span> <span class="token string">"name"</span><span class="token punctuation">,</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">expires</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+jstk<span class="token punctuation">.</span>Cookies<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span>
+<span class="token comment">// "张三"</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>

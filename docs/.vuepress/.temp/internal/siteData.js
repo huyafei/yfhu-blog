@@ -1,7 +1,7 @@
 export const siteData = {
   "base": "/yfhu-blog/",
   "lang": "en-US",
-  "title": "vensst",
+  "title": "yfhu-blog",
   "description": "这是一段描述",
   "head": [
     [
