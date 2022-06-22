@@ -108,94 +108,6 @@ jstk.thousandSeparator(369527.279527)
 // 369,527.279527
 ```
 
-#### add
-
-- 说明：
-
-两个数相加
-
-- 参数：
-
-  - a {number} 第一个数
-  - b {number} 第二个数
-
-- 返回值：
-
-  {*} 相加后的数字
-
-- 示例：
-
-```js
-jstk.add(0.4,0.1)
-// 0.5
-```
-
-#### subtract
-
-- 说明：
-
-两个数相减
-
-- 参数：
-
-  - a {number} 第一个数
-  - b {number} 第二个数
-
-- 返回值：
-
-  {*} 相减后的数字
-
-- 示例：
-
-```js
-jstk.subtract(0.4,0.1)
-// 0.3
-```
-
-#### multiply
-
-- 说明：
-
-两个数相乘
-
-- 参数：
-
-  - a {number} 第一个数
-  - b {number} 第二个数
-
-- 返回值：
-
-  {*} 相乘后的数字
-
-- 示例：
-
-```js
-jstk.multiply(0.4,0.1)
-// 0.04
-```
-
-#### divide
-
-- 说明：
-
-两个相除
-
-- 参数：
-
-  - a {number} 第一个数
-  - b {number} 第二个数
-
-- 返回值：
-
-  {*} 相除后的数字
-
-- 示例：
-
-```js
-jstk.divide(8,2)
-// 4
-```
-
 ### String
 
 #### strHideCode
@@ -354,6 +266,7 @@ jstk.oArrFindEle(arr, 'type', "b")
 jstk.oArrFindEle(arr, 'type', "d")
 // -1
 ```
+
 #### oArrRemoveRepeat
 
 - 说明：
@@ -433,6 +346,7 @@ let arr = [1, 1, 2, 4, 5, 'a', 'b', 'a']
 jstk.arrRemoveRepeat(arr)
 // [1, 2, 4, 5, 'a', 'b']
 ```
+
 #### arrContains
 
 - 说明：
@@ -527,94 +441,6 @@ jstk.arrRemoveEle(arr, "b")
 // ['a', 'c']
 ```
 
-#### arrMax
-
-- 说明：
-
-获取数组中最大值
-
-- 参数：
-
-  - arr {number[]}
-
-- 返回值：
-
-  {number}
-
-- 示例：
-
-```js
-let arr = [1, 2, 3]
-jstk.arrMax(arr)
-// 3
-```
-
-#### arrMin
-
-- 说明：
-
-获取数组中取最小值
-
-- 参数：
-
-  - arr {number[]}
-
-- 返回值：
-
-  {number}
-
-- 示例：
-
-```js
-let arr = [1, 2, 3]
-jstk.arrMax(arr)
-// 1
-```
-
-#### arrSum
-
-- 说明：
-
-数组求和
-
-- 参数：
-
-  - arr {number[]}
-
-- 返回值：
-
-  {number}
-
-- 示例：
-
-```js
-let arr = [1, 2, 3]
-jstk.arrSum(arr)
-// 6
-```
-
-#### arrAverage
-
-- 说明：
-
-求数组中数值平均值
-
-- 参数：
-
-  - arr {number[]}
-
-- 返回值：
-
-  {number}
-
-- 示例：
-
-```js
-let arr = [1, 2, 3]
-jstk.arrAverage(arr)
-// 2
-```
-
 #### arrEleCount
 
 - 说明：
@@ -636,130 +462,6 @@ jstk.arrAverage(arr)
 let arr = [1, 1, 2, 4, 5, 'a', 'b', 'a']
 jstk.arrEleCount(arr, 1)
 // 2
-```
-
-### Function
-#### debounce
-
-- 说明：
-
-函数防抖
-
-- 参数：
-
-  - fun {Function} 需要被防抖的函数
-  - wait {number} 防抖的时间（毫秒） 默认：500
-  - immediate {boolean} 是否立即执行 默认：true
-
-- 返回值：
-
-  {Function} 返回新的 debounced（防抖动）函数
-
-- 示例：
-
-```html
-<button onclick="debounceEvent()">防抖</button>
-<script>
-  const debounceEvent = jstk.debounce(function(){
-    console.log('防抖成功')
-  }, 1000,true)
-</script>
-```
-
-#### throttle
-
-- 说明：
-
-函数节流
-
-- 参数：
-
-  - fun {Function} 需要被节流的函数
-  - wait {number} 节流的时间（毫秒） 默认：500
-
-- 返回值：
-
-  {Function} 返回一个新的函数
-
-- 示例：
-
-```html
-<button onclick="throttleEvent()">节流</button>
-<script>
-  const throttleEvent = jstk.throttle(function(){
-    console.log('节流成功')
-  }, 1000)
-</script>
-```
-
-### Url
-
-#### getUrlParam
-
-- 说明：
-
-获取 url 地址栏参数
-
-- 参数：
-
-  - name {string} 参数名
-
-- 返回值：
-
-  {string|null}
-
-- 示例：
-
-```js
-// http://localhost/examples/index.html?name=张三&age=18
-jstk.getUrlParam('name')
-// 张三
-jstk.getUrlParam('sex')
-// null
-```
-
-#### getUrlAllParams
-
-- 说明：
-
-获取全部 url 参数,并转换成对象
-
-- 参数：
-
-  - url {string|null} url地址
-
-- 返回值：
-
-  {Object} 参数对象
-
-- 示例：
-
-```js
-// http://localhost/examples/index.html?name=张三&age=18
-jstk.getUrlAllParams('name')
-// {name: '张三', age: '18'}
-```
-
-#### delParamsUrl
-
-- 说明：
-
-删除 url 指定参数，返回url
-
-- 参数：
-
-  - url {string} url地址
-  - name {string} 参数名
-
-- 返回值：
-
-  {string|*} 返回url
-
-- 示例：
-
-```js
-jstk.delParamsUrl('http://localhost/examples/index.html?name=张三&age=18','name')
-// http://localhost/examples/index.html?age=18
 ```
 
 ### Date
@@ -862,7 +564,7 @@ jstk.getDays(new Date(),3,3)
 
 #### getMonthOfDays
 
-- 说明：  
+- 说明：
 
   获得某月天数
 
@@ -870,7 +572,7 @@ jstk.getDays(new Date(),3,3)
 
   - year {number} 年份
   - month {number} 月份
-  
+
 - 返回值：
 
   {number} 天数
@@ -938,7 +640,7 @@ jstk.getMonths('2022-3',4,3)
 
 - 参数：
 
-  - 
+  -
 
 - 返回值：
 
@@ -1223,6 +925,308 @@ jstk.getBeforeDate(7)
 // 2022-06-11
 jstk.getBeforeDate(30)
 // 2022-05-19
+```
+
+### Function
+#### debounce
+
+- 说明：
+
+函数防抖
+
+- 参数：
+
+  - fun {Function} 需要被防抖的函数
+  - wait {number} 防抖的时间（毫秒） 默认：500
+  - immediate {boolean} 是否立即执行 默认：true
+
+- 返回值：
+
+  {Function} 返回新的 debounced（防抖动）函数
+
+- 示例：
+
+```html
+<button onclick="debounceEvent()">防抖</button>
+<script>
+  const debounceEvent = jstk.debounce(function(){
+    console.log('防抖成功')
+  }, 1000,true)
+</script>
+```
+
+#### throttle
+
+- 说明：
+
+函数节流
+
+- 参数：
+
+  - fun {Function} 需要被节流的函数
+  - wait {number} 节流的时间（毫秒） 默认：500
+
+- 返回值：
+
+  {Function} 返回一个新的函数
+
+- 示例：
+
+```html
+<button onclick="throttleEvent()">节流</button>
+<script>
+  const throttleEvent = jstk.throttle(function(){
+    console.log('节流成功')
+  }, 1000)
+</script>
+```
+
+### Math
+
+#### add
+
+- 说明：
+
+两个数相加
+
+- 参数：
+
+  - a {number} 第一个数
+  - b {number} 第二个数
+
+- 返回值：
+
+  {*} 相加后的数字
+
+- 示例：
+
+```js
+jstk.add(0.4,0.1)
+// 0.5
+```
+
+#### subtract
+
+- 说明：
+
+两个数相减
+
+- 参数：
+
+  - a {number} 第一个数
+  - b {number} 第二个数
+
+- 返回值：
+
+  {*} 相减后的数字
+
+- 示例：
+
+```js
+jstk.subtract(0.4,0.1)
+// 0.3
+```
+
+#### multiply
+
+- 说明：
+
+两个数相乘
+
+- 参数：
+
+  - a {number} 第一个数
+  - b {number} 第二个数
+
+- 返回值：
+
+  {*} 相乘后的数字
+
+- 示例：
+
+```js
+jstk.multiply(0.4,0.1)
+// 0.04
+```
+
+#### divide
+
+- 说明：
+
+两个相除
+
+- 参数：
+
+  - a {number} 第一个数
+  - b {number} 第二个数
+
+- 返回值：
+
+  {*} 相除后的数字
+
+- 示例：
+
+```js
+jstk.divide(8,2)
+// 4
+```
+
+#### sum
+
+- 说明：
+
+数组求和
+
+- 参数：
+
+  - arr {number[]}
+
+- 返回值：
+
+  {number}
+
+- 示例：
+
+```js
+let arr = [1, 2, 3]
+jstk.sum(arr)
+// 6
+```
+
+#### average
+
+- 说明：
+
+求数组中数值平均值
+
+- 参数：
+
+  - arr {number[]}
+
+- 返回值：
+
+  {number}
+
+- 示例：
+
+```js
+let arr = [1, 2, 3]
+jstk.average(arr)
+// 2
+```
+
+#### max
+
+- 说明：
+
+获取数组中最大值
+
+- 参数：
+
+  - arr {number[]}
+
+- 返回值：
+
+  {number}
+
+- 示例：
+
+```js
+let arr = [1, 2, 3]
+jstk.max(arr)
+// 3
+```
+
+#### min
+
+- 说明：
+
+获取数组中取最小值
+
+- 参数：
+
+  - arr {number[]}
+
+- 返回值：
+
+  {number}
+
+- 示例：
+
+```js
+let arr = [1, 2, 3]
+jstk.max(arr)
+// 1
+```
+
+### Url
+
+#### getUrlParam
+
+- 说明：
+
+获取 url 地址栏参数
+
+- 参数：
+
+  - name {string} 参数名
+
+- 返回值：
+
+  {string|null}
+
+- 示例：
+
+```js
+// http://localhost/examples/index.html?name=张三&age=18
+jstk.getUrlParam('name')
+// 张三
+jstk.getUrlParam('sex')
+// null
+```
+
+#### getUrlAllParams
+
+- 说明：
+
+获取全部 url 参数,并转换成对象
+
+- 参数：
+
+  - url {string|null} url地址
+
+- 返回值：
+
+  {Object} 参数对象
+
+- 示例：
+
+```js
+// http://localhost/examples/index.html?name=张三&age=18
+jstk.getUrlAllParams('name')
+// {name: '张三', age: '18'}
+```
+
+#### delParamsUrl
+
+- 说明：
+
+删除 url 指定参数，返回url
+
+- 参数：
+
+  - url {string} url地址
+  - name {string} 参数名
+
+- 返回值：
+
+  {string|*} 返回url
+
+- 示例：
+
+```js
+jstk.delParamsUrl('http://localhost/examples/index.html?name=张三&age=18','name')
+// http://localhost/examples/index.html?age=18
 ```
 
 ### Http
@@ -2270,6 +2274,28 @@ downloadFile("a.png","....")
 ```
 
 ### Other
+
+#### deepClone
+
+- 说明：
+
+深克隆
+
+- 参数：
+
+  - data {*} 要克隆的数据
+
+- 返回值：
+
+  {*} 返回克隆后的数据
+
+- 示例：
+
+```js
+let arr = [null,undefined,true,new Date(),function(){},1,"aa",[],{}]
+jstk.deepClone(arr)
+// [null, undefined, true, Wed Jun 22 2022 13:53:02 GMT+0800 (中国标准时间), ƒ, 1, 'aa', [], {}]
+```
 
 #### resizeFontSize
 
