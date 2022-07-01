@@ -4,15 +4,16 @@ const {searchPlugin} = require('@vuepress/plugin-search')
 
 module.exports = {
   base: '/yfhu-blog/', // 这是部署到github相关的配置
+  lang: 'en-US', // 默认
   //网站的标题
-  title: 'yfhu-blog',
+  title: 'vensst',
   //网站的描述，它将会以 <meta> 标签渲染到当前页面的 HTML 中
-  description: '这是一段描述',
+  description: '为开发者提供搭建项目模板脚手架、ui组件库、js工具库',
   //额外的需要被注入到当前页面的 HTML <head> 中的标签，每个标签都可以以 [tagName, { attrName: attrValue }, innerHTML?]
   head: [
     // @vuepress/plugin-pwa 配置
-    ['link', {rel: 'manifest', href: '/manifest.json'}],
-    ['link', {rel: 'icon', href: '/static/images/logo.png'}],
+    ['link', {rel: 'manifest', href: '/yfhu-blog/manifest.json'}],
+    ['link', {rel: 'icon', href: '/yfhu-blog/static/images/logo.png'}],
   ],
   // dev 配置
   port: "9523",
@@ -35,7 +36,7 @@ module.exports = {
         children: [
           {text: '@vensst/js-toolkit', link: '/js-toolkit/'},
           {text: '@vensst/vue-widget', link: '/vue-widget/'},
-          {text: '@vensst/ven-ui', target: '_blank', link: 'https://vensst.github.io/ven-ui/'},
+          {text: 'ven-ui', target: '_blank', link: 'https://vensst.github.io/ven-ui/'},
           // {text: '@vensst/ven-ui',link: '/ven-ui/'},
           {text: '@vensst/cli', link: '/cli/'},
           {text: '笔记', link: '/record/'},
@@ -53,57 +54,129 @@ module.exports = {
     //侧边
     sidebarDepth: 3, //左侧导航显示的层级
     // smoothScroll: true,
-    // 中文
-    '/': {
-      lang: 'zh-CN',
-      title: 'Vensst',
-      description: 'Vue-powered Static Site Generator',
-      sidebar: {
-        '/guide/': [
-          {
-            text: 'guide',
-            children: ['/guide/README.md',],
-          },
-        ],
-        '/js-toolkit/': [
-          "README.md",
-        ],
-        '/vue-widget/': [
-          '',
-        ],
-        '/cli/': [
-          '',
-        ],
-        // '/record/':[
-        //   {
-        //     text: 'html',
-        //     path: '/record/html/',
-        //     collapsable: true
-        //   },
-        //   {
-        //     text: 'css',
-        //     path: '/record/css/',
-        //     collapsable: true
-        //   },
-        //   {
-        //     text: 'js',
-        //     path: '/record/js/',
-        //     collapsable: true
-        //   },
-        //   {
-        //     text: 'browser',
-        //     // path: '/record/browser/',
-        //     collapsable: false,
-        //     children: [
-        //       {
-        //         text: '数据存储',
-        //         path: '/record/browser/storage/'
-        //       },
-        //     ]
-        //   },
-        // ]
-      }
+
+    locales: {
+      // 中文
+      '/': {
+        // lang: 'zh-CN',
+        // title: 'Vensst',
+        // description: 'Vue-powered Static Site Generator',
+        sidebar: {
+          '/guide/': [
+            {
+              text: '指南',
+              children: [
+                '/guide/README.md',
+              ],
+            },
+          ],
+          '/js-toolkit/': [
+            {
+              text: "js-toolkit文档",
+              children: [
+                "/js-toolkit/README.md",
+                "/js-toolkit/api.md",
+              ]
+            },
+          ],
+          '/vue-widget/': [
+            {
+              text: "vue-widget文档",
+              children: [
+                "/vue-widget/README.md",
+                {
+                  text: "组件",
+                  // collapsible: true,
+                  children: [
+                    "/vue-widget/components/VenDrag.md",
+                    "/vue-widget/components/VenCaptchaOrdinary.md",
+                    "/vue-widget/components/VenCaptchaSlide.md",
+                  ]
+                },
+                {
+                  text: "指令",
+                  // collapsible: true,
+                  children: [
+                    "/vue-widget/directives/drag.md",
+                  ]
+                }
+              ]
+            },
+          ],
+          '/cli/': [
+            {
+              text: "cli文档",
+              children: [
+                "/cli/README.md",
+              ]
+            },
+          ],
+          '/record/': [
+            {
+              text: '笔记',
+              // collapsible: true,
+              children: [
+                '/record/README.md',
+              ],
+            },
+            {
+              text: 'VuePress',
+              collapsible: true,
+              children: [
+                '/record/vuepress/README.md',
+                '/record/vuepress/vuepress-guide.md',
+              ],
+            },
+            {
+              text: 'html',
+              collapsible: true,
+              children: [
+                '/record/html/README.md',
+              ],
+            },
+            {
+              text: 'css',
+              collapsible: true,
+              children: [
+                '/record/css/README.md',
+              ],
+            },
+            {
+              text: 'js',
+              collapsible: true,
+              children: [
+                '/record/js/README.md',
+              ],
+            },
+            {
+              text: 'browser',
+              collapsible: true,
+              children: [
+                '/record/browser/README.md',
+              ],
+            },
+            {
+              text: 'webpack',
+              collapsible: true,
+              children: [
+                '/record/webpack/README.md',
+              ],
+            },
+            {
+              text: 'java',
+              collapsible: true,
+              children: [
+                '/record/java/001_DOS基础知识.md',
+                '/record/java/002_java基础.md',
+                '/record/java/003_java.md',
+                '/record/java/004_数据类型.md',
+              ],
+            },
+          ]
+        }
+      },
     },
+
 
   }),
 
@@ -123,5 +196,6 @@ module.exports = {
     searchPlugin({
       maxSuggestions: 10,// 搜索框显示的搜索结果数量
     }),
+
   ]
 }
