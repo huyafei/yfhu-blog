@@ -1138,6 +1138,75 @@ jstk.max(arr)
 // 1
 ```
 
+#### ceil
+
+- 说明：
+
+向上取整
+
+- 参数：
+
+  - num {number} 数字 默认：0
+  - precision {number} 精度 默认：0
+
+- 返回值：
+
+  {number} 向上取整后的数字
+
+- 示例：
+
+```js
+jstk.ceil("23.321523",2)
+// 23.33
+```
+
+#### floor
+
+- 说明：
+
+向下取整
+
+- 参数：
+
+  - num {number} 数字 默认：0
+  - precision {number} 精度 默认：0
+
+- 返回值：
+
+  {number} 向下取整后的数字
+
+- 示例：
+
+```js
+jstk.floor("23.321523",2)
+// 23.32
+```
+
+#### decimal
+
+- 说明：
+
+保留小数点后几位，不考虑四舍五入
+
+- 参数：
+
+  - num {number} 数字 默认：0
+  - precision {number} 精度 默认：0
+
+- 返回值：
+
+  {number} 保留小数点后几位的数字
+
+- 示例：
+
+```js
+jstk.decimal("23.321523",2)
+// 23.32
+jstk.decimal("23",2)
+// 23
+```
+
+
 ### Url
 
 #### getUrlParam

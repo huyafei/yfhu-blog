@@ -113,18 +113,18 @@ module.exports = {
           ],
           '/record/': [
             {
-              text: '笔记',
-              // collapsible: true,
-              children: [
-                '/record/README.md',
-              ],
-            },
-            {
               text: 'VuePress',
               collapsible: true,
               children: [
                 '/record/vuepress/README.md',
                 '/record/vuepress/vuepress-guide.md',
+              ],
+            },
+            {
+              text: '笔记',
+              collapsible: true,
+              children: [
+                '/record/README.md',
               ],
             },
             {
@@ -156,20 +156,30 @@ module.exports = {
               ],
             },
             {
-              text: 'webpack',
+              text: 'Webpack',
               collapsible: true,
               children: [
                 '/record/webpack/README.md',
               ],
             },
             {
-              text: 'java',
+              text: 'node',
               collapsible: true,
               children: [
-                '/record/java/001_DOS基础知识.md',
-                '/record/java/002_java基础.md',
-                '/record/java/003_java.md',
-                '/record/java/004_数据类型.md',
+                '/record/node/README.md',
+              ],
+            },
+            {
+              text: 'Java',
+              collapsible: true,
+              children: [
+                '/record/java/README.md',
+                '/record/java/001_简介.md',
+                '/record/java/002_环境搭建.md',
+                '/record/java/003_java开发和运行过程.md',
+                '/record/java/004_DOS基础知识.md',
+                '/record/java/005_java基础.md',
+                '/record/java/006_变量和数据类型.md',
               ],
             },
           ]

@@ -4,7 +4,7 @@
 <li>1995 java 问世</li>
 <li>1996 JDK 1.0</li>
 <li>1999 JAVA2 发布（JAVA SE/EE/ME）</li>
-<li>2009 Oracle收购Sun</li>
+<li>2009 Oracle 收购 Sun</li>
 </ul>
 <h4 id="jdk" tabindex="-1"><a class="header-anchor" href="#jdk" aria-hidden="true">#</a> JDK</h4>
 <ul>
