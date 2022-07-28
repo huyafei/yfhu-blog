@@ -34,746 +34,99 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "record",
+    "headers": [
+      {
+        "level": 2,
+        "title": "vue中使用 \"?.\" 链式操作 编译报错",
+        "slug": "vue中使用-链式操作-编译报错",
+        "children": []
+      }
+    ],
+    "path": "/record/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "API",
     "headers": [
       {
         "level": 3,
         "title": "Number",
         "slug": "number",
-        "children": [
-          {
-            "level": 4,
-            "title": "randomNum",
-            "slug": "randomnum",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "numberToChinese",
-            "slug": "numbertochinese",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "numberCurrencyToChinese",
-            "slug": "numbercurrencytochinese",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "thousandSeparator",
-            "slug": "thousandseparator",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "String",
         "slug": "string",
-        "children": [
-          {
-            "level": 4,
-            "title": "strHideCode",
-            "slug": "strhidecode",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "strTrim",
-            "slug": "strtrim",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "strEnChangeCase",
-            "slug": "strenchangecase",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "strFilterHtmlTag",
-            "slug": "strfilterhtmltag",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "createCode",
-            "slug": "createcode",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "Array",
         "slug": "array",
-        "children": [
-          {
-            "level": 4,
-            "title": "oArrFindEle",
-            "slug": "oarrfindele",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "oArrRemoveRepeat",
-            "slug": "oarrremoverepeat",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "findEleTurnSymDelStrByOArr",
-            "slug": "findeleturnsymdelstrbyoarr",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "arrRemoveRepeat",
-            "slug": "arrremoverepeat",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "arrContains",
-            "slug": "arrcontains",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "arrMerge",
-            "slug": "arrmerge",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "arrIntersect",
-            "slug": "arrintersect",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "arrRemoveEle",
-            "slug": "arrremoveele",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "arrEleCount",
-            "slug": "arrelecount",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "Date",
         "slug": "date",
-        "children": [
-          {
-            "level": 4,
-            "title": "formatDate",
-            "slug": "formatdate",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getTimeSlot",
-            "slug": "gettimeslot",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "formatHMS",
-            "slug": "formathms",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getDays",
-            "slug": "getdays",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getMonthOfDays",
-            "slug": "getmonthofdays",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getYearOfDays",
-            "slug": "getyearofdays",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getMonths",
-            "slug": "getmonths",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getQuarterStartMonth",
-            "slug": "getquarterstartmonth",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getDayOfYear",
-            "slug": "getdayofyear",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getDayOfYearWeek",
-            "slug": "getdayofyearweek",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getWeekStartDate",
-            "slug": "getweekstartdate",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getMonthStartDate",
-            "slug": "getmonthstartdate",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getMonthEndDate",
-            "slug": "getmonthenddate",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getQuarterStartDate",
-            "slug": "getquarterstartdate",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getQuarterStartDate",
-            "slug": "getquarterstartdate-1",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getQuarterEndDate",
-            "slug": "getquarterenddate",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getYearStartDate",
-            "slug": "getyearstartdate",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getYearEndDate",
-            "slug": "getyearenddate",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getFirstOrLastDayOfYear",
-            "slug": "getfirstorlastdayofyear",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getBeforeDate",
-            "slug": "getbeforedate",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "Function",
         "slug": "function",
-        "children": [
-          {
-            "level": 4,
-            "title": "debounce",
-            "slug": "debounce",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "throttle",
-            "slug": "throttle",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "Math",
         "slug": "math",
-        "children": [
-          {
-            "level": 4,
-            "title": "add",
-            "slug": "add",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "subtract",
-            "slug": "subtract",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "multiply",
-            "slug": "multiply",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "divide",
-            "slug": "divide",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "sum",
-            "slug": "sum",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "average",
-            "slug": "average",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "max",
-            "slug": "max",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "min",
-            "slug": "min",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "ceil",
-            "slug": "ceil",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "floor",
-            "slug": "floor",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "decimal",
-            "slug": "decimal",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "Url",
         "slug": "url",
-        "children": [
-          {
-            "level": 4,
-            "title": "getUrlParam",
-            "slug": "geturlparam",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getUrlAllParams",
-            "slug": "geturlallparams",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "delParamsUrl",
-            "slug": "delparamsurl",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "Http",
         "slug": "http",
-        "children": [
-          {
-            "level": 4,
-            "title": "_ajax",
-            "slug": "ajax",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "_fetch",
-            "slug": "fetch",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "Inspect",
         "slug": "inspect",
-        "children": [
-          {
-            "level": 4,
-            "title": "isType",
-            "slug": "istype",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isString",
-            "slug": "isstring",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isNumber",
-            "slug": "isnumber",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isBoolean",
-            "slug": "isboolean",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isFunction",
-            "slug": "isfunction",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isNull",
-            "slug": "isnull",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isUndefined",
-            "slug": "isundefined",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isObject",
-            "slug": "isobject",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isArray",
-            "slug": "isarray",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isDate",
-            "slug": "isdate",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isRegExp",
-            "slug": "isregexp",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isError",
-            "slug": "iserror",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isSymbol",
-            "slug": "issymbol",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isPromise",
-            "slug": "ispromise",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isSet",
-            "slug": "isset",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isFalse",
-            "slug": "isfalse",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isTrue",
-            "slug": "istrue",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isIos",
-            "slug": "isios",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getMobileEnv",
-            "slug": "getmobileenv",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isPC",
-            "slug": "ispc",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getBrowserType",
-            "slug": "getbrowsertype",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "checkPwdLv",
-            "slug": "checkpwdlv",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "verifyFormatIsCorrect",
-            "slug": "verifyformatiscorrect",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isCardID",
-            "slug": "iscardid",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "isPCBroswer",
-            "slug": "ispcbroswer",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "Storage",
         "slug": "storage",
-        "children": [
-          {
-            "level": 4,
-            "title": "setLocal",
-            "slug": "setlocal",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getLocal",
-            "slug": "getlocal",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "removeLocal",
-            "slug": "removelocal",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "clearLocal",
-            "slug": "clearlocal",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "setSession",
-            "slug": "setsession",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getSession",
-            "slug": "getsession",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "removeSession",
-            "slug": "removesession",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "clearSession",
-            "slug": "clearsession",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "setCookie",
-            "slug": "setcookie",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getCookie",
-            "slug": "getcookie",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "removeCookie",
-            "slug": "removecookie",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "Dom",
         "slug": "dom",
-        "children": [
-          {
-            "level": 4,
-            "title": "$",
-            "slug": "",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "hasClass",
-            "slug": "hasclass",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "addClass",
-            "slug": "addclass",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "removeClass",
-            "slug": "removeclass",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "replaceClass",
-            "slug": "replaceclass",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "siblings",
-            "slug": "siblings",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "getByStyle",
-            "slug": "getbystyle",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "elInsertAfter",
-            "slug": "elinsertafter",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "elInsertBefore",
-            "slug": "elinsertbefore",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "File",
         "slug": "file",
-        "children": [
-          {
-            "level": 4,
-            "title": "getBlobType",
-            "slug": "getblobtype",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "downloadFile",
-            "slug": "downloadfile",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "level": 3,
         "title": "Other",
         "slug": "other",
-        "children": [
-          {
-            "level": 4,
-            "title": "deepClone",
-            "slug": "deepclone",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "resizeFontSize",
-            "slug": "resizefontsize",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "resizeViewScale",
-            "slug": "resizeviewscale",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "dayjs",
-            "slug": "dayjs",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "Cookies",
-            "slug": "cookies",
-            "children": []
-          }
-        ]
+        "children": []
       }
     ],
     "path": "/js-toolkit/api.html",
@@ -797,20 +150,6 @@ export const searchIndex = [
       }
     ],
     "path": "/js-toolkit/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "record",
-    "headers": [
-      {
-        "level": 2,
-        "title": "vue中使用 \"?.\" 链式操作 编译报错",
-        "slug": "vue中使用-链式操作-编译报错",
-        "children": []
-      }
-    ],
-    "path": "/record/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -892,14 +231,7 @@ export const searchIndex = [
             "level": 3,
             "title": "css",
             "slug": "css-2",
-            "children": [
-              {
-                "level": 4,
-                "title": "css",
-                "slug": "css-3",
-                "children": []
-              }
-            ]
+            "children": []
           }
         ]
       }
@@ -920,14 +252,7 @@ export const searchIndex = [
             "level": 3,
             "title": "html3",
             "slug": "html3",
-            "children": [
-              {
-                "level": 4,
-                "title": "html4",
-                "slug": "html4",
-                "children": []
-              }
-            ]
+            "children": []
           }
         ]
       }
@@ -1158,6 +483,20 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "计算机内存基本知识【扩展】",
+        "slug": "计算机内存基本知识【扩展】",
+        "children": []
+      }
+    ],
+    "path": "/record/java/006_F_%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%86%85%E5%AD%98%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "变量和数据类型",
     "headers": [
       {
@@ -1165,6 +504,12 @@ export const searchIndex = [
         "title": "变量",
         "slug": "变量",
         "children": [
+          {
+            "level": 3,
+            "title": "概述",
+            "slug": "概述",
+            "children": []
+          },
           {
             "level": 3,
             "title": "变量分类",
@@ -1185,63 +530,15 @@ export const searchIndex = [
         "slug": "数据类型",
         "children": [
           {
-            "level": 4,
-            "title": "二进制，十进制",
-            "slug": "二进制-十进制",
+            "level": 3,
+            "title": "概述",
+            "slug": "概述-1",
             "children": []
           },
           {
-            "level": 4,
-            "title": "byte",
-            "slug": "byte",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "short",
-            "slug": "short",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "int",
-            "slug": "int",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "long",
-            "slug": "long",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "float",
-            "slug": "float",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "double",
-            "slug": "double",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "boolean",
-            "slug": "boolean",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "chart",
-            "slug": "chart",
-            "children": []
-          },
-          {
-            "level": 4,
-            "title": "基本数据类型之间互相转换",
-            "slug": "基本数据类型之间互相转换",
+            "level": 3,
+            "title": "基本类型",
+            "slug": "基本类型",
             "children": []
           }
         ]
@@ -1270,19 +567,47 @@ export const searchIndex = [
             "level": 3,
             "title": "js",
             "slug": "js-2",
-            "children": [
-              {
-                "level": 4,
-                "title": "js",
-                "slug": "js-3",
-                "children": []
-              }
-            ]
+            "children": []
           }
         ]
       }
     ],
     "path": "/record/js/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "micro-app",
+    "headers": [],
+    "path": "/record/microFrontEnd/micro-app.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "qiankun",
+    "headers": [
+      {
+        "level": 2,
+        "title": "快速上手",
+        "slug": "快速上手",
+        "children": [
+          {
+            "level": 3,
+            "title": "主应用",
+            "slug": "主应用",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/record/microFrontEnd/qiankun.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说明",
+    "headers": [],
+    "path": "/record/microFrontEnd/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1298,14 +623,7 @@ export const searchIndex = [
             "level": 3,
             "title": "初始化",
             "slug": "初始化",
-            "children": [
-              {
-                "level": 4,
-                "title": "handlebars.js 使用方式",
-                "slug": "handlebars-js-使用方式",
-                "children": []
-              }
-            ]
+            "children": []
           },
           {
             "level": 3,
@@ -1353,14 +671,7 @@ export const searchIndex = [
             "level": 3,
             "title": "webpack",
             "slug": "webpack-2",
-            "children": [
-              {
-                "level": 4,
-                "title": "webpack",
-                "slug": "webpack-3",
-                "children": []
-              }
-            ]
+            "children": []
           },
           {
             "level": 3,

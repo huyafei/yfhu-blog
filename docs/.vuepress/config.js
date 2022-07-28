@@ -127,47 +127,56 @@ module.exports = {
                 '/record/README.md',
               ],
             },
+            // {
+            //   text: 'html',
+            //   collapsible: true,
+            //   children: [
+            //     '/record/html/README.md',
+            //   ],
+            // },
+            // {
+            //   text: 'css',
+            //   collapsible: true,
+            //   children: [
+            //     '/record/css/README.md',
+            //   ],
+            // },
+            // {
+            //   text: 'js',
+            //   collapsible: true,
+            //   children: [
+            //     '/record/js/README.md',
+            //   ],
+            // },
+            // {
+            //   text: 'browser',
+            //   collapsible: true,
+            //   children: [
+            //     '/record/browser/README.md',
+            //   ],
+            // },
+            // {
+            //   text: 'Webpack',
+            //   collapsible: true,
+            //   children: [
+            //     '/record/webpack/README.md',
+            //   ],
+            // },
+            // {
+            //   text: 'node',
+            //   collapsible: true,
+            //   children: [
+            //     '/record/node/README.md',
+            //   ],
+            // },
             {
-              text: 'html',
+              text: '微前端',
               collapsible: true,
               children: [
-                '/record/html/README.md',
-              ],
-            },
-            {
-              text: 'css',
-              collapsible: true,
-              children: [
-                '/record/css/README.md',
-              ],
-            },
-            {
-              text: 'js',
-              collapsible: true,
-              children: [
-                '/record/js/README.md',
-              ],
-            },
-            {
-              text: 'browser',
-              collapsible: true,
-              children: [
-                '/record/browser/README.md',
-              ],
-            },
-            {
-              text: 'Webpack',
-              collapsible: true,
-              children: [
-                '/record/webpack/README.md',
-              ],
-            },
-            {
-              text: 'node',
-              collapsible: true,
-              children: [
-                '/record/node/README.md',
-              ],
+                '/record/microFrontEnd/README.md',
+                '/record/microFrontEnd/qiankun.md',
+                '/record/microFrontEnd/micro-app.md',
+              ]
             },
             {
               text: 'Java',

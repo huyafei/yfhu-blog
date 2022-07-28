@@ -1,3 +1,24 @@
+# 说明
+个人笔记以及个人开发组件库、js工具库等文档。
+
+## 安装
+
+```shell
+yarn install
+```
+
+
+## 运行
+```shell
+yarn run docs:dev
+```
+
+## 升级依赖包
+```shell
+yarn upgrade [package]
+# 升级选择的包
+yarn upgrade-interactive --latest
+```
 ```
 .
 ├── docs
