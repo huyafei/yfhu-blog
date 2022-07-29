@@ -175,7 +175,7 @@ module.exports = {
 - 使用 `package.json` 中的 `name` 字段作名称要与注册的微应用名称一致
 - `jsonpFunction` 在 webpack5 废弃了，使用 `chunkLoadingGlobal` 替代，
 
-### 主应用和微应用数据通信
+## 数据通信
 
 在主应用使用 `initGlobalState(state)` 初始化状态方法，通过 `props` 传给微应用,通过 `setGlobalState(state)` 设置状态，
 通过 `offGlobalStateChange()` 移除当前应用的状态监听。
@@ -217,7 +217,7 @@ actions.onGlobalStateChange((state, prev) => {
 export default actions;
 ```
 **备注：**
-可以先忽略 store 相关代码，在此可以做一些其它操作
+可以先忽略 store 相关代码
 
 #### 2. 在主应用注册应用处（main.js） 将 `actions` 通过 `props` 传给微应用
 
@@ -259,7 +259,7 @@ export async function mount(props) {
 }
 ```
 **备注：**
-可以先忽略 store 相关代码，在此可以做一些其它操作
+可以先忽略 store 相关代码
 
 ::: tip 提示
 以上为开发环境的测试，其它功能、需求、问题请参考 [官方文档](https://qiankun.umijs.org/zh/)

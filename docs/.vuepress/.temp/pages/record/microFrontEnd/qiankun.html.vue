@@ -152,7 +152,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li>使用 <code v-pre>package.json</code> 中的 <code v-pre>name</code> 字段作名称要与注册的微应用名称一致</li>
 <li><code v-pre>jsonpFunction</code> 在 webpack5 废弃了，使用 <code v-pre>chunkLoadingGlobal</code> 替代，</li>
 </ul>
-<h3 id="主应用和微应用数据通信" tabindex="-1"><a class="header-anchor" href="#主应用和微应用数据通信" aria-hidden="true">#</a> 主应用和微应用数据通信</h3>
+<h2 id="数据通信" tabindex="-1"><a class="header-anchor" href="#数据通信" aria-hidden="true">#</a> 数据通信</h2>
 <p>在主应用使用 <code v-pre>initGlobalState(state)</code> 初始化状态方法，通过 <code v-pre>props</code> 传给微应用,通过 <code v-pre>setGlobalState(state)</code> 设置状态，
 通过 <code v-pre>offGlobalStateChange()</code> 移除当前应用的状态监听。</p>
 <div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> initGlobalState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'qiankun'</span><span class="token punctuation">;</span>
@@ -184,7 +184,7 @@ actions<span class="token punctuation">.</span><span class="token function">onGl
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">export</span> <span class="token keyword">default</span> actions<span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>备注：</strong>
-可以先忽略 store 相关代码，在此可以做一些其它操作</p>
+可以先忽略 store 相关代码</p>
 <h4 id="_2-在主应用注册应用处-main-js-将-actions-通过-props-传给微应用" tabindex="-1"><a class="header-anchor" href="#_2-在主应用注册应用处-main-js-将-actions-通过-props-传给微应用" aria-hidden="true">#</a> 2. 在主应用注册应用处（main.js） 将 <code v-pre>actions</code> 通过 <code v-pre>props</code> 传给微应用</h4>
 <div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token comment">// ... 其它代码</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> registerMicroApps<span class="token punctuation">,</span> start <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'qiankun'</span><span class="token punctuation">;</span>
@@ -219,7 +219,7 @@ actions<span class="token punctuation">.</span><span class="token function">onGl
   <span class="token function">render</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>备注：</strong>
-可以先忽略 store 相关代码，在此可以做一些其它操作</p>
+可以先忽略 store 相关代码</p>
 <div class="custom-container tip"><p class="custom-container-title">提示</p>
 <p>以上为开发环境的测试，其它功能、需求、问题请参考 <a href="https://qiankun.umijs.org/zh/" target="_blank" rel="noopener noreferrer">官方文档<ExternalLinkIcon/></a></p>
 </div>
