@@ -189,6 +189,23 @@ module.exports = {
                 '/record/java/004_DOS基础知识.md',
                 '/record/java/005_java基础.md',
                 '/record/java/006_变量和数据类型.md',
+                '/record/java/007_java运算符.md',
+                '/record/java/008_java控制语句.md',
+                '/record/java/009_数组.md',
+                '/record/java/010_方法.md',
+                {
+                  text: '面向对象',
+                  collapsible: true,
+                  children: [
+                    '/record/java/011_面向对象.md',
+                    '/record/java/012_封装.md',
+                    '/record/java/013_static和this.md',
+                    '/record/java/014_继承.md',
+                    '/record/java/015_覆盖.md',
+                    '/record/java/016_多态.md',
+                    '/record/java/017_super.md',
+                  ]
+                },
               ],
             },
           ]

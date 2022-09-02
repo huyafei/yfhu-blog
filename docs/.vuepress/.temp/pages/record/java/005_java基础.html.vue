@@ -93,7 +93,7 @@
 <p>在 Java 中以 <code v-pre>main</code> 命名的方法示为主方法，在 <code v-pre>class</code> 中定义 <code v-pre>main</code> 方法（主方法），示作为程序的入口，
 也就是说任何一个class中都可以写 <code v-pre>main</code> 方法（主方法），想从哪个入口进去执行，则让类加载器先加载对应的类即可。 例如：
 想让A类中的main方法执行，则执行：java A，想让B类中的main方法执行，则执行：java B。但实际上，对于一个完整的独立的应用来说，只需要提供一个入口，也就是说只需要定义一个main方法即可。</p>
-<p><strong>特殊说明：</strong></p>
+<p><strong>备注：</strong></p>
 <ul>
 <li>java入口程序必需是静态方法 【static 修饰】</li>
 <li>方法名必须为 main</li>

@@ -34,20 +34,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "record",
-    "headers": [
-      {
-        "level": 2,
-        "title": "vue中使用 \"?.\" 链式操作 编译报错",
-        "slug": "vue中使用-链式操作-编译报错",
-        "children": []
-      }
-    ],
-    "path": "/record/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "API",
     "headers": [
       {
@@ -154,6 +140,45 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "record",
+    "headers": [
+      {
+        "level": 2,
+        "title": "vue中使用 \"?.\" 链式操作 编译报错",
+        "slug": "vue中使用-链式操作-编译报错",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "服务器安装 node",
+        "slug": "服务器安装-node",
+        "children": [
+          {
+            "level": 3,
+            "title": "安装",
+            "slug": "安装",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "卸载",
+            "slug": "卸载",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "服务器部署jar使用脚本运行",
+        "slug": "服务器部署jar使用脚本运行",
+        "children": []
+      }
+    ],
+    "path": "/record/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "开始",
     "headers": [],
     "path": "/ven-ui/",
@@ -237,27 +262,6 @@ export const searchIndex = [
       }
     ],
     "path": "/record/css/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "html",
-    "headers": [
-      {
-        "level": 2,
-        "title": "html2",
-        "slug": "html2",
-        "children": [
-          {
-            "level": 3,
-            "title": "html3",
-            "slug": "html3",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/record/html/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -540,6 +544,12 @@ export const searchIndex = [
             "title": "基本类型",
             "slug": "基本类型",
             "children": []
+          },
+          {
+            "level": 3,
+            "title": "引用数据类型",
+            "slug": "引用数据类型",
+            "children": []
           }
         ]
       }
@@ -549,9 +559,394 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "java运算符",
+    "headers": [
+      {
+        "level": 2,
+        "title": "算术运算符",
+        "slug": "算术运算符",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "关系运算符",
+        "slug": "关系运算符",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "逻辑运算符",
+        "slug": "逻辑运算符",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "位运算符",
+        "slug": "位运算符",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "赋值运算符",
+        "slug": "赋值运算符",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "条件运算符",
+        "slug": "条件运算符",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "字符串连接运算符",
+        "slug": "字符串连接运算符",
+        "children": []
+      }
+    ],
+    "path": "/record/java/007_java%E8%BF%90%E7%AE%97%E7%AC%A6.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "java控制语句",
+    "headers": [
+      {
+        "level": 2,
+        "title": "选择语句 if...else...",
+        "slug": "选择语句-if-else",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "选择语句 switch...case...",
+        "slug": "选择语句-switch-case",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "循环语句 for",
+        "slug": "循环语句-for",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "循环语句 while",
+        "slug": "循环语句-while",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "循环语句 do-while",
+        "slug": "循环语句-do-while",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "break 语句",
+        "slug": "break-语句",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "continue 语句",
+        "slug": "continue-语句",
+        "children": []
+      }
+    ],
+    "path": "/record/java/008_java%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数组",
+    "headers": [
+      {
+        "level": 2,
+        "title": "数组的初始化",
+        "slug": "数组的初始化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "数组的访问",
+        "slug": "数组的访问",
+        "children": [
+          {
+            "level": 3,
+            "title": "获取数组长度",
+            "slug": "获取数组长度",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "获取数组元素",
+            "slug": "获取数组元素",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "数组的遍历",
+        "slug": "数组的遍历",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "数组的拷贝",
+        "slug": "数组的拷贝",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "数组的排序",
+        "slug": "数组的排序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "多维数组",
+        "slug": "多维数组",
+        "children": []
+      }
+    ],
+    "path": "/record/java/009_%E6%95%B0%E7%BB%84.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "方法",
+    "headers": [
+      {
+        "level": 2,
+        "title": "方法的定义和调用",
+        "slug": "方法的定义和调用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "递归方法",
+        "slug": "递归方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "方法重载",
+        "slug": "方法重载",
+        "children": []
+      }
+    ],
+    "path": "/record/java/010_%E6%96%B9%E6%B3%95.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "基础",
+    "headers": [
+      {
+        "level": 2,
+        "title": "面向对象和面向过程",
+        "slug": "面向对象和面向过程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "面向对象的特征",
+        "slug": "面向对象的特征",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "java类与对象",
+        "slug": "java类与对象",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "类的定义",
+        "slug": "类的定义",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "创建并使用对象",
+        "slug": "创建并使用对象",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "构造方法",
+        "slug": "构造方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "数组",
+        "slug": "数组",
+        "children": [
+          {
+            "level": 3,
+            "title": "引用类型",
+            "slug": "引用类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "java中的内存",
+            "slug": "java中的内存",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "栈和堆",
+            "slug": "栈和堆",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "引用类型数组",
+            "slug": "引用类型数组",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/record/java/011_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "封装",
+    "headers": [],
+    "path": "/record/java/012_%E5%B0%81%E8%A3%85.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "static和this",
+    "headers": [
+      {
+        "level": 2,
+        "title": "this 关键字",
+        "slug": "this-关键字",
+        "children": [
+          {
+            "level": 3,
+            "title": "this 实例方法中使用",
+            "slug": "this-实例方法中使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "this(实际参数列表) 使用",
+            "slug": "this-实际参数列表-使用",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "static 关键字",
+        "slug": "static-关键字",
+        "children": [
+          {
+            "level": 3,
+            "title": "static 静态变量",
+            "slug": "static-静态变量",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "static 静态代码块",
+            "slug": "static-静态代码块",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "static 静态方法",
+            "slug": "static-静态方法",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/record/java/013_static%E5%92%8Cthis.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "继承",
+    "headers": [],
+    "path": "/record/java/014_%E7%BB%A7%E6%89%BF.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "覆盖",
+    "headers": [],
+    "path": "/record/java/015_%E8%A6%86%E7%9B%96.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "多态",
+    "headers": [
+      {
+        "level": 2,
+        "title": "多态用法",
+        "slug": "多态用法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "instanceof 运算符",
+        "slug": "instanceof-运算符",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "多态的作用",
+        "slug": "多态的作用",
+        "children": []
+      }
+    ],
+    "path": "/record/java/016_%E5%A4%9A%E6%80%81.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/record/java/017_super.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "说明",
     "headers": [],
     "path": "/record/java/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "html",
+    "headers": [
+      {
+        "level": 2,
+        "title": "html2",
+        "slug": "html2",
+        "children": [
+          {
+            "level": 3,
+            "title": "html3",
+            "slug": "html3",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/record/html/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -577,37 +972,23 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "micro-app",
-    "headers": [],
-    "path": "/record/microFrontEnd/micro-app.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "qiankun",
+    "title": "开始",
     "headers": [
       {
         "level": 2,
-        "title": "快速上手",
-        "slug": "快速上手",
-        "children": [
-          {
-            "level": 3,
-            "title": "主应用",
-            "slug": "主应用",
-            "children": []
-          }
-        ]
+        "title": "手动安装",
+        "slug": "手动安装",
+        "children": []
       }
     ],
-    "path": "/record/microFrontEnd/qiankun.html",
+    "path": "/record/vuepress/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "说明",
+    "title": "实现类似 element-ui 文档代码预览功能",
     "headers": [],
-    "path": "/record/microFrontEnd/",
+    "path": "/record/vuepress/vuepress-guide.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -635,27 +1016,6 @@ export const searchIndex = [
       }
     ],
     "path": "/record/node/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "开始",
-    "headers": [
-      {
-        "level": 2,
-        "title": "手动安装",
-        "slug": "手动安装",
-        "children": []
-      }
-    ],
-    "path": "/record/vuepress/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "实现类似 element-ui 文档代码预览功能",
-    "headers": [],
-    "path": "/record/vuepress/vuepress-guide.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -757,6 +1117,116 @@ export const searchIndex = [
       }
     ],
     "path": "/vue-widget/directives/drag.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "micro-app",
+    "headers": [
+      {
+        "level": 2,
+        "title": "说明",
+        "slug": "说明",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "快速上手",
+        "slug": "快速上手",
+        "children": [
+          {
+            "level": 3,
+            "title": "基座",
+            "slug": "基座",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "子应用",
+            "slug": "子应用",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "数据通信",
+        "slug": "数据通信",
+        "children": [
+          {
+            "level": 3,
+            "title": "基座向子应用发送数据",
+            "slug": "基座向子应用发送数据",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "子应用获取来自基座数据",
+            "slug": "子应用获取来自基座数据",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "子应用向基座发送数据",
+            "slug": "子应用向基座发送数据",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "基座获取子应用数据",
+            "slug": "基座获取子应用数据",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/record/microFrontEnd/micro-app.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "qiankun",
+    "headers": [
+      {
+        "level": 2,
+        "title": "说明",
+        "slug": "说明",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "快速上手",
+        "slug": "快速上手",
+        "children": [
+          {
+            "level": 3,
+            "title": "主应用",
+            "slug": "主应用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "微应用",
+            "slug": "微应用",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "数据通信",
+        "slug": "数据通信",
+        "children": []
+      }
+    ],
+    "path": "/record/microFrontEnd/qiankun.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "说明",
+    "headers": [],
+    "path": "/record/microFrontEnd/",
     "pathLocale": "/",
     "extraFields": []
   },
