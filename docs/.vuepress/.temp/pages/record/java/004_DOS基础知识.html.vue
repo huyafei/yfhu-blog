@@ -27,8 +27,8 @@
 <li><code v-pre>ping ip/网网址</code>   【发送和接收数据包4次】</li>
 <li><code v-pre>ping ip/网网址 -t</code> 【一直不停的发送和接收数据包】</li>
 </ul>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">ping</span> <span class="token number">192.168</span>.27.23
-<span class="token function">ping</span> <span class="token number">192.168</span>.27.23 -t
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token function">ping</span> <span class="token number">192.168</span>.27.23
+<span class="token function">ping</span> <span class="token number">192.168</span>.27.23 <span class="token parameter variable">-t</span>
 <span class="token function">ping</span> www.baidu.com
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="强行终止dos命令窗口中正在运行的程序" tabindex="-1"><a class="header-anchor" href="#强行终止dos命令窗口中正在运行的程序" aria-hidden="true">#</a> 强行终止DOS命令窗口中正在运行的程序</h3>
 <ul>
@@ -38,13 +38,13 @@
 <ul>
 <li><code v-pre>mkdir 文件名</code></li>
 </ul>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token comment"># 在前所在目录下 创建 test 目录</span>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token comment"># 在前所在目录下 创建 test 目录</span>
 <span class="token function">mkdir</span> <span class="token builtin class-name">test</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="删除文件" tabindex="-1"><a class="header-anchor" href="#删除文件" aria-hidden="true">#</a> 删除文件</h3>
 <ul>
 <li><code v-pre>del 文件名</code></li>
 </ul>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token comment"># 删除当前目录下 test 目录</span>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token comment"># 删除当前目录下 test 目录</span>
 del <span class="token builtin class-name">test</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="切换目命令" tabindex="-1"><a class="header-anchor" href="#切换目命令" aria-hidden="true">#</a> 切换目命令</h3>
 <ul>
@@ -110,3 +110,5 @@ del <span class="token builtin class-name">test</span>
 <li><code v-pre>ctrl + home</code>	回到文件头</li>
 </ul>
 </div></template>
+
+

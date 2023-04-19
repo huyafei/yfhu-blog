@@ -1,7 +1,7 @@
 <template><div><h1 id="vendrag-拖动" tabindex="-1"><a class="header-anchor" href="#vendrag-拖动" aria-hidden="true">#</a> VenDrag 拖动</h1>
 <p>拖动组件，兼容pc和移动端。</p>
 <p>::: demo</p>
-<div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code>
+<div class="language-html line-numbers-mode" data-ext="html"><pre v-pre class="language-html"><code>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>VenDrag</span>
 		<span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100px<span class="token punctuation">"</span></span>
@@ -125,3 +125,5 @@
 </tbody>
 </table>
 </div></template>
+
+

@@ -55,7 +55,7 @@ JDK 中包含 JRE，JRE 中包含 JVM，所以运行 Java 程序最小环境为 
 <p>测试命令</p>
 </li>
 </ol>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>java -version
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token function">java</span> <span class="token parameter variable">-version</span>
 <span class="token comment"># 输出以下则成功</span>
 <span class="token comment"># java version "1.8.0_291"</span>
 <span class="token comment"># Java(TM) SE Runtime Environment (build 1.8.0_291-b10)</span>
@@ -68,3 +68,5 @@ JDK 中包含 JRE，JRE 中包含 JVM，所以运行 Java 程序最小环境为 
 系统变量 - 理解为全局变量，要想在任何位置使用命令就要配置，path - 就是对应的命令所在的路径，比如 <code v-pre>ipconfig.exe</code> 在 <code v-pre>C:\Windows\System32</code>，
 脑补一下js中全局变量一样。</p>
 </div></template>
+
+

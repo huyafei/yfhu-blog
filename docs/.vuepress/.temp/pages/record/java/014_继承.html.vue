@@ -3,12 +3,12 @@
 <p>继承时子类继承父类的特征和行为，使得子类对象（实例）具有父类的属性，或子类从父类继承方法，使得子类具有与父类相同的行为。兔子和羊属于食草动物类，狮子和豹属于食肉动物类。食草动物和食肉动物又是属于动物类。所以继承需要符合的关系是：is-a（Bird is-a Animal），父类更通用，子类更具体。虽然食草动物和食肉动物都是属于动物，但是两者的属性和行为上有差别，所以子类会具有父类的一般特性也会具有自身的特性。</p>
 <p>为什么要使用继承机制？在不同的类中也可能会有共同的特征和动作，可以把这些共同的特征和动作放在一个类中，让其它类共享。因此可以定义一个通用类，然后将其扩展为其它多个特定类，这些特定类继承通用类中的特征和动作。继承是 Java 中实现软件重用的重要手段，避免重复，易于维护。</p>
 <p>语法：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>class 类名 extends 父类名{
+<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>class 类名 extends 父类名{
 // 类体
 }
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>备注：</strong><br>
 使用 extends 继承父类</p>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">// Address.java</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token comment">// Address.java</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Address</span> <span class="token punctuation">{</span>
     <span class="token keyword">private</span> <span class="token class-name">String</span> address<span class="token punctuation">;</span>
 
@@ -96,3 +96,5 @@
 <li>继承优点，继承解决了代码复用的问题</li>
 </ul>
 </div></template>
+
+

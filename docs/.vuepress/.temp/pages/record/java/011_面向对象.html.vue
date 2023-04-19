@@ -30,7 +30,7 @@
 <p>抽象数据类型：将不同类型的数据集合组成一个整体用来描述新的事物。</p>
 <h2 id="类的定义" tabindex="-1"><a class="header-anchor" href="#类的定义" aria-hidden="true">#</a> 类的定义</h2>
 <p>完整的类定义：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>修饰符 class 类名 {
+<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>修饰符 class 类名 {
     // 类体 = 属性(成员变量，也叫字段（field）)+方法（成员方法）
     // 1. 定义成员变量
     成员变量类型 成员变量名称;
@@ -48,7 +48,7 @@
 <li>成员变量类型就是基本数据类型（byte、short、int、long、float、double、boolean、chart）和引用数据类型（String、Object、数组...）</li>
 </ul>
 <p>实现一个 “学生类” 如下：</p>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
     <span class="token comment">// 姓名</span>
     <span class="token class-name">String</span> name<span class="token punctuation">;</span>
     <span class="token comment">// 年龄</span>
@@ -68,8 +68,8 @@
 <h2 id="创建并使用对象" tabindex="-1"><a class="header-anchor" href="#创建并使用对象" aria-hidden="true">#</a> 创建并使用对象</h2>
 <p>类定义后，可以使用类这个“模板”来创造“对象”了，一个类可以创建多个对象！<br>
 语法：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>new 类名()
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentTest</span> <span class="token punctuation">{</span>
+<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>new 类名()
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentTest</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// 创建一个学生对象</span>
         <span class="token class-name">Student</span> s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -121,7 +121,7 @@
 <h2 id="构造方法" tabindex="-1"><a class="header-anchor" href="#构造方法" aria-hidden="true">#</a> 构造方法</h2>
 <p>java构造方法是类中特殊的方法，是类的初始化方法（构造方法/构造函数），通过 new 构造方法名(实际参数列表)来调用构造方法，用于初始化对象的属性。</p>
 <p>语法：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>[修饰符列表] 构造方法名(形式参数列表){
+<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>[修饰符列表] 构造方法名(形式参数列表){
     构造方法体;
 }
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
@@ -132,7 +132,7 @@
 <li>构造方法用来创建对象，以及完成属性初始化操作，不允许使用 static 关键字</li>
 </ul>
 <p>例如：</p>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DateTest</span> <span class="token punctuation">{</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DateTest</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// 创建一个日期对象</span>
         <span class="token class-name">Date</span> d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 调用默认无参构造方法</span>
@@ -277,7 +277,7 @@ JVM 运行时数据区中有些数据是一直存在的，被所有线程所共�
 <li>数组的元素看做是对象的成员变量只不过类型全部相同</li>
 </ul>
 <h4 id="引用类型数组数组" tabindex="-1"><a class="header-anchor" href="#引用类型数组数组" aria-hidden="true">#</a> 引用类型数组数组</h4>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Arrays</span></span><span class="token punctuation">;</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Arrays</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">YyArr</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -331,3 +331,5 @@ JVM 运行时数据区中有些数据是一直存在的，被所有线程所共�
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>备注：</strong><br>
 如果多个变量引用同一个引用类型数据，如上面示例 intArr 和 intArr2 改变其中一个变量的值，则其他变量的值也会被改变，因为实际改变的是公用的内存地址对应的数据的值。</p>
 </div></template>
+
+

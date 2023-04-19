@@ -1,4 +1,4 @@
-export const data = JSON.parse("{\"key\":\"v-74457188\",\"path\":\"/cli/\",\"title\":\"开始\",\"lang\":\"en-US\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"npm/yarn\",\"slug\":\"npm-yarn\",\"children\":[]},{\"level\":2,\"title\":\"使用\",\"slug\":\"使用\",\"children\":[]}],\"git\":{\"updatedTime\":1656639476000,\"contributors\":[{\"name\":\"yfhu\",\"email\":\"879649442@qq.com\",\"commits\":2}]},\"filePathRelative\":\"cli/README.md\"}")
+export const data = JSON.parse("{\"key\":\"v-74457188\",\"path\":\"/cli/\",\"title\":\"开始\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"npm/yarn\",\"slug\":\"npm-yarn\",\"link\":\"#npm-yarn\",\"children\":[]},{\"level\":2,\"title\":\"使用\",\"slug\":\"使用\",\"link\":\"#使用\",\"children\":[]}],\"git\":{\"updatedTime\":1656639476000,\"contributors\":[{\"name\":\"yfhu\",\"email\":\"879649442@qq.com\",\"commits\":2}]},\"filePathRelative\":\"cli/README.md\"}")
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()

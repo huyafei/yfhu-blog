@@ -1,19 +1,13 @@
-# 开始
+# 使用
 
 ## npm/yarn
 
-:::: code-group
-::: code-group-item npm
 ```shell
+# npm
 npm install @vensst/js-toolkit --save
-```
-:::
-::: code-group-item yarn
-```shell
+# yarn
 yarn add @vensst/js-toolkit --save
 ```
-:::
-::::
 
 ```js
 // 全部引用

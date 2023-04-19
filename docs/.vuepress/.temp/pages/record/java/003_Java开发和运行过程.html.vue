@@ -36,7 +36,7 @@ java 类名</li>
 </ul>
 </li>
 </ul>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>java HelloWord
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token function">java</span> HelloWord
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="/static/images/java/002/by_yx.png" alt="java编译和运行过程"></p>
 <h2 id="开始第一个-java-程序的开发" tabindex="-1"><a class="header-anchor" href="#开始第一个-java-程序的开发" aria-hidden="true">#</a> 开始第一个 Java 程序的开发</h2>
 <ol>
@@ -48,7 +48,7 @@ java 类名</li>
 <p>在 HelloWorld.java 文件中编写源代码</p>
 </li>
 </ol>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"HelloWorld"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
@@ -57,12 +57,14 @@ java 类名</li>
 <li>打开命令窗口，使用javac命令进行编译，生成 <code v-pre>HelloWorld.class</code> 文件
 语法：javac 源文件路径</li>
 </ol>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>javac HelloWorld.java
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>javac HelloWorld.java
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="/static/images/java/003/02.jpg" alt="java源文件"></p>
 <ol start="4">
 <li>使用java命令进行运行
 语法：java 编译生成的 <code v-pre>xxx.class</code> 类名</li>
 </ol>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>java HelloWorld
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token function">java</span> HelloWorld
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="/static/images/java/003/03.jpg" alt="java字节码文件"></p>
 </div></template>
+
+

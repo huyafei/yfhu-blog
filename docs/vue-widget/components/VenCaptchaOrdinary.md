@@ -1,3 +1,8 @@
+---
+sidebarDepth: 1
+---
+
+
 # VenCaptchaOrdinary 验证码
 普通验证码组件
 

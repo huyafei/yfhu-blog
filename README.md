@@ -7,8 +7,8 @@
 yarn install
 ```
 
-
 ## 运行
+
 ```shell
 yarn run docs:dev
 ```
@@ -19,6 +19,7 @@ yarn upgrade [package]
 # 升级选择的包
 yarn upgrade-interactive --latest
 ```
+
 ```
 .
 ├── docs

@@ -10,15 +10,15 @@
 <h4 id="_1-安装-qiankun" tabindex="-1"><a class="header-anchor" href="#_1-安装-qiankun" aria-hidden="true">#</a> 1. 安装 qiankun</h4>
 <CodeGroup>
 <CodeGroupItem title="yarn">
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> qiankun
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> qiankun
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></CodeGroupItem>
 <CodeGroupItem title="npm">
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> qiankun -S
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> qiankun <span class="token parameter variable">-S</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></CodeGroupItem>
 </CodeGroup>
 <h4 id="_2-在主应用中注册微应用" tabindex="-1"><a class="header-anchor" href="#_2-在主应用中注册微应用" aria-hidden="true">#</a> 2. 在主应用中注册微应用</h4>
 <p>在 <code v-pre>main.js</code> 中注册微应用，增加如下代码：</p>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token comment">// ... 其它代码</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">// ... 其它代码</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> registerMicroApps<span class="token punctuation">,</span> start <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'qiankun'</span><span class="token punctuation">;</span>
 
 <span class="token function">registerMicroApps</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
@@ -43,7 +43,7 @@
 </ul>
 <h3 id="微应用" tabindex="-1"><a class="header-anchor" href="#微应用" aria-hidden="true">#</a> 微应用</h3>
 <h4 id="_1-在-src-下新增-public-path-js-文件-内容如下" tabindex="-1"><a class="header-anchor" href="#_1-在-src-下新增-public-path-js-文件-内容如下" aria-hidden="true">#</a> 1. 在 <code v-pre>src</code> 下新增 <code v-pre>public-path.js</code> 文件，内容如下：</h4>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>__POWERED_BY_QIANKUN__<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>__POWERED_BY_QIANKUN__<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// eslint-disable-next-line no-undef</span>
   __webpack_public_path__ <span class="token operator">=</span> window<span class="token punctuation">.</span>__INJECTED_PUBLIC_PATH_BY_QIANKUN__<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -53,7 +53,7 @@
 <li>使用 esLint 需要加 <code v-pre>// eslint-disable-next-line no-undef</code></li>
 </ul>
 <h4 id="_2-修改入口文件-main-js-代码如下" tabindex="-1"><a class="header-anchor" href="#_2-修改入口文件-main-js-代码如下" aria-hidden="true">#</a> 2.  修改入口文件 <code v-pre>main.js</code> ,代码如下：</h4>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token string">"./public-path.js"</span><span class="token punctuation">;</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token string">"./public-path.js"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">"./App.vue"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> routes <span class="token keyword">from</span> <span class="token string">"./router"</span><span class="token punctuation">;</span>
@@ -119,7 +119,7 @@ Vue<span class="token punctuation">.</span>config<span class="token punctuation"
 <li>路由的 <code v-pre>base</code> 要与注册应用的 <code v-pre>activeRule</code> 一致</li>
 <li><code v-pre>main.js</code> 改成上面，那么 <code v-pre>router</code> 文件下 导出也要改一下 ,导出路由 routes 如下：</li>
 </ul>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> VueRouter <span class="token keyword">from</span> <span class="token string">"vue-router"</span><span class="token punctuation">;</span>
 
 Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueRouter<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -131,7 +131,7 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
 <span class="token keyword">export</span> <span class="token keyword">default</span> routes<span class="token punctuation">;</span>
 
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_3-修改-vue-config-js-中打包配置" tabindex="-1"><a class="header-anchor" href="#_3-修改-vue-config-js-中打包配置" aria-hidden="true">#</a> 3. 修改 vue.config.js 中打包配置：</h4>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> name <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./package'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 使用 package.json 中的 name 字段作为微应用的名称（注意要与注册的微应用名称一致）</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> name <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./package'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 使用 package.json 中的 name 字段作为微应用的名称（注意要与注册的微应用名称一致）</span>
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">devServer</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -155,7 +155,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <h2 id="数据通信" tabindex="-1"><a class="header-anchor" href="#数据通信" aria-hidden="true">#</a> 数据通信</h2>
 <p>在主应用使用 <code v-pre>initGlobalState(state)</code> 初始化状态方法，通过 <code v-pre>props</code> 传给微应用,通过 <code v-pre>setGlobalState(state)</code> 设置状态，
 通过 <code v-pre>offGlobalStateChange()</code> 移除当前应用的状态监听。</p>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> initGlobalState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'qiankun'</span><span class="token punctuation">;</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> initGlobalState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'qiankun'</span><span class="token punctuation">;</span>
 <span class="token comment">// 初始化 state</span>
 <span class="token keyword">let</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">// 这里写初始化数据</span>
@@ -169,7 +169,7 @@ actions<span class="token punctuation">.</span><span class="token function">setG
 actions<span class="token punctuation">.</span><span class="token function">offGlobalStateChange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 移除当前应用的状态监听</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><a href="https://qiankun.umijs.org/zh/api#initglobalstatestate" target="_blank" rel="noopener noreferrer">详细参考<ExternalLinkIcon/></a></p>
 <h4 id="_1-在主应用-src-新增-actions-js-文件-代码如下" tabindex="-1"><a class="header-anchor" href="#_1-在主应用-src-新增-actions-js-文件-代码如下" aria-hidden="true">#</a> 1. 在主应用 <code v-pre>src</code> 新增 <code v-pre>actions.js</code> 文件，代码如下：</h4>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">"./store"</span><span class="token punctuation">;</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">"./store"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> initGlobalState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"qiankun"</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">// 这里写初始化数据</span>
@@ -186,7 +186,7 @@ actions<span class="token punctuation">.</span><span class="token function">onGl
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>备注：</strong>
 可以先忽略 store 相关代码</p>
 <h4 id="_2-在主应用注册应用处-main-js-将-actions-通过-props-传给微应用" tabindex="-1"><a class="header-anchor" href="#_2-在主应用注册应用处-main-js-将-actions-通过-props-传给微应用" aria-hidden="true">#</a> 2. 在主应用注册应用处（main.js） 将 <code v-pre>actions</code> 通过 <code v-pre>props</code> 传给微应用</h4>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token comment">// ... 其它代码</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">// ... 其它代码</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> registerMicroApps<span class="token punctuation">,</span> start <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'qiankun'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> actions <span class="token keyword">from</span> <span class="token string">'./actions'</span><span class="token punctuation">;</span>
 <span class="token function">registerMicroApps</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
@@ -206,7 +206,7 @@ actions<span class="token punctuation">.</span><span class="token function">onGl
 
 <span class="token comment">// ... 其它代码</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_3-在微应用生命周期-mount-中获取通信方法" tabindex="-1"><a class="header-anchor" href="#_3-在微应用生命周期-mount-中获取通信方法" aria-hidden="true">#</a> 3. 在微应用生命周期 mount 中获取通信方法</h4>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">mount</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">mount</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   props<span class="token punctuation">.</span><span class="token function">onGlobalStateChange</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> prev</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token comment">// state: 变更后的状态; prev 变更前的状态</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"微应用history状态变化"</span><span class="token punctuation">,</span> state<span class="token punctuation">,</span> prev<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -224,3 +224,5 @@ actions<span class="token punctuation">.</span><span class="token function">onGl
 <p>以上为开发环境的测试，其它功能、需求、问题请参考 <a href="https://qiankun.umijs.org/zh/" target="_blank" rel="noopener noreferrer">官方文档<ExternalLinkIcon/></a></p>
 </div>
 </div></template>
+
+

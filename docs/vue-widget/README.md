@@ -4,20 +4,14 @@
 该组件库使用 Vue 2.x 开发
 :::
 
-## npm/yarn
+## 安装
 
-:::: code-group
-::: code-group-item npm
 ```shell
+# npm
 npm install @vensst/vue-widget --save
-```
-:::
-::: code-group-item yarn
-```shell
+# yarn
 yarn add @vensst/vue-widget --save
 ```
-:::
-::::
 
 ## 使用
 

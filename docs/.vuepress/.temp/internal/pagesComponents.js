@@ -5,12 +5,14 @@ export const pagesComponents = {
   "v-8daa1a0e": defineAsyncComponent(() => import(/* webpackChunkName: "v-8daa1a0e" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/index.html.vue")),
   // path: /cli/
   "v-74457188": defineAsyncComponent(() => import(/* webpackChunkName: "v-74457188" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/cli/index.html.vue")),
-  // path: /guide/
-  "v-fffb8e28": defineAsyncComponent(() => import(/* webpackChunkName: "v-fffb8e28" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/guide/index.html.vue")),
   // path: /js-toolkit/api.html
   "v-37cb77ca": defineAsyncComponent(() => import(/* webpackChunkName: "v-37cb77ca" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/js-toolkit/api.html.vue")),
+  // path: /js-toolkit/number.html
+  "v-b23b2ed8": defineAsyncComponent(() => import(/* webpackChunkName: "v-b23b2ed8" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/js-toolkit/number.html.vue")),
   // path: /js-toolkit/
   "v-6bd5191c": defineAsyncComponent(() => import(/* webpackChunkName: "v-6bd5191c" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/js-toolkit/index.html.vue")),
+  // path: /guide/
+  "v-fffb8e28": defineAsyncComponent(() => import(/* webpackChunkName: "v-fffb8e28" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/guide/index.html.vue")),
   // path: /record/
   "v-aae6de36": defineAsyncComponent(() => import(/* webpackChunkName: "v-aae6de36" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/index.html.vue")),
   // path: /ven-ui/
@@ -21,6 +23,8 @@ export const pagesComponents = {
   "v-d5cbd428": defineAsyncComponent(() => import(/* webpackChunkName: "v-d5cbd428" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/browser/index.html.vue")),
   // path: /record/css/
   "v-7e8e54f1": defineAsyncComponent(() => import(/* webpackChunkName: "v-7e8e54f1" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/css/index.html.vue")),
+  // path: /record/html/
+  "v-5383241f": defineAsyncComponent(() => import(/* webpackChunkName: "v-5383241f" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/html/index.html.vue")),
   // path: /record/java/001_%E7%AE%80%E4%BB%8B.html
   "v-4675ba10": defineAsyncComponent(() => import(/* webpackChunkName: "v-4675ba10" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/java/001_简介.html.vue")),
   // path: /record/java/002_%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.html
@@ -57,18 +61,30 @@ export const pagesComponents = {
   "v-eb958b8c": defineAsyncComponent(() => import(/* webpackChunkName: "v-eb958b8c" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/java/016_多态.html.vue")),
   // path: /record/java/017_super.html
   "v-50e51b62": defineAsyncComponent(() => import(/* webpackChunkName: "v-50e51b62" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/java/017_super.html.vue")),
+  // path: /record/java/018_%E5%8C%85(package).html
+  "v-328d5e36": defineAsyncComponent(() => import(/* webpackChunkName: "v-328d5e36" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/java/018_包(package).html.vue")),
+  // path: /record/java/019_%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90.html
+  "v-55497919": defineAsyncComponent(() => import(/* webpackChunkName: "v-55497919" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/java/019_访问权限.html.vue")),
+  // path: /record/java/020_Object%E7%B1%BB.html
+  "v-7eebcee9": defineAsyncComponent(() => import(/* webpackChunkName: "v-7eebcee9" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/java/020_Object类.html.vue")),
+  // path: /record/java/021_final%E5%85%B3%E9%94%AE%E5%AD%97.html
+  "v-e849e880": defineAsyncComponent(() => import(/* webpackChunkName: "v-e849e880" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/java/021_final关键字.html.vue")),
+  // path: /record/java/022_%E6%8A%BD%E8%B1%A1%E7%B1%BB.html
+  "v-d4a3695c": defineAsyncComponent(() => import(/* webpackChunkName: "v-d4a3695c" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/java/022_抽象类.html.vue")),
+  // path: /record/java/023_%E6%8E%A5%E5%8F%A3.html
+  "v-4ac0cf47": defineAsyncComponent(() => import(/* webpackChunkName: "v-4ac0cf47" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/java/023_接口.html.vue")),
+  // path: /record/java/024_%E5%86%85%E9%83%A8%E7%B1%BB.html
+  "v-a64042f2": defineAsyncComponent(() => import(/* webpackChunkName: "v-a64042f2" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/java/024_内部类.html.vue")),
   // path: /record/java/
   "v-5396d088": defineAsyncComponent(() => import(/* webpackChunkName: "v-5396d088" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/java/index.html.vue")),
-  // path: /record/html/
-  "v-5383241f": defineAsyncComponent(() => import(/* webpackChunkName: "v-5383241f" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/html/index.html.vue")),
   // path: /record/js/
   "v-0859b5fe": defineAsyncComponent(() => import(/* webpackChunkName: "v-0859b5fe" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/js/index.html.vue")),
+  // path: /record/node/
+  "v-53d548a8": defineAsyncComponent(() => import(/* webpackChunkName: "v-53d548a8" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/node/index.html.vue")),
   // path: /record/vuepress/
   "v-83b2dbe6": defineAsyncComponent(() => import(/* webpackChunkName: "v-83b2dbe6" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/vuepress/index.html.vue")),
   // path: /record/vuepress/vuepress-guide.html
   "v-70e22180": defineAsyncComponent(() => import(/* webpackChunkName: "v-70e22180" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/vuepress/vuepress-guide.html.vue")),
-  // path: /record/node/
-  "v-53d548a8": defineAsyncComponent(() => import(/* webpackChunkName: "v-53d548a8" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/node/index.html.vue")),
   // path: /record/webpack/
   "v-5447e647": defineAsyncComponent(() => import(/* webpackChunkName: "v-5447e647" */"D:/huyafei/001-GitHub/yfhu-blog/docs/.vuepress/.temp/pages/record/webpack/index.html.vue")),
   // path: /vue-widget/components/VenCaptchaOrdinary.html

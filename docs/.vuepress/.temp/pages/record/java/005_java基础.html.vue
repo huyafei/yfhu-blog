@@ -1,7 +1,7 @@
 <template><div><h1 id="java基础" tabindex="-1"><a class="header-anchor" href="#java基础" aria-hidden="true">#</a> Java基础</h1>
 <h2 id="java基本结构" tabindex="-1"><a class="header-anchor" href="#java基本结构" aria-hidden="true">#</a> Java基本结构</h2>
 <p>一个完整的java程序：</p>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token doc-comment comment">/**
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token doc-comment comment">/**
  * （javadoc注释，写在这里的注释信息会被JDKbin
  * 目录下的javadoc.exe工具提取并生成帮助文档）
  * HelloWorld.java
@@ -15,7 +15,7 @@
       注释结束 */</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>**
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>**
  * （javadoc注释，写在这里的注释信息会被JDKbin
  * 目录下的javadoc.exe工具提取并生成帮助文档）
  * HelloWorld.java
@@ -30,7 +30,7 @@
   }
 }
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Java是面向对象的语言，一个程序的基本单位就是 <code v-pre>class</code>，<code v-pre>class</code> 是关键字，这里定义的 <code v-pre>class</code> 类的名字就是 HelloWorld：</p>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span> <span class="token comment">// 类名是 HelloWorld</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span> <span class="token comment">// 类名是 HelloWorld</span>
     <span class="token comment">// ...</span>
 <span class="token punctuation">}</span> <span class="token comment">// class定义结束</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>类名要求：</p>
@@ -60,7 +60,7 @@
 <p><code v-pre>public</code> 修饰符表示类的访问权限，<code v-pre>public</code> 表示该 <code v-pre>class</code> 是公开的，不写 <code v-pre>public</code> 则默认为 <code v-pre>private</code>  私有的，
 只能在当前文件中使用，不能在其他文件中使用。</p>
 <p>一个源文件中可以有多个 <code v-pre>class</code> 类，但是一个 <code v-pre>class</code> 类只能有一个 <code v-pre>public</code> 的类， 并且要求此 <code v-pre>类名</code> 必须和 <code v-pre>java源文件名</code> 保持一致。如下：</p>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">// HelloWorld.java</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token comment">// HelloWorld.java</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
  <span class="token comment">// ...</span>
 <span class="token punctuation">}</span>
@@ -72,7 +72,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>一个源文件中有多个 <code v-pre>class</code> 类时，在编译的时候一个<code v-pre>class</code> 会编译生成一个 <code v-pre>class</code> 字节码程序文件，一般规范化写法一个 java 源文件只定义一个 <code v-pre>class</code> 类，</p>
 <p>在 <code v-pre>class</code> 内部，可以定义若干方法（method）：</p>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">// HelloWorld.java</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token comment">// HelloWorld.java</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 方法名是main</span>
     <span class="token comment">// ...</span>
@@ -201,3 +201,5 @@
 想执行 X.class 当中的 main 方法：java X</li>
 </ul>
 </div></template>
+
+

@@ -1,12 +1,6 @@
 # webpack
 
-## webpack
-
-### webpack
-
-#### webpack
-
-### library
+## library
 编译后对外暴露方式
 ```js
   var path = require('path');

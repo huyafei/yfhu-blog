@@ -1,7 +1,7 @@
 <template><div><h1 id="v-drag" tabindex="-1"><a class="header-anchor" href="#v-drag" aria-hidden="true">#</a> v-drag</h1>
 <p>拖动指令</p>
 <p>::: demo</p>
-<div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+<div class="language-html line-numbers-mode" data-ext="html"><pre v-pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
 		<span class="token attr-name">v-drag</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{ isRange: false }<span class="token punctuation">"</span></span>
 		<span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>
@@ -37,3 +37,5 @@
 </tbody>
 </table>
 </div></template>
+
+

@@ -1,7 +1,7 @@
 <template><div><h1 id="vencaptchaordinary-验证码" tabindex="-1"><a class="header-anchor" href="#vencaptchaordinary-验证码" aria-hidden="true">#</a> VenCaptchaOrdinary 验证码</h1>
 <p>普通验证码组件</p>
 <p>::: demo</p>
-<div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+<div class="language-html line-numbers-mode" data-ext="html"><pre v-pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>VenCaptchaOrdinary</span> 
       <span class="token attr-name">:options</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{
         contentWidth: 120,
@@ -185,3 +185,5 @@
 </tbody>
 </table>
 </div></template>
+
+

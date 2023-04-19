@@ -1,7 +1,7 @@
 <template><div><h1 id="vencaptchaslide-滑动验证" tabindex="-1"><a class="header-anchor" href="#vencaptchaslide-滑动验证" aria-hidden="true">#</a> VenCaptchaSlide 滑动验证</h1>
 <p>滑动验证组件（待优化，滑动到最后会触发多次 getVal 事件）</p>
 <p>::: demo</p>
-<div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+<div class="language-html line-numbers-mode" data-ext="html"><pre v-pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>VenCaptchaSlide</span>
         <span class="token attr-name">:width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>300<span class="token punctuation">"</span></span>
         <span class="token attr-name">:height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>32<span class="token punctuation">"</span></span>
@@ -72,3 +72,5 @@
 </tbody>
 </table>
 </div></template>
+
+

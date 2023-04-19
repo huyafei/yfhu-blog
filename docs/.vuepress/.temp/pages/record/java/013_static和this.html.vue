@@ -4,7 +4,7 @@
 任何一个堆内存的java对象都有一个this，也就是说创建100个java对象则分别对应100个this。
 this指向“当前对象”，也可以说this代表“当前对象”，谁调用实例方法，this就是谁，this可以使用在实例方法中以及构造方法中，语法格式分别为“this.”和“this(..)”。<strong>this不能出现在带有static的方法当中</strong>。</p>
 <h3 id="this-实例方法中使用" tabindex="-1"><a class="header-anchor" href="#this-实例方法中使用" aria-hidden="true">#</a> this 实例方法中使用</h3>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">// ThisZx.java</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token comment">// ThisZx.java</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ThisZx</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">String</span> name <span class="token operator">=</span> <span class="token string">"名字"</span><span class="token punctuation">;</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span> no <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
@@ -92,7 +92,7 @@ this指向“当前对象”，也可以说this代表“当前对象”，谁调
 </ul>
 <h3 id="this-实际参数列表-使用" tabindex="-1"><a class="header-anchor" href="#this-实际参数列表-使用" aria-hidden="true">#</a> this(实际参数列表) 使用</h3>
 <p>this 的另外一种写法 this(实际参数列表)，但<strong>必须写在构造方法的第一行</strong>，否则报错。</p>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">// ThisZx.java</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token comment">// ThisZx.java</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ThisZx2</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">MobilePhone</span> mb <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MobilePhone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -147,12 +147,12 @@ this指向“当前对象”，也可以说this代表“当前对象”，谁调
 在方法体中声明的变量为局部变量，有效范围很小，只能在方法体中访问，方法结束之后局部变量内存就释放了，在内存方面局部变量存储在栈当中。
 在类体中定义的变量为成员变量，而成员变量又包括实例变量和静态变量，
 当成员变量声明时使用了static关键字，那么这种变量称为静态变量，没有使用static关键字称为实例变量</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>修饰符 class  类名{
+<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>修饰符 class  类名{
     //类体
     static 类型 成员变量1;
     static 类型 成员变量2;
 }
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">// StaticSy.java</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token comment">// StaticSy.java</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StaticSy</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// 类名.  访问静态成员变量</span>
@@ -208,13 +208,13 @@ this指向“当前对象”，也可以说this代表“当前对象”，谁调
 <p>静态代码块在类加载时执行，并且只执行一次。静态代码块实际上是java语言为程序员准备的一个特殊的时刻，这个时刻就是类加载时刻，如果你想在类加载的时候执行一段代码，那么这段代码就有的放矢了。
 例如我们要在类加载的时候解析某个文件，并且要求该文件只解析一次，那么此时就可以把解析该文件的代码写到静态代码块当中了。
 静态代码块的语法格式：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>修饰符 class  类名{
+<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>修饰符 class  类名{
     //静态代码块
     static{
       java语句;
     }
 }
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StaticDmk</span> <span class="token punctuation">{</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StaticDmk</span> <span class="token punctuation">{</span>
     <span class="token keyword">static</span> <span class="token punctuation">{</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token comment">// System.out.println(quantity);// 报错 非法前向引用,遵循代码自上而下顺序执行，先定义变量，再使用变量</span>
@@ -263,7 +263,7 @@ this指向“当前对象”，也可以说this代表“当前对象”，谁调
 <h3 id="static-静态方法" tabindex="-1"><a class="header-anchor" href="#static-静态方法" aria-hidden="true">#</a> static 静态方法</h3>
 <p>有静态变量就有静态方法，方法是描述的是行为动作，在方法前加 static 修饰符称为静态方法，静态方法使用 <code v-pre>类名.静态方法</code> 调用，不需要实例化，因为没有实例变量，所以静态方法中没有 this，只有实例方法中才有 this，
 一般用于编写 &quot;工具类&quot; 这样就不需要创建对象，直接使用 <code v-pre>类名.静态方法</code> 调用，方便使用</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>修饰符 class 类名{
+<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>修饰符 class 类名{
   修饰符列表 类型 变量名1;
   修饰符列表 类型 变量名2;
   
@@ -273,7 +273,7 @@ this指向“当前对象”，也可以说this代表“当前对象”，谁调
 
 }
 
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">//CustomerTest.java</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token comment">//CustomerTest.java</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomerTest</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">Customer</span> c_zs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Customer</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -328,3 +328,5 @@ this指向“当前对象”，也可以说this代表“当前对象”，谁调
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+

@@ -14,7 +14,7 @@
 <li>可以设置过期时间（以 UTC 或 GMT 时间）</li>
 </ul>
 <p><strong>使用：</strong></p>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token comment">//设置cookie</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">//设置cookie</span>
 <span class="token keyword">function</span> <span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token parameter">cname<span class="token punctuation">,</span> cvalue<span class="token punctuation">,</span> exdays</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     d<span class="token punctuation">.</span><span class="token function">setTime</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>exdays <span class="token operator">*</span> <span class="token number">24</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -61,7 +61,7 @@
 <li>当前浏览器窗口关闭前有效（关闭浏览器或窗口数据就销毁了）</li>
 </ul>
 <p><strong>使用：</strong></p>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token comment">//设置</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">//设置</span>
 sessionStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span>keyname<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
 <span class="token comment">//获取</span>
 sessionStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span>keyname<span class="token punctuation">)</span>
@@ -78,7 +78,7 @@ sessionStorage<span class="token punctuation">.</span><span class="token functio
 <li>永久保存，浏览器或窗口关闭也一直保存</li>
 </ul>
 <p><strong>使用：</strong></p>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token comment">//设置</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">//设置</span>
 localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span>keyname<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
 <span class="token comment">//获取</span>
 localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span>keyname<span class="token punctuation">)</span>
@@ -125,3 +125,5 @@ localStorage<span class="token punctuation">.</span><span class="token function"
 &lt;/tr&gt;</p>
 <p>&lt;/table&gt;</p>
 </div></template>
+
+

@@ -4,7 +4,7 @@
 <h4 id="webpack-3" tabindex="-1"><a class="header-anchor" href="#webpack-3" aria-hidden="true">#</a> webpack</h4>
 <h3 id="library" tabindex="-1"><a class="header-anchor" href="#library" aria-hidden="true">#</a> library</h3>
 <p>编译后对外暴露方式</p>
-<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>  <span class="token keyword">var</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code>  <span class="token keyword">var</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
@@ -31,3 +31,5 @@
 <li>UMD：在 AMD 或 CommonJS 的 require 之后可访问（libraryTarget:'umd'）</li>
 </ul>
 </div></template>
+
+

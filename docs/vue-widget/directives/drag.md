@@ -6,9 +6,10 @@
 
 ```html
 <template>
-	<div
-		v-drag="{ isRange: false }"
-		style="
+	<div style="position: relative;width: 300px;height: 300px">
+			<div
+				v-drag="{ isRange: false }"
+				style="
         width: 100px;
         height: 100px;
         display: inline-block;
@@ -16,9 +17,10 @@
         background: #ddd;
         left: 200px;
       "
-	>
-		pc/移动端全局指令
-	</div>
+			>
+				pc/移动端全局指令
+			</div>
+    </div>
 </template>
 ```
 :::

@@ -1,16 +1,4 @@
-# record
-
-## vue中使用 "?." 链式操作 编译报错
-npm install @babel/plugin-proposal-optional-chaining --save-dev   
-如果报错试试  
-npm install '@babel/plugin-proposal-optional-chaining' --save-dev 
-在babel.config.js中添加:
-```js
-module.exports = {
-  presets: ['@vue/app'],
-  plugins: ["@babel/plugin-proposal-optional-chaining"]
-}
-```
+# nginx
 
 ## 服务器安装 node
 
@@ -30,15 +18,15 @@ tar -zxvf node-v9.8.0.tar.gz
 mv node-v9.8.0  /usr/local/node/
 ```
 
-- 编辑文件 
-  - cd /etc 下编辑 profile 文件，或者 vim /etc/profile
-  - 增加以下内容：
+- 编辑文件
+    - cd /etc 下编辑 profile 文件，或者 vim /etc/profile
+    - 增加以下内容：
 ```text
 export NODE_HOME=/usr/local/node
 export PATH=$NODE_HOME/bin:$PATH
 ```
 - 执行source才能使用环境变量立即有效
-  - source /etc/profile
+    - source /etc/profile
 - 验证
 ```shell
 node -v

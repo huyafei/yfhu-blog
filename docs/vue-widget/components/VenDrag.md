@@ -7,15 +7,17 @@
 ```html
 
 <template>
-	<VenDrag
-		width="100px"
-		height="100px"
-		right="20px"
-		bottom="20px"
-		title="Drag me"
-		borderRadius="10px"
-		@click="clickEvent"
-	></VenDrag>
+	<div style="position: relative;width: 300px;height: 300px">
+			<VenDrag
+				width="100px"
+				height="100px"
+				right="20px"
+				bottom="20px"
+				title="Drag me"
+				borderRadius="10px"
+				@click="clickEvent"
+			></VenDrag>
+    </div>
 </template>
 <script>
 	export default {

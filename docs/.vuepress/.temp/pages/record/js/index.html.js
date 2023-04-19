@@ -1,4 +1,4 @@
-export const data = JSON.parse("{\"key\":\"v-0859b5fe\",\"path\":\"/record/js/\",\"title\":\"js\",\"lang\":\"en-US\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"js\",\"slug\":\"js-1\",\"children\":[{\"level\":3,\"title\":\"js\",\"slug\":\"js-2\",\"children\":[]}]}],\"git\":{\"updatedTime\":1656639476000,\"contributors\":[{\"name\":\"yfhu\",\"email\":\"879649442@qq.com\",\"commits\":2}]},\"filePathRelative\":\"record/js/README.md\"}")
+export const data = JSON.parse("{\"key\":\"v-0859b5fe\",\"path\":\"/record/js/\",\"title\":\"js\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"js\",\"slug\":\"js-1\",\"link\":\"#js-1\",\"children\":[{\"level\":3,\"title\":\"js\",\"slug\":\"js-2\",\"link\":\"#js-2\",\"children\":[]}]}],\"git\":{\"updatedTime\":1656639476000,\"contributors\":[{\"name\":\"yfhu\",\"email\":\"879649442@qq.com\",\"commits\":2}]},\"filePathRelative\":\"record/js/README.md\"}")
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()
