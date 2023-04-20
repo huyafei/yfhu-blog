@@ -1,10 +1,10 @@
 {
-  "name": "张三",
-  "short_name": "张三",
+  "name": "vensst",
+  "short_name": "vensst",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#2196f3",
-  "description": "张三的个人主页",
+  "description": "为开发者提供搭建项目模板脚手架、ui组件库、js工具库",
   "theme_color": "blue",
   "icons": [
     {

@@ -1,9 +1,3 @@
-// import {defineUserConfig, defaultTheme} from 'vuepress'
-// import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
-//
-// import {pwaPlugin} from '@vuepress/plugin-pwa'
-
-
 const config = {
   //导航
   nav: [
@@ -122,33 +116,35 @@ const config = {
         collapsible: true,
         children: [
           '/record/java/',
-          '/record/java/001_简介.md',
-          '/record/java/002_环境搭建.md',
-          '/record/java/003_java开发和运行过程.md',
-          '/record/java/004_DOS基础知识.md',
-          '/record/java/005_java基础.md',
-          '/record/java/006_变量和数据类型.md',
-          '/record/java/007_java运算符.md',
-          '/record/java/008_java控制语句.md',
-          '/record/java/009_数组.md',
-          '/record/java/010_方法.md',
+          '/record/java/001.md',
+          '/record/java/002.md',
+          '/record/java/003.md',
+          '/record/java/004.md',
+          '/record/java/005.md',
+          '/record/java/006.md',
+          '/record/java/007.md',
+          '/record/java/008.md',
+          '/record/java/009.md',
+          '/record/java/010.md',
+          '/record/java/011.md',
           {
             title: '面向对象',
             collapsible: true,
             children: [
-              '/record/java/011_面向对象.md',
-              '/record/java/012_封装.md',
-              '/record/java/013_static和this.md',
-              '/record/java/014_继承.md',
-              '/record/java/015_覆盖.md',
-              '/record/java/016_多态.md',
-              '/record/java/017_super.md',
-              '/record/java/018_包(package).md',
-              '/record/java/019_访问权限.md',
-              '/record/java/020_Object类.md',
-              '/record/java/021_final关键字.md',
-              '/record/java/022_抽象类.md',
-              '/record/java/023_接口.md',
+              '/record/java/012.md',
+              '/record/java/013.md',
+              '/record/java/014.md',
+              '/record/java/015.md',
+              '/record/java/016.md',
+              '/record/java/017.md',
+              '/record/java/018.md',
+              '/record/java/019.md',
+              '/record/java/020.md',
+              '/record/java/021.md',
+              '/record/java/022.md',
+              '/record/java/023.md',
+              '/record/java/024.md',
+              '/record/java/025.md',
             ]
           },
         ],
@@ -166,9 +162,9 @@ module.exports = {
   description: '为开发者提供搭建项目模板脚手架、ui组件库、js工具库',
   //额外的需要被注入到当前页面的 HTML <head> 中的标签，每个标签都可以以 [tagName, { attrName: attrValue }, innerHTML?]
   head: [
-    // @vuepress/plugin-pwa 配置
-    ['link', {rel: 'manifest', href: '/yfhu-blog/manifest.json'}],
-    ['link', {rel: 'icon', href: '/yfhu-blog/static/images/logo.png'}],
+    // @vuepress/pwa 配置  https://developer.mozilla.org/zh-CN/docs/Web/Manifest
+    // ['link', {rel: 'manifest', href: '/manifest.json'}],
+    ['link', {rel: 'icon', href: '/static/images/logo.png'}],
   ],
   // dev 配置
   port: "9523",
@@ -221,5 +217,6 @@ module.exports = {
     '@vuepress/back-to-top',
     '@vuepress/nprogress',
     'demo-container', // https://docs.chenjianhui.site/vuepress-plugin-demo-container/zh/
+    // '@vuepress/pwa',
   ]
 }

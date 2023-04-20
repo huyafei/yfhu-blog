@@ -13,13 +13,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 选择要作为作业中步骤的一部分运行的操作 在这里查：https://github.com/marketplace?type=actions&query=checkout+
       - uses: actions/checkout@v2
         with:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           # 选择要使用的 node 版本
           node-version: '14'

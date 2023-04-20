@@ -6,8 +6,15 @@
 * @LastEditors: yf_hu
 * @LastEditTime: 2023/4/19 14:29
 * */
-import VueWidget from "@vensst/vue-widget";
+// import VueWidget from "@vensst/vue-widget";
 
 export default ({Vue, options, router, siteData, isServer}) => {
-  Vue.use(VueWidget);
+  Vue.mixin({
+    mounted() {
+      import('@vensst/vue-widget').then((m) => {
+        Vue.use(m.default);
+      });
+    },
+  });
+
 }
