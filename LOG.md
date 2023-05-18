@@ -1,4 +1,7 @@
 # 更新日志
+## 2.0.0-beta.13 (2023--18)
+### Docs
+* @vensst/js-toolkit中string、number文档修改
 
 ## 2.0.0-beta.12 (2023-4-21)
 ### Docs

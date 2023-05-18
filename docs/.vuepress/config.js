@@ -90,8 +90,11 @@ const config = {
           '',
           "/record/vue/",
           "/record/node/",
-          "/record/nginx/",
           "/record/webpack/",
+          "/record/github/",
+          "/record/linux/",
+          "/record/nginx/",
+          "/record/docker/",
         ],
       },
       {

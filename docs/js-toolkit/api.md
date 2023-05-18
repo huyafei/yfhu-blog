@@ -87,6 +87,51 @@ jstk.thousandSeparator(31415926)
 // 31,415,926
 ```
 
+#### numberFormatter
+
+- 说明：
+
+数字格式化
+
+- 参数：
+
+  - {number} num 数字
+  - {number} digits 保留小数位数
+
+- 返回值：
+
+  {string}
+
+- 示例：
+
+```js
+jstk.numberFormatter(31415926) // 31M
+```
+
+#### timeAgo
+
+- 说明：
+
+以前时间距离当前时间的时间差
+
+- 参数：
+
+  - {Date|number} time 时间对象或时间戳
+  - {Object} opt 选项配置，可选 默认值：{d: 'day', h: 'hour', m: 'minute'}
+
+- 返回值：
+
+  {string}
+
+- 示例：
+
+```js
+// 假设当前时间为 2023-5-18
+jstk.timeAgo(new Date('2023-5-17'))
+// 1day
+```
+
+
 ## String
 
 ### strHideCode
@@ -141,11 +186,32 @@ jstk.strTrim(str, 4)
 //  这是 一段 文字
 ```
 
+#### uppercaseFirst
+
+- 说明：
+
+英文字母大写转换
+
+- 参数：
+
+  - {string} str
+
+- 返回值：
+
+  {string}
+
+- 示例：
+
+```js
+jstk.uppercaseFirst('userName') // UserName
+```
+
+
 ### strEnChangeCase
 
 - 说明：
 
-英文字母大小写转换
+英文字母大小写转换，如果是驼峰命名也会转换
 
 - 参数：
 
@@ -161,6 +227,8 @@ jstk.strTrim(str, 4)
 ```js
 jstk.strEnChangeCase(str, 1)
 // This Is A Text
+jstk.strEnChangeCase('UserName', 1)
+// Username
 jstk.strEnChangeCase(str, 2)
 // tHIS iS a tEXT
 jstk.strEnChangeCase(str, 3)
