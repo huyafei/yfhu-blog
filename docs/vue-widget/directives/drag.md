@@ -5,22 +5,16 @@
 ::: demo
 
 ```html
+
 <template>
-	<div style="position: relative;width: 300px;height: 300px">
-			<div
-				v-drag="{ isRange: false }"
-				style="
-        width: 100px;
-        height: 100px;
-        display: inline-block;
-        cursor: pointer;
-        background: #ddd;
-        left: 200px;
-      "
-			>
-				pc/移动端全局指令
-			</div>
-    </div>
+	<div style="width: 300px;height: 300px">
+		<div
+			v-drag="{ isRange: false }"
+	
+		>
+			pc/移动端全局指令
+		</div>
+	</div>
 </template>
 ```
 :::

@@ -1,28 +1,34 @@
-# 使用
+# 简介
 
-## npm/yarn
+[@vensst/js-toolkit](https://github.com/vensst/js-toolkit) 是个人常用的js工具库
 
-```shell
+## 使用node安装
+
+### 安装
+
+```
 # npm
 npm install @vensst/js-toolkit --save
-# yarn
-yarn add @vensst/js-toolkit --save
+
 ```
+
+### 引用
 
 ```js
 // 全部引用
-import * as jstk from "@vensst/js-toolkit";
-jstk.randomNum(0,100);
-// 单个引用
-// import {randomNum} from "@vensst/js-toolkit";
-// randomNum(0,100);
+import jstk from "@vensst/js-toolkit"
+
+jstk.randomNum(1, 100)
+
+// 指定功能引入
+import {randomNum} from "@vensst/js-toolkit"
+
+randomNum(1, 100)
 ```
-## CDN
+
+## 使用script引用
+
 ```html
+
 <script src="https://unpkg.com/@vensst/js-toolkit"></script>
 ```
-```js
-jstk.randomNum(0,100);
-```
-
-
