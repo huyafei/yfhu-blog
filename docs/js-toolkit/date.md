@@ -1,5 +1,28 @@
 # 日期
 
+## timeAgo
+
+- 说明：
+
+以前时间距离当前时间的时间差
+
+- 参数：
+
+  - {Date|number} time 时间对象或时间戳
+  - {Object} opt 选项配置，可选 默认值：{d: 'day', h: 'hour', m: 'minute'}
+
+- 返回值：
+
+  {string}
+
+- 示例：
+
+```js
+// 假设当前时间为 2023-5-18
+jstk.timeAgo(new Date('2023-5-17'))
+// 1day
+```
+
 ## formatDate
 
 - 说明：

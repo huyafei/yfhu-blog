@@ -104,7 +104,7 @@
     </template>
     ```
 
-## 数据可视化大屏解决方案
+## vue 数据可视化大屏解决方案
 
 ### 方式一：使用 scale
 
@@ -386,7 +386,7 @@ $vh_base: 1080; // 设计稿高度
 
 :::
 
-## vue中常用见的报错以及解决方案
+## vue 中常用见的报错以及解决方案
 
 ::: tip 提示
 只记录遇到的或者可能出现的报错以及解决方案
@@ -398,10 +398,10 @@ $vh_base: 1080; // 设计稿高度
 
 #### 排查与解决
 
-1. 是否使用高级语法，可选链运算符（?.）
+1. 是否使用高级语法，可选链运算符（?.）或者空值合并运算符（??）等等
 
-> 可选链运算符（?.）允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。可选链操作符在 ?. 之前的对象为
-> undefined 或 null 时，会短路直接返回 undefined。
+   > 可选链运算符（?.）允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。可选链操作符在 ?. 之前的对象为
+   > undefined 或 null 时，会短路直接返回 undefined。
 
 ![错误1](/static/images/vue/error/error_syntax_error_1.png)
 
@@ -429,18 +429,25 @@ vue2.6.11 + vue-cli4.5
       return current;
     };
    ```
-3. lodash的get方法
+3. lodash的get方法代替
 4. 升级vue到2.7+版本
-5.
+5. 如果是低版本的vue，可以使用babel插件来解决（针对js部分)
+   ，template模板部分可使用[vue-template-babel-compiler（不是官方的）](https://github.com/JuniorTour/vue-template-babel-compiler#readme)
+   ```shell
+     npm install --save-dev @babel/plugin-proposal-optional-chaining @babel/plugin-proposal-nullish-coalescing-operator
+   ```
+   ```js
+    // babel.config.js (package.json同级目录)
+   module.exports = {
+       plugins: [
+           '@babel/plugin-proposal-optional-chaining',
+           '@babel/plugin-proposal-nullish-coalescing-operator'
+       ]
+   }
+   ```
 
-如果是低版本的vue，可以使用babel插件来解决（针对js部分，template模板部分可使用[vue-template-babel-compiler（不是官方的）](https://github.com/JuniorTour/vue-template-babel-compiler#readme)）
+**备注**
 
-```js
- // babel.config.js (package.json同级目录)
-module.exports = {
-  plugins: [
-    '@babel/plugin-proposal-optional-chaining'
-  ]
-}
-```
+1. vue3.0+支持可选链运算符（?.）和空值合并运算符（??），vue2中建议template中不使用高阶运算符语法硬要使用的话用2、3方式解决，js中可以使用babel插件解决。
 
+## vue

@@ -1,66 +1,91 @@
 # 数字
 
-## randomNum
+## random
 
 - 说明：
 
-  根据区间获取随机整数(包含最大值、最大值)
+  根据区间获取随机数
 
 - 参数：
 
-    - {number} min 最小值，默认：0
-    - {number} max 最大值，默认：1
+    - {(number|string)} [min=0] 最小值（包含）
+    - {(number|string)} [max=1] 最大值（不包含）
+    - {boolean} [floating=true] 是否返回浮点数
 
 - 返回值：
 
-  {number}
+  {number} 随机数
 
 - 示例：
 
 ```js
-jstk.randomNum(0, 100)
+jstk.random(0, 100)
 // 79
 ```
 
-## numberToChinese
+## inRange
 
 - 说明：
 
-  将阿拉伯数字翻译成中文大写数字
+  判断数字是否在区间内
+
+- 添加版本：2.0.0-beta.1
 
 - 参数：
 
-    - {number|string} num 数字
+    - {number} num 数字
+    - {number} min 最小值（包含）
+    - {number} max 最大值（包含）
 
 - 返回值：
 
-    - {string}
+  {boolean} 是否在区间内
 
 - 示例：
 
 ```js
-jstk.numberToChinese(31415926)
+jstk.inRange(3, 2, 4) // true
+```
+
+## toChinese
+
+- 说明：
+
+  将数字转成中文大写
+
+- 参数：
+
+    - {(number|string)} num 数字
+
+- 返回值：
+
+    - {string} 中文大写
+
+- 示例：
+
+```js
+jstk.toChinese(31415926)
 // 三仟一百四十一萬五仟九百二十六
 ```
 
-## numberCurrencyToChinese
+## toCny
 
 - 说明：
 
-将阿拉伯数字数字金额转为中文大写金额
+将数字金额转为中文大写金额
 
 - 参数：
 
-    - {number|string} num 数字金额
+    - {(number|string)} num 数字金额
 
 - 返回值：
 
-  {string}
+  {string} 中文大写金额
 
 - 示例：
 
 ```js
-jstk.numberCurrencyToChinese(31415926)
+jstk.toCny(31415926)
 // 叁仟壹佰肆拾壹万伍仟玖佰贰拾陆元整
 ```
 
@@ -72,11 +97,11 @@ jstk.numberCurrencyToChinese(31415926)
 
 - 参数：
 
-    - {number|string} num 数字
+    - {(number|string)} num 数字
 
 - 返回值：
 
-  {*|string}
+  {string} 千分位分割后的字符串
 
 - 示例：
 
@@ -98,7 +123,7 @@ jstk.thousandSeparator(31415926)
 
 - 返回值：
 
-  {string}
+  {string} 格式化后的字符串
 
 - 示例：
 
@@ -106,25 +131,4 @@ jstk.thousandSeparator(31415926)
 jstk.numberFormatter(31415926) // 31M
 ```
 
-## timeAgo
 
-- 说明：
-
-以前时间距离当前时间的时间差
-
-- 参数：
-
-    - {Date|number} time 时间对象或时间戳
-    - {Object} opt 选项配置，可选 默认值：{d: 'day', h: 'hour', m: 'minute'}
-
-- 返回值：
-
-  {string}
-
-- 示例：
-
-```js
-// 假设当前时间为 2023-5-18
-jstk.timeAgo(new Date('2023-5-17'))
-// 1day
-```

@@ -1,5 +1,14 @@
 # js
 
+## js 中 == 和 === 的区别
+
+- == 会自动转换类型，再比较值是否相等
+- === 不会转换类型，直接比较值是否相等
+- 除了 == null 之外，其他情况都应该使用 ===
+- 如果两个操作数都是对象，则比较它们是不是指向同一个对象
+- 如果一个操作数是 null 或 undefined，则比较它们是否都是 null 或 undefined
+- 如果两个操作数是不同类型的，就会尝试在比较之前将它们转换为相同类型
+
 ## 装饰器 Decorator
 
 装饰器 Decorators 是一个函数，用来修改类的行为。装饰器只能用于类和类的方法，不能用于函数，因为存在函数提升。装饰器目前处于
@@ -47,8 +56,7 @@ const logParams = function (type) {
 }
 
 class Math {
-    @logParams('log') 
-    add(a, b) {
+    @logParams('log') add(a, b) {
         return a + b
     }
 }

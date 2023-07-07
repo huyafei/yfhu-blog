@@ -69,6 +69,31 @@ jstk.isNumber("123")
 // false
 ```
 
+## isNumeric
+
+- 说明：
+
+判断是否数字
+
+- 添加版本：2.0.0-beta.1
+
+- 参数：
+
+  - {*} value 任意类型
+
+- 返回值：
+
+  {boolean}
+
+- 示例：
+
+```js
+jstk.isNumeric(123) // true
+jstk.isNumeric("123") // true
+jstk.isNumeric("abc") // false
+```
+
+
 ## isBoolean
 
 - 说明：
