@@ -135,6 +135,81 @@ jstk.joinEleOfObjArr(arr, 'type')
 jstk.joinEleOfObjArr(arr, 'type', '-')
 // a-b-c
 ```
+## forEach
+
+- 说明：
+
+自定义 forEach 函数
+
+- 添加版本：2.0.0-beta.1
+
+- 参数：
+
+  - {any[]} array 数组
+  - {Function} callback 回调函数
+  - {Object} thisArg this指向
+
+- 示例：
+
+```js
+let arr = [1, 2, 3]
+jstk.forEach(arr, (item, index) => {
+  console.log('--forEach--', item, index)
+})
+```
+
+## map
+
+- 说明：
+
+自定义 map 函数
+
+- 参数：
+
+  - {any[]} arr 数组
+  - {Function} fn 回调函数
+  - {Object} thisObj this指向
+
+- 返回值：
+
+  {*[]}
+
+- 示例：
+
+```js
+  const arr1 = [
+  {
+    id: 1,
+    name: "a"
+  },
+  {
+    id: 2,
+    name: "b"
+  },
+  {
+    id: 3,
+    name: "c"
+  },
+  {
+    id: 4,
+    name: "c"
+  },
+  {
+    id: 3,
+    name: "c"
+  },
+  {
+    id: 4,
+    name: "c",
+    age: 28
+  },
+]
+const _arr1 = jstk.map(arr1, (item, index) => {
+  return {id: item.id, name: item.name}
+})
+console.log('--map--', _arr1)
+```
+
 
 ## arrRemoveRepeat
 
@@ -179,78 +254,6 @@ jstk.arrRemoveRepeat(arr)
 let arr = [1, 2, 3]
 jstk.arrContains(1)
 // true
-```
-
-## each
-
-- 说明：
-
-自定义 each 函数
-
-- 参数：
-
-    - {any[]} arr 数组
-    - {Function} fn 回调函数
-
-- 示例：
-
-```js
-let arr = [1, 2, 3]
-jstk.each(arr, (item, index) => {
-  console.log('--each--', item, index)
-})
-```
-
-## map
-
-- 说明：
-
-自定义 map 函数
-
-- 参数：
-
-    - {any[]} arr 数组
-    - {Function} fn 回调函数
-    - {Object} thisObj this指向
-
-- 返回值：
-
-  {*[]}
-
-- 示例：
-
-```js
-  const arr1 = [
-  {
-    id: 1,
-    name: "a"
-  },
-  {
-    id: 2,
-    name: "b"
-  },
-  {
-    id: 3,
-    name: "c"
-  },
-  {
-    id: 4,
-    name: "c"
-  },
-  {
-    id: 3,
-    name: "c"
-  },
-  {
-    id: 4,
-    name: "c",
-    age: 28
-  },
-]
-const _arr1 = jstk.map(arr1, (item, index) => {
-  return {id: item.id, name: item.name}
-})
-console.log('--map--', _arr1)
 ```
 
 ## sort

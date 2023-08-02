@@ -182,3 +182,24 @@ jstk.filterHtmlTag(str)
 jstk.randomCode()
 // F1Fo
 ```
+
+## findCharCount
+
+- 说明：
+  查找某个词或字符在字符串中出现次数
+
+- 添加版本：2.0.0-beta.1
+
+- 参数：    
+	- {string} str 字符串
+  - {string} key 要查找的词或字符
+
+- 返回值：  
+  {number} 出现次数
+
+- 示例：
+
+```js
+const str = " my name is lilei-lei fromChina "
+findCharCount(str,'i') // 5
+```
