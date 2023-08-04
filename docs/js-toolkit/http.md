@@ -4,7 +4,7 @@
 
 - 说明：
 
-XMLHttpRequest 简易封装成 ajax 请求
+	XMLHttpRequest 简易封装成 ajax 请求
 
 - 参数：
 
@@ -47,7 +47,7 @@ jstk._ajax({
 
 - 说明：
 
-封装 fetch 请求
+	封装 fetch 请求
 
 - 参数：
 

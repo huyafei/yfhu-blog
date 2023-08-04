@@ -56,8 +56,12 @@ const config = {
           "/js-toolkit/storage.md",
           "/js-toolkit/url.md",
           "/js-toolkit/file.md",
+          "/js-toolkit/img.md",
           "/js-toolkit/http.md",
+          "/js-toolkit/scroll.md",
+          "/js-toolkit/window.md",
           "/js-toolkit/other.md",
+          "/js-toolkit/thirdpart.md",
         ]
       },
     ],

@@ -1,153 +1,131 @@
 # 数组
 
-## findEleOfObjArr
+## find
 
 - 说明：
 
-查找对象数组是否存在某元素 返回 -1或下标，可使用 findIndex() 代替
+	返回数组中满足提供的函数的判断条件的第一个元素的值  
+
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
-    - {Array\<Object\>} arr 对象数组
-    - {string} attrName 查找的元素属性名
-    - {*} attrVal 查找的元素属性的值
+    - {Array} arr 数组
+    - {Function} callback 回调函数
+    - {number} [fromIndex=0] 从该索引处开始查找
 
 - 返回值：
 
-  {number} 下标或-1
+  {undefined|*} 满足条件的元素值
 
 - 示例：
 
 ```js
-let arr = [
-  {type: "a"},
-  {type: "b"},
-  {type: "c"}
-]
-jstk.findEleOfObjArr(arr, 'type', "b")
-// 1
-jstk.findEleOfObjArr(arr, 'type', "d")
-// -1
-```
-
-## uniqueArr
-
-- 说明：
-
-数组去重
-
-- 参数：
-
-    - @param {Array\<any\>} arr 数组（普通数组或对象数组都可以）
-
-- 返回值：
-
-  {*[]} 去重后的数组
-
-- 示例：
-
-```js
-let arr = [
+const arr = [
   {
     id: 1,
-    name: "a"
+    name: "a",
   },
   {
     id: 2,
-    name: "b"
+    name: "b",
   },
   {
     id: 3,
-    name: "c"
-  },
-  {
-    id: 4,
-    name: "c"
-  },
-  {
-    id: 3,
-    name: "c"
+    name: "c",
+    age: 28,
   },
   {
     id: 4,
     name: "c",
-    age: 28
   },
-]
-jstk.uniqueArr(arr)
-//[{id: 1, name: 'a'},{id: 2, name: 'b'},{id: 3, name: 'c'},{id: 4, name: 'c'},{id: 4, name: 'c', age: 28}]
+  {
+    id: 4,
+    name: "c",
+  },
+  {
+    id: 3,
+    name: "c",
+  },
+  {
+    id: 4,
+    name: "c",
+    age: 28,
+  },
+];
+jstk.find(arr, (item) => item.name === "a")
+// {id: 1, name: 'a'}
 ```
 
-## uniqueObjArr
+## findIndex
 
 - 说明：
 
-对象数组根据指定属性名称去重
+	返回数组中满足提供的函数的判断条件的第一个元素的下标,未找到返回-1  
+
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
-    - {Array\<Object\>} arr 对象数组
-    - {string} attrName 需要匹配去重的对象里属性名
+    - {Array} arr 数组
+    - {Function} callback 回调函数
+    - {number} [fromIndex=0] 从该索引处开始查找
 
 - 返回值：
 
-  {Array} 去重后的数组
+  {number} 满足条件的元素下标或-1 
 
 - 示例：
 
 ```js
-let arr = [
-  {type: "a"},
-  {type: "b"},
-  {type: "c"},
-  {type: "c"}
-]
-jstk.uniqueObjArr(arr, 'type')
-// [{type: "a"},{type: "b"},{type: "c"}]
+const arr = [
+  {
+    id: 1,
+    name: "a",
+  },
+  {
+    id: 2,
+    name: "b",
+  },
+  {
+    id: 3,
+    name: "c",
+    age: 28,
+  },
+  {
+    id: 4,
+    name: "c",
+  },
+  {
+    id: 4,
+    name: "c",
+  },
+  {
+    id: 3,
+    name: "c",
+  },
+  {
+    id: 4,
+    name: "c",
+    age: 28,
+  },
+];
+jstk.findIndex(arr, (item) => item.name === "b")
 ```
 
-## joinEleOfObjArr
-
-- 说明：
-
-对象数组根据指定属性名称值返回逗号隔开字符串
-
-- 参数：
-
-    - {Object[]} arr 对象数组
-    - {string} attrName 属性名
-    - {string} sym 符号 默认 ','
-
-- 返回值：
-
-  {string} 符号拼接的字符串
-
-- 示例：
-
-```js
-let arr = [
-  {type: "a"},
-  {type: "b"},
-  {type: "c"}
-]
-jstk.joinEleOfObjArr(arr, 'type')
-// a,b,c
-jstk.joinEleOfObjArr(arr, 'type', '-')
-// a-b-c
-```
 ## forEach
 
 - 说明：
 
-自定义 forEach 函数
+	自定义forEach函数
 
-- 添加版本：2.0.0-beta.1
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
-  - {any[]} array 数组
+  - {any[]} arr 数组
   - {Function} callback 回调函数
-  - {Object} thisArg this指向
+  - {Object} [thisObj] this指向
 
 - 示例：
 
@@ -162,13 +140,13 @@ jstk.forEach(arr, (item, index) => {
 
 - 说明：
 
-自定义 map 函数
+	自定义map函数
 
 - 参数：
 
   - {any[]} arr 数组
-  - {Function} fn 回调函数
-  - {Object} thisObj this指向
+  - {Function} callback 回调函数
+  - {Object} [thisObj] this指向
 
 - 返回值：
 
@@ -177,7 +155,7 @@ jstk.forEach(arr, (item, index) => {
 - 示例：
 
 ```js
-  const arr1 = [
+const arr1 = [
   {
     id: 1,
     name: "a"
@@ -210,62 +188,43 @@ const _arr1 = jstk.map(arr1, (item, index) => {
 console.log('--map--', _arr1)
 ```
 
-
-## arrRemoveRepeat
+## join
 
 - 说明：
 
-普通数组去重
+	对象数组中根据指定属性名以及拼接字符，返回拼接的属性名的值的字符串（普通或对象数组）  
+
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
-    - {Array\<string\|number\>} arr 普通数组
+    - {Object[]|string} arr 对象数组
+    - {string} char 符号
+    - {string} [attrName] 属性名，该参数有值是arr必须是对象数组
 
 - 返回值：
 
-  {(string\|number)[]} 去重后的数组
+  {string} 符号拼接的字符串
 
 - 示例：
 
 ```js
-let arr = [1, 1, 2, 4, 5, 'a', 'b', 'a']
-jstk.arrRemoveRepeat(arr)
-// [1, 2, 4, 5, 'a', 'b']
-```
-
-## arrContains
-
-- 说明：
-
-判断一个元素是否在数组中
-
-- 参数：
-
-    - {(string|number)[]} arr 普通数组
-    - {string|number} val 要查找的指定元素
-
-- 返回值：
-
-  {boolean} 布尔值
-
-- 示例：
-
-```js
-let arr = [1, 2, 3]
-jstk.arrContains(1)
-// true
+jstk.join(arr1, ",", "id")
+// 1,2,3,4,4,3,4
+jstk.join([1, 2, 3, 4, 5], "-")
+// 1-2-3-4-5
 ```
 
 ## sort
 
 - 说明：
 
-排序
+	排序
 
 - 参数：
 
-    - {number[]} arr number类型数组
-    - {number} type 排序类型 1：从小到大 2：从大到小 3：随机，默认：1
+  - {number[]} arr number类型数组
+  - {number} [type=1] 排序类型 1：从小到大 2：从大到小 3：随机
 
 - 返回值：
 
@@ -278,224 +237,239 @@ const _sortArrr = sort([1, 2, 3, 2, 3, 4])
 console.log(_sortArrr) // [1, 2, 2, 3, 3, 4]
 ```
 
-## formArray
+## unique
 
 - 说明：
 
-将类数组转换为数组的方法
+	数组去重（普通数组或对象数组都可以）  
 
-- 参数：
-
-    - {any[]} arr 类数组
-
-- 返回值：
-
-  {Array} 数组
-
-- 示例：
-
-```js
- const fun = function (a, b) {
-  console.log(formArray(arguments))
-}
-fun(1, 2)
-```
-
-## arrMerge
-
-- 说明：
-
-数组合并，求两个数组(集合)的并集
-
-- 参数：
-
-    - {number[]} a 数组1
-    - {number[]} b 数组2
-
-- 返回值：
-
-  {number[]} 返回并集数组
-
-- 示例：
-
-```js
-let arr = [1, 1, 2, 4, 5, 'a', 'b', 'a']
-let arr2 = [1, 2, 3, 6, 7, 'b', 'c']
-jstk.arrMerge(arr, arr2)
-// [1, 2, 4, 5, 'a', 'b', 3, 6, 7, 'c']
-```
-
-## arrIntersect
-
-- 说明：
-
-获取两个数组相同元素，求两个数组(集合)的交集
-
-- 参数：
-
-    - {number[]} a 数组1
-    - {number[]} b 数组2
-
-- 返回值：
-
-  {number[]} 返回交集数组
-
-- 示例：
-
-```js
-let arr = [1, 1, 2, 4, 5, 'a', 'b', 'a']
-let arr2 = [1, 2, 3, 6, 7, 'b', 'c']
-jstk.arrIntersect(arr, arr2)
-// [1, 2, 'b']
-```
-
-## getIntersectOfObjArr
-
-- 说明：
-
-  根据指定属性名获取两个对象数组的交集
-
-- 参数：
-    - {Object[]} arr1 数组1
-    - {Object[]} arr2 数组2
-    - {string} attrName 指定属性名称 例如：'a'
-- 返回值：
-
-  {Object[]} 返回交集数组
-
-- 示例：
-
-```js
-const arr1 = [
-  {
-    id: 1,
-    name: "a"
-  },
-  {
-    id: 2,
-    name: "b"
-  },
-  {
-    id: 3,
-    name: "c"
-  }
-]
-const arr2 = [
-  {
-    id: 1,
-    name: "a"
-  },
-  {
-    id: 3,
-    name: "c"
-  }
-]
-jstk.getIntersectOfObjArr(arr1, arr2, 'id')
-// [{id: 1,name: "a"},{id: 3,name: "c"}]
-```
-
-## getIntersectOfMultiObjArr
-
-- 说明：
-
-  根据指定属性名获取多个对象数组的交集
-
-- 参数：
-    - {Array\<Array\<Object\>\>} arr 数组，例如：[[{a:1},{a:2}],[{a:1},{a:3}]]
-    - {string} attrName 指定属性名称 例如：'a'
-- 返回值：
-
-  {Object[]} 返回交集数组
-
-- 示例：
-
-```js
-const arr1 = [
-  {
-    id: 1,
-    name: "a"
-  },
-  {
-    id: 2,
-    name: "b"
-  },
-  {
-    id: 3,
-    name: "c"
-  }
-]
-const arr2 = [
-  {
-    id: 1,
-    name: "a"
-  },
-  {
-    id: 3,
-    name: "c"
-  }
-]
-const arr3 = [
-  {
-    id: 1,
-    name: "a"
-  },
-  {
-    id: 2,
-    name: "b"
-  },
-  {
-    id: 3,
-    name: "c"
-  }
-]
-const arr4 = [
-  {
-    id: 2,
-    name: "b"
-  },
-  {
-    id: 3,
-    name: "c"
-  }
-]
-const arr = [arr1, arr2, arr3, arr4]
-const _arr = getIntersectOfMultiObjArr(arr, 'id')
-// [{id: 3, name: 'c'}]
-```
-
-## arrRemoveEle
-
-- 说明：
-
-删除数组其中一个元素
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
     - {Array\<any\>} arr 数组
-    - {any} ele 要删除的元素
+    - {string} [attrName] 指定属性名称 (如果传这个值，就是对象数组去重，arr参数必须是对象数组)
 
 - 返回值：
 
-  {Array\<any\>} 返回删除后的数组
+  {Array} 去重后的数组
 
 - 示例：
 
 ```js
-let arr = ['a', 'b', 'c']
-jstk.arrRemoveEle(arr, "b")
-// ['a', 'c']
+const arr1 = [
+  {
+    id: 1,
+    name: "a",
+  },
+  {
+    id: 2,
+    name: "b",
+  },
+  {
+    id: 3,
+    name: "c",
+    age: 28,
+  },
+  {
+    id: 4,
+    name: "c",
+  },
+  {
+    id: 4,
+    name: "c",
+  },
+  {
+    id: 3,
+    name: "c",
+  },
+  {
+    id: 4,
+    name: "c",
+    age: 28,
+  },
+];
+jstk.unique([1, 2, 3, 4, 3, 'a', 'a', 'b'])
+// [1, 2, 3, 4, 5, 6]
+jstk.unique(arr1)
+jstk.unique(arr1, 'name')
 ```
 
-## arrEleCount
+## union
 
 - 说明：
 
-检测数组中指定元素出现的次数
+	求两个数组的并集（普通数组或对象数组都可以）
+
+- 参数：
+
+    - {any[]} arr1 数组
+    - {any[]} arr2 数组
+    - {string} [attrName] 指定属性名称 (如果传这个值，就是对象数组合并，arr1和arr2必须是对象数组)
+
+- 返回值：
+
+  {any[]} 返回并集数组
+
+- 示例：
+
+```js
+const arr1 = [1, 2, 3, 4, 3];
+const arr2 = [3, 4, 5, 3, 6, 6];
+const arr3 = [
+  {id: 1},
+  {id: 2},
+  {id: 3, name: 'a'},
+  {id: 3},
+
+];
+const arr4 = [
+  {id: 3},
+  {id: 4},
+  {id: 4},
+  {id: 5},
+];
+jsttk.union(arr1, arr2);
+jsttk.union(arr3, arr4);
+jsttk.union(arr3, arr4, 'id');
+```
+
+## intersect
+
+- 说明：
+
+	求两个数组的交集
+
+- 参数：
+
+    - {any[]} arr1 数组
+    - {any[]} arr2 数组
+    - {string} [attrName] 指定属性名称 (如果传这个值，就是求两个对象数组交集，arr1和arr2必须是对象数组)
+
+- 返回值：
+
+  {any[]} 返回交集数组
+
+- 示例：
+
+```js
+const arr1 = [1, 2, 3, 4, 3];
+const arr2 = [3, 4, 5, 3, 6, 6];
+const arr3 = [
+  {id: 1},
+  {id: 2},
+  {id: 3, name: 'a'},
+  {id: 3},
+
+];
+const arr4 = [
+  {id: 3},
+  {id: 4},
+  {id: 4},
+  {id: 5},
+];
+jstk.intersect(arr1, arr2)
+jstk.intersect(arr3, arr4)
+jstk.intersect(arr3, arr4, 'id')
+```
+
+## intersectInMatrix
+
+- 说明：
+
+  在二维数组中根据指定属性名获取数组的交集
+
+- 参数：
+    - {Array\<Array\<Object\>\>} arr 数组，例如：[[{a:1},{a:2}],[{a:1},{a:3}]]
+    - {string} [attrName] 指定属性名称，如果不传，就是普通数组，如果传了，就是对象数组
+- 返回值：
+
+  {any[]} 返回交集数组
+
+- 示例：
+
+```js
+const arr1 = [
+  {
+    id: 1,
+    name: "a",
+  },
+  {
+    id: 2,
+    name: "b",
+  },
+  {
+    id: 3,
+    name: "c",
+    age: 28,
+  },
+  {
+    id: 4,
+    name: "c",
+  },
+  {
+    id: 4,
+    name: "c",
+  },
+  {
+    id: 3,
+    name: "c",
+  },
+  {
+    id: 4,
+    name: "c",
+    age: 28,
+  },
+];
+const arr2 = [
+  {
+    id: 1,
+    name: "a",
+  },
+  {
+    id: 3,
+    name: "c",
+  },
+];
+const arr3 = [
+  {
+    id: 1,
+    name: "a",
+  },
+  {
+    id: 2,
+    name: "b",
+  },
+  {
+    id: 3,
+    name: "c",
+  },
+];
+const arr4 = [
+  {
+    id: 2,
+    name: "b",
+  },
+  {
+    id: 3,
+    name: "c",
+  },
+];
+const arr = [arr1, arr2, arr3, arr4];
+jstk.intersectInMatrix(arr)
+jstk.intersectInMatrix(arr, 'id')
+```
+
+## elCount
+
+- 说明：
+
+	对象数组重复数据添加标记
 
 - 参数：
 
     - {any[]} arr 数组
-    - {any} val 元素
+    - {(Function|*)} predicate 指定元素或者回调函数
 
 - 返回值：
 
@@ -504,16 +478,16 @@ jstk.arrRemoveEle(arr, "b")
 - 示例：
 
 ```js
-let arr = [1, 1, 2, 4, 5, 'a', 'b', 'a']
-jstk.arrEleCount(arr, 1)
-// 2
+const arr1 = [1, 2, 3, 2, 3, 4]
+jstk.elCount(arr1, 2)
+jstk.elCount(arr1, item => item === 2)
 ```
 
-## addTagToObjectArrayDuplicateData
+## duplicateDataTag
 
 - 说明：
 
-对象数组重复数据添加标记
+	对象数组重复数据添加标记
 
 - 参数：
 
@@ -546,7 +520,7 @@ jstk.arrEleCount(arr, 1)
   }, {
     "nodeStr": "span"
   }]
-console.log(addTagToObjectArrayDuplicateData(arr7, 'nodeStr', 'axh'))
+jstk.duplicateDataTag(arr7, 'nodeStr', 'axh')
 // [
 //   {nodeStr: 'div', axh: 1},
 //   {nodeStr: 'span', axh: 1},
@@ -557,4 +531,125 @@ console.log(addTagToObjectArrayDuplicateData(arr7, 'nodeStr', 'axh'))
 //   {nodeStr: 'span', axh: 2},
 //   {nodeStr: 'span', axh: 3}
 // ]
+```
+
+## groupByAttr
+
+- 说明：
+
+  根据指定属性对数组进行分组
+
+- 添加版本：1.1.0-beta.11
+
+- 参数：
+
+    - {Object[]} arr 对象数组
+    - {string} attrName 指定属性名称
+
+- 返回值：
+
+  {Object} 返回分组后的对象 
+
+- 示例：
+
+```js
+const arr8 = [
+      {
+        "nodeStr": "div",
+        "nodeSize": 1
+      }, {
+        "nodeStr": "span",
+        "nodeSize": 2
+      }, {
+        "nodeStr": "p",
+        "nodeSize": 3
+      }, {
+        "nodeStr": "div",
+        "nodeSize": 4
+      }, {
+        "nodeStr": "div",
+        "nodeSize": 5
+      }, {
+        "nodeStr": "p",
+        "nodeSize": 6
+      }, {
+        "nodeStr": "span",
+        "nodeSize": 7
+      }, {
+        "nodeStr": "span",
+        "nodeSize": 8
+      }]
+jstk.groupByAttr(arr8, 'nodeStr')
+```
+
+## groupBySize
+
+- 说明：
+
+  根据指定长度对数组进行分组
+
+- 添加版本：
+
+- 参数：
+
+    - {any[]} arr 数组
+    - {number} size 指定长度
+
+- 返回值：
+
+  {any[][]} 返回分组后的二维数组 
+
+- 示例：
+
+```js
+const arr8 = [
+      {
+        "nodeStr": "div",
+        "nodeSize": 1
+      }, {
+        "nodeStr": "span",
+        "nodeSize": 2
+      }, {
+        "nodeStr": "p",
+        "nodeSize": 3
+      }, {
+        "nodeStr": "div",
+        "nodeSize": 4
+      }, {
+        "nodeStr": "div",
+        "nodeSize": 5
+      }, {
+        "nodeStr": "p",
+        "nodeSize": 6
+      }, {
+        "nodeStr": "span",
+        "nodeSize": 7
+      }, {
+        "nodeStr": "span",
+        "nodeSize": 8
+      }]
+jstk.groupBySize(arr8, 4)
+```
+
+## toArray
+
+- 说明：
+
+	将类数组转换为数组的方法
+
+- 参数：
+
+  - {any[]} arr 类数组
+
+- 返回值：
+
+  {Array} 数组
+
+- 示例：
+
+```js
+ const fun = function (a, b) {
+  console.log(toArray(arguments))
+}
+fun(1, 2)
 ```

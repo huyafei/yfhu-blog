@@ -6,9 +6,11 @@
 
   根据区间获取随机数
 
+- 添加版本：1.1.0-beta.11
+
 - 参数：
 
-    - {(number|string)} [min=0] 最小值（包含）
+    - {{(number|string)} [min=0] 最小值（包含）
     - {(number|string)} [max=1] 最大值（不包含）
     - {boolean} [floating=true] 是否返回浮点数
 
@@ -29,13 +31,13 @@ jstk.random(0, 100)
 
   判断数字是否在区间内
 
-- 添加版本：2.0.0-beta.1
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
     - {number} num 数字
-    - {number} min 最小值（包含）
-    - {number} max 最大值（包含）
+    - {number} min 最小值（不包含）
+    - {number} max 最大值（不包含）
 
 - 返回值：
 
@@ -64,15 +66,21 @@ jstk.inRange(3, 2, 4) // true
 - 示例：
 
 ```js
-jstk.toChinese(31415926)
-// 三仟一百四十一萬五仟九百二十六
+jstk.toChinese(3141592654)
+// 三十一億四仟一百五十九萬二仟六百五十四 
+jstk.toChinese(31415926.54)
+// 三仟一百四十一萬五仟九百二十六点五四 
+jstk.toChinese('abc')
+// undefined
 ```
 
 ## toCny
 
 - 说明：
 
-将数字金额转为中文大写金额
+	将数字金额转为中文大写金额
+
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
@@ -85,15 +93,17 @@ jstk.toChinese(31415926)
 - 示例：
 
 ```js
-jstk.toCny(31415926)
-// 叁仟壹佰肆拾壹万伍仟玖佰贰拾陆元整
+jstk.toCny(3141592654)
+// 叁拾壹亿肆仟壹佰伍拾玖万贰仟陆佰伍拾肆元整
+jstk.toCny('31415926.54321')
+// 叁仟壹佰肆拾壹万伍仟玖佰贰拾陆元伍角肆分
 ```
 
 ## thousandSeparator
 
 - 说明：
 
-将数字千分位分割
+	将数字千分位分割
 
 - 参数：
 
@@ -106,20 +116,22 @@ jstk.toCny(31415926)
 - 示例：
 
 ```js
-jstk.thousandSeparator(31415926)
-// 31,415,926
+jstk.thousandSeparator(3141592654)
+// 3,141,592,654
+jstk.thousandSeparator(31415926.12233655)
+// 31,415,926.12233655
 ```
 
 ## numberFormatter
 
 - 说明：
 
-数字格式化
+	数字格式化
 
 - 参数：
 
     - {number} num 数字
-    - {number} digits 保留小数位数
+    - {number} [digits] 保留小数位数
 
 - 返回值：
 
@@ -128,7 +140,8 @@ jstk.thousandSeparator(31415926)
 - 示例：
 
 ```js
-jstk.numberFormatter(31415926) // 31M
+jstk.numberFormatter(3141592654)
+// 3G
 ```
 
 

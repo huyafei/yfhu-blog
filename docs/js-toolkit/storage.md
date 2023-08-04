@@ -4,7 +4,7 @@
 
 - 说明：
 
-设置 localStorage
+	设置 localStorage
 
 - 参数：
 
@@ -21,7 +21,7 @@ jstk.setLocal("name", "zhangsan")
 
 - 说明：
 
-获取 localStorage
+	获取 localStorage
 
 - 参数：
 
@@ -42,7 +42,7 @@ jstk.getLocal("name")
 
 - 说明：
 
-清除某个 localStorage
+	清除某个 localStorage
 
 - 参数：
 
@@ -58,7 +58,7 @@ jstk.removeLocal("name")
 
 - 说明：
 
-清除所有 localStorage
+	清除所有 localStorage
 
 - 示例：
 
@@ -70,7 +70,7 @@ jstk.clearLocal()
 
 - 说明：
 
-设置 sessionStorage
+	设置 sessionStorage
 
 - 参数：
 
@@ -87,7 +87,7 @@ jstk.setSession("name", "zhangsan")
 
 - 说明：
 
-获取 sessionStorage
+	获取 sessionStorage
 
 - 参数：
 
@@ -108,7 +108,7 @@ jstk.getSession("name")
 
 - 说明：
 
-清除某个 sessionStorage
+	清除某个 sessionStorage
 
 - 参数：
 
@@ -124,7 +124,7 @@ jstk.removeSession("name")
 
 - 说明：
 
-清除所有 sessionStorage
+	清除所有 sessionStorage
 
 - 示例：
 
@@ -136,7 +136,7 @@ jstk.clearSession()
 
 - 说明：
 
-设置 cookie
+	设置 cookie
 
 - 参数：
 
@@ -161,7 +161,7 @@ jstk.setCookie("name", "zhangsan", {
 
 - 说明：
 
-获取 cookie
+	获取 cookie
 
 - 参数：
 
@@ -181,7 +181,7 @@ jstk.getCookie("name")
 
 - 说明：
 
-删除某个 cookie
+	删除某个 cookie
 
 - 参数：
 

@@ -4,15 +4,15 @@
 
 - 说明：
 
-根据文件名称（有文件类型） 查询对应blob type
+	根据文件类型查询对应 blob type类型
 
 - 参数：
 
-    - {string} name 名称，例如："image/png"
+    - {string} name 文件类型（例如："a.png"，"b.jpg"，或者 ".xls"）
 
 - 返回值：
 
-  {string|null} 对应 blob 类型
+  {(string|null)} 对应 blob type类型
 
 - 示例：
 
@@ -25,7 +25,7 @@ jstk.getBlobType(".image/png")
 
 - 说明：
 
-根据文件名称（带类型名称）和二进制数据流下载文件
+  根据二进制数据流和文件名称（带类型名称）下载文件
 
 - 参数：
 

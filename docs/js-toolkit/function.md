@@ -4,13 +4,13 @@
 
 - 说明：
 
-函数防抖
+	函数防抖
 
 - 参数：
 
     - {Function} fun 需要被防抖的函数
-    - {number} wait 防抖的时间（毫秒） 默认：500
-    - {boolean} immediate 是否立即执行 默认：true
+    - {number} [wait=500]  防抖的时间（毫秒） 
+    - {boolean} [immediate=true] 是否立即执行
 
 - 返回值：
 
@@ -32,12 +32,12 @@
 
 - 说明：
 
-函数节流
+	函数节流
 
 - 参数：
 
     - {Function} fun 需要被节流的函数
-    - {number} wait 节流的时间（毫秒） 默认：500
+    - {number} [wait=500] 节流的时间（毫秒
 
 - 返回值：
 

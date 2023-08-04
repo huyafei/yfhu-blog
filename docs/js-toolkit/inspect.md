@@ -4,7 +4,7 @@
 
 - 说明：
 
-类型判断
+	类型判断
 
 - 参数：
 
@@ -26,7 +26,7 @@ isType("String", "123")
 
 - 说明：
 
-判断是否字符串
+	判断是否字符串
 
 - 参数：
 
@@ -50,7 +50,7 @@ jstk.isString(123)
 
 - 说明：
 
-判断是否数字
+	判断是否数字
 
 - 参数：
 
@@ -73,9 +73,9 @@ jstk.isNumber("123")
 
 - 说明：
 
-判断是否数字
+	判断是否数字
 
-- 添加版本：2.0.0-beta.1
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
@@ -98,7 +98,7 @@ jstk.isNumeric("abc") // false
 
 - 说明：
 
-判断是否 boolean
+	判断是否 boolean
 
 - 参数：
 
@@ -121,7 +121,7 @@ jstk.isBoolean(123)
 
 - 说明：
 
-判断是否函数
+	判断是否函数
 
 - 参数：
 
@@ -143,7 +143,7 @@ jstk.isFunction(() => {
 
 - 说明：
 
-判断是否为 null
+	判断是否为 null
 
 - 参数：
 
@@ -164,7 +164,7 @@ jstk.isNull(null)
 
 - 说明：
 
-判断是否 undefined
+	判断是否 undefined
 
 - 参数：
 
@@ -185,7 +185,7 @@ jstk.isUndefined(undefined)
 
 - 说明：
 
-判断是否对象
+	判断是否对象
 
 - 参数：
 
@@ -206,7 +206,7 @@ jstk.isObject({})
 
 - 说明：
 
-判断是否数组
+	判断是否数组
 
 - 参数：
 
@@ -227,7 +227,7 @@ jstk.isArray([])
 
 - 说明：
 
-判断是否时间
+	判断是否时间
 
 - 参数：
 
@@ -248,7 +248,7 @@ jstk.isDate(new Date())
 
 - 说明：
 
-判断是否正则
+	判断是否正则
 
 - 参数：
 
@@ -269,7 +269,7 @@ jstk.isRegExp(/\d+/)
 
 - 说明：
 
-判断是否错误对象
+	判断是否错误对象
 
 - 参数：
 
@@ -290,7 +290,7 @@ jstk.isError(new Error())
 
 - 说明：
 
-判断是否 Symbol 函数
+	判断是否 Symbol 函数
 
 - 参数：
 
@@ -311,7 +311,7 @@ jstk.isSymbol(Symbol())
 
 - 说明：
 
-判断是否 Promise 对象
+	判断是否 Promise 对象
 
 - 参数：
 
@@ -332,7 +332,7 @@ jstk.isPromise(Promise.resolve())
 
 - 说明：
 
-判断是否 Set 对象
+	判断是否 Set 对象
 
 - 参数：
 
@@ -353,7 +353,7 @@ jstk.isSet(new Set())
 
 - 说明：
 
-判断是否为 false
+	判断是否为 false
 
 - 参数：
 
@@ -382,7 +382,7 @@ jstk.isFalse("NaN")
 
 - 说明：
 
-判断是否为 true
+	判断是否为 true
 
 - 参数：
 
@@ -399,11 +399,50 @@ jstk.isTrue(true)
 // true
 ```
 
+## isCardID
+
+- 说明：
+
+  严格的身份证校验
+
+- 参数：
+
+  - {string} sId 身份证号码
+
+- 返回值：
+
+  {boolean}
+
+- 示例：
+
+```js
+jstk.isCardID("350524199010109876")
+// false
+```
+
+## isMobile
+
+- 说明：
+
+  判断当前环境是否为移动端
+
+- 添加版本：1.1.0-beta.11
+
+- 返回值：
+
+  {boolean} 是否为移动端
+
+- 示例：
+
+```js
+jstk.isMobile()
+```
+
 ## isIos
 
 - 说明：
 
-判断当前环境是否为ios苹果手机
+	判断当前环境是否为ios苹果手机
 
 - 返回值：
 
@@ -415,27 +454,11 @@ jstk.isTrue(true)
 jstk.isIos()
 ```
 
-## getMobileEnv
-
-- 说明：
-
-获取当前属于哪种类型手机运行环境
-
-- 返回值：
-
-  {string|boolean}
-
-- 示例：
-
-```js
-jstk.getMobileEnv()
-```
-
 ## isPC
 
 - 说明：
 
-判断当前环境是否为 PC 端
+	判断当前环境是否为 PC 端
 
 - 返回值：
 
@@ -447,11 +470,44 @@ jstk.getMobileEnv()
 jstk.isPC()
 ```
 
+## isPcBrowser
+
+- 说明：
+
+  判断是否是PC浏览器
+
+- 返回值：
+
+  {boolean} 是否是PC浏览器
+
+- 示例：
+
+```js
+jstk.isPcBrowser()
+// true
+```
+
+## getMobileEnv
+
+- 说明：
+
+	获取当前属于哪种类型手机运行环境
+
+- 返回值：
+
+  {string} 是手机环境返回运行环境，不是手机运行环境返回Unknown
+
+- 示例：
+
+```js
+jstk.getMobileEnv()
+```
+
 ## getBrowserType
 
 - 说明：
 
-获取浏览器类型
+	获取浏览器类型
 
 - 返回值：
 
@@ -463,15 +519,15 @@ jstk.isPC()
 jstk.getBrowserType()
 ```
 
-## checkPwdLv
+## checkPasswordLevel
 
 - 说明：
 
-检测密码强度
+	检测密码强度
 
 - 参数：
 
-    - {string} str 需要检测密码
+    - {string} password 需要检测密码
 
 - 返回值：
 
@@ -480,15 +536,15 @@ jstk.getBrowserType()
 - 示例：
 
 ```js
-jstk.checkPwdLv("123456")
+jstk.checkPasswordLevel("123456")
 // 2
 ```
 
-## verifyFormatIsCorrect
+## checkFormat
 
 - 说明：
 
-检查手机号码，座机号码，身份证，密码，邮政编码，QQ号，邮箱，金额(小数点2位)，网址，IP，日期时间，数字，英文，中文，小写，大写，HTML标记格式是否正确
+	检查手机号码，座机号码，身份证，密码，邮政编码，QQ号，邮箱，金额(小数点2位)，网址，IP，日期时间，数字，英文，中文，小写，大写，HTML标记格式是否正确
 
 - 参数：
 
@@ -503,47 +559,11 @@ jstk.checkPwdLv("123456")
 - 示例：
 
 ```js
-jstk.verifyFormatIsCorrect("15061709876", "phone")
+jstk.checkFormat("15061709876", "phone")
 // true
-jstk.verifyFormatIsCorrect("025-1234567", "tel")
+jstk.checkFormat("025-1234567", "tel")
 // true
 // ...
 ```
 
-## isCardID
 
-- 说明：
-
-严格的身份证校验
-
-- 参数：
-
-    - {string} sId 身份证号码
-
-- 返回值：
-
-  {boolean}
-
-- 示例：
-
-```js
-jstk.isCardID("350524199010109876")
-// false
-```
-
-## isPCBroswer
-
-- 说明：
-
-判断是否是PC浏览器
-
-- 返回值：
-
-  {boolean} 是否是PC浏览器
-
-- 示例：
-
-```js
-jstk.isPCBroswer()
-// true
-```

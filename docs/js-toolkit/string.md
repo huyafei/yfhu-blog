@@ -6,7 +6,7 @@
 
 字符串脱敏
 
-- 添加版本：2.0.0-beta.1
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
@@ -22,22 +22,25 @@
 - 示例：
 
 ```js
-jstk.desensitization("这是一段文字", 2, 4)
-// 这是**文字
+const str = " my name is lilei-lei fromChina "
+jstk.desensitization(str, 5, 7)
+// my n**e is lilei-lei fromChina 
+jstk.desensitization(15063946854, 3, 7, 'x')
+// 150xxxx6854
 ```
 
 ## trim
 
 - 说明：
 
-字符串去除空格
+	去除字符串空格
 
-- 添加版本：2.0.0-beta.1
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
     - {string} str 需要去除空格的字符串
-    - {number} [type=2] 类型, 1:所有空格  2:前后空格 (默认)  3:前空格 4:后空格
+    - {number} [type=2] 类型 1:所有空格  2:前后空格(默认)  3:前空格 4:后空格
 
 - 返回值：
 
@@ -46,24 +49,24 @@ jstk.desensitization("这是一段文字", 2, 4)
 - 示例：
 
 ```js
-let str = " 这是 一段 文字 "
-jstk.strTrim(str, 1)
-// 这是一段文字
-jstk.strTrim(str, 2)
-// 这是 一段 文字
-jstk.strTrim(str, 3)
-// 这是 一段 文字
-jstk.strTrim(str, 4)
-//  这是 一段 文字
+const str = " my name is lilei-lei fromChina "
+jstk.trim(str, 1)
+// mynameislilei-leifromChina
+jstk.trim(str, 2)
+// my name is lilei-lei fromChina
+jstk.trim(str, 3)
+// my name is lilei-lei fromChina 
+jstk.trim(str, 4)
+//  my name is lilei-lei fromChina
 ```
 
 ## toUpperCaseFirst
 
 - 说明：
 
-字符串首字母转大写
+	字符串首字母转大写
 
-- 添加版本：2.0.0-beta.1
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
@@ -76,16 +79,18 @@ jstk.strTrim(str, 4)
 - 示例：
 
 ```js
-jstk.toUpperCaseFirst('userName') // UserName
+const str = "my name is lilei-lei fromChina "
+jstk.toUpperCaseFirst(str)
+// My name is lilei-lei fromChina 
 ```
 
 ## toUpperCase
 
 - 说明：
 
-字符串转大写
+	字符串转大写
 
-- 添加版本：2.0.0-beta.1
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
@@ -112,9 +117,9 @@ jstk.toUpperCase(str, 3)
 
 - 说明：
 
-字符串转小写
+	字符串转小写
 
-- 添加版本：2.0.0-beta.1
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
@@ -141,9 +146,9 @@ jstk.toLowerCase(str, 3)
 
 - 说明：
 
-过滤 html代码(把 <、> 和 & 转换)
+	过滤 html代码(把 <、> 和 & 转换)
 
-- 添加版本：2.0.0-beta.1
+- 添加版本：1.1.0-beta.11
 
 - 参数：
 
@@ -165,7 +170,7 @@ jstk.filterHtmlTag(str)
 
 - 说明：
 
-生成随机验证码
+	生成随机验证码
 
 - 参数：
 
@@ -174,7 +179,7 @@ jstk.filterHtmlTag(str)
 
 - 返回值：
 
-  {string}
+  {string} 随机验证码
 
 - 示例：
 
@@ -188,7 +193,7 @@ jstk.randomCode()
 - 说明：
   查找某个词或字符在字符串中出现次数
 
-- 添加版本：2.0.0-beta.1
+- 添加版本：1.1.0-beta.11
 
 - 参数：    
 	- {string} str 字符串
@@ -202,4 +207,54 @@ jstk.randomCode()
 ```js
 const str = " my name is lilei-lei fromChina "
 findCharCount(str,'i') // 5
+```
+
+## padStart
+
+- 说明：
+
+	字符串补全（开头）
+
+- 添加版本：1.1.0-beta.11
+
+- 参数：
+
+    - {(string|number)} str 字符串
+    - {number} targetLength 目标长度
+    - {string} padString 补全字符
+
+- 返回值：
+
+  {string} 补全后的字符串
+
+- 示例：
+
+```js
+jstk.padStart(9, 2, '0')
+// 09
+```
+
+## padEnd
+
+- 说明：
+
+	字符串补全（尾部）  
+
+- 添加版本：1.1.0-beta.11
+
+- 参数：
+
+    - {(string|number)} str 字符串
+    - {number} targetLength 目标长度
+    - {string} padString 补全字符
+
+- 返回值：
+
+  {string} 补全后的字符串
+
+- 示例：
+
+```js
+jstk.padEnd(150, 11, '*')
+// 150********
 ```
