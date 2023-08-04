@@ -117,7 +117,7 @@ jstk.atob('d3d3LmJhaWR1LmNvbSUzRmElM0QxJTI2YiUzRDI')
 // www.baidu.com?a=1&b=2
 ```
 
-## 
+## base64_decode
 
 - 说明：
 
@@ -170,7 +170,7 @@ jstk.atob('d3d3LmJhaWR1LmNvbSUzRmElM0QxJTI2YiUzRDI')
 
   {string}
 
-## 
+## stringToDom
 
 - 说明：
 
