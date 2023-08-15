@@ -161,6 +161,8 @@ resolutions 来升级packageB包升级。
 }
 ```
 
+## 发布包到 npm
+
 ## 搭建 cli 脚手架 发布到 npm 教程
 
 ### 初始化

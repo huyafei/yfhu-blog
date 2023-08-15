@@ -14,7 +14,7 @@
 - 示例：
 
 ```js
-jstk.setLocal("name", "zhangsan")
+jsToolkit.setLocal("name", "zhangsan")
 ```
 
 ## getLocal
@@ -34,7 +34,7 @@ jstk.setLocal("name", "zhangsan")
 - 示例：
 
 ```js
-jstk.getLocal("name")
+jsToolkit.getLocal("name")
 // "zhangsan"
 ```
 
@@ -51,7 +51,7 @@ jstk.getLocal("name")
 - 示例：
 
 ```js
-jstk.removeLocal("name")
+jsToolkit.removeLocal("name")
 ```
 
 ## clearLocal
@@ -63,7 +63,7 @@ jstk.removeLocal("name")
 - 示例：
 
 ```js
-jstk.clearLocal()
+jsToolkit.clearLocal()
 ```
 
 ## setSession
@@ -80,7 +80,7 @@ jstk.clearLocal()
 - 示例：
 
 ```js
-jstk.setSession("name", "zhangsan")
+jsToolkit.setSession("name", "zhangsan")
 ```
 
 ## getSession
@@ -100,7 +100,7 @@ jstk.setSession("name", "zhangsan")
 - 示例：
 
 ```js
-jstk.getSession("name")
+jsToolkit.getSession("name")
 // "zhangsan"
 ```
 
@@ -117,7 +117,7 @@ jstk.getSession("name")
 - 示例：
 
 ```js
-jstk.removeSession("name")
+jsToolkit.removeSession("name")
 ```
 
 ## clearSession
@@ -129,7 +129,7 @@ jstk.removeSession("name")
 - 示例：
 
 ```js
-jstk.clearSession()
+jsToolkit.clearSession()
 ```
 
 ## setCookie
@@ -150,7 +150,7 @@ jstk.clearSession()
 - 示例：
 
 ```js
-jstk.setCookie("name", "zhangsan", {
+jsToolkit.setCookie("name", "zhangsan", {
   expires: 3600,
   path: "/",
   domain: "www.baidu.com"
@@ -174,7 +174,7 @@ jstk.setCookie("name", "zhangsan", {
 - 示例：
 
 ```js
-jstk.getCookie("name")
+jsToolkit.getCookie("name")
 ```
 
 ## removeCookie
@@ -190,6 +190,6 @@ jstk.getCookie("name")
 - 示例：
 
 ```js
-jstk.removeCookie("name")
+jsToolkit.removeCookie("name")
 ```
 

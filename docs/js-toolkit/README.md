@@ -1,33 +1,37 @@
-# 简介
+# 开始
+
+## 介绍
 
 [@vensst/js-toolkit](https://github.com/vensst/js-toolkit) 是个人常用的js工具库
 
-## 使用node安装
+## 安装
 
-### 安装
+### 使用npm
 
 ```shell
-# npm
-npm install @vensst/js-toolkit --save
+npm install @vensst/js-toolkit -S
 ```
-
-### 引用
 
 ```js
 // 全部引用
-import jstk from "@vensst/js-toolkit"
+import jsToolkit from "@vensst/js-toolkit"
 
-jstk.random(1, 100)
+jsToolkit.random(1, 100)
 
-// 指定功能引入
+// 按需引用
 import {random} from "@vensst/js-toolkit"
 
 random(1, 100)
 ```
 
-## 使用script引用
+### 使用script
 
 ```html
 
 <script src="https://unpkg.com/@vensst/js-toolkit"></script>
+<script>
+  jsToolkit.random(1, 100)
+</script>
 ```
+
+

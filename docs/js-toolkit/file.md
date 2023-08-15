@@ -17,7 +17,7 @@
 - 示例：
 
 ```js
-jstk.getBlobType(".image/png")
+jsToolkit.getBlobType(".image/png")
 // "text/xml"
 ```
 
@@ -39,5 +39,5 @@ jstk.getBlobType(".image/png")
 - 示例：
 
 ```js
-jstk.downloadFile("....", "a.png")
+jsToolkit.downloadFile("....", "a.png")
 ```

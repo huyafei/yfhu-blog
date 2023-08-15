@@ -39,9 +39,9 @@ isType("String", "123")
 - 示例：
 
 ```js
-jstk.isString('123')
+jsToolkit.isString('123')
 // true
-jstk.isString(123)
+jsToolkit.isString(123)
 // false
 
 ```
@@ -63,9 +63,9 @@ jstk.isString(123)
 - 示例：
 
 ```js
-jstk.isNumber(123)
+jsToolkit.isNumber(123)
 // true
-jstk.isNumber("123")
+jsToolkit.isNumber("123")
 // false
 ```
 
@@ -88,9 +88,9 @@ jstk.isNumber("123")
 - 示例：
 
 ```js
-jstk.isNumeric(123) // true
-jstk.isNumeric("123") // true
-jstk.isNumeric("abc") // false
+jsToolkit.isNumeric(123) // true
+jsToolkit.isNumeric("123") // true
+jsToolkit.isNumeric("abc") // false
 ```
 
 
@@ -111,9 +111,9 @@ jstk.isNumeric("abc") // false
 - 示例：
 
 ```js
-jstk.isBoolean(true)
+jsToolkit.isBoolean(true)
 // true
-jstk.isBoolean(123)
+jsToolkit.isBoolean(123)
 // false
 ```
 
@@ -134,7 +134,7 @@ jstk.isBoolean(123)
 - 示例：
 
 ```js
-jstk.isFunction(() => {
+jsToolkit.isFunction(() => {
 })
 // true
 ```
@@ -156,7 +156,7 @@ jstk.isFunction(() => {
 - 示例：
 
 ```js
-jstk.isNull(null)
+jsToolkit.isNull(null)
 // true
 ```
 
@@ -177,7 +177,7 @@ jstk.isNull(null)
 - 示例：
 
 ```js
-jstk.isUndefined(undefined)
+jsToolkit.isUndefined(undefined)
 // true
 ```
 
@@ -198,7 +198,7 @@ jstk.isUndefined(undefined)
 - 示例：
 
 ```js
-jstk.isObject({})
+jsToolkit.isObject({})
 //  rue
 ```
 
@@ -219,7 +219,7 @@ jstk.isObject({})
 - 示例：
 
 ```js
-jstk.isArray([])
+jsToolkit.isArray([])
 // true
 ```
 
@@ -240,7 +240,7 @@ jstk.isArray([])
 - 示例：
 
 ```js
-jstk.isDate(new Date())
+jsToolkit.isDate(new Date())
 // true
 ```
 
@@ -261,7 +261,7 @@ jstk.isDate(new Date())
 - 示例：
 
 ```js
-jstk.isRegExp(/\d+/)
+jsToolkit.isRegExp(/\d+/)
 // true
 ```
 
@@ -282,7 +282,7 @@ jstk.isRegExp(/\d+/)
 - 示例：
 
 ```js
-jstk.isError(new Error())
+jsToolkit.isError(new Error())
 // true
 ```
 
@@ -303,7 +303,7 @@ jstk.isError(new Error())
 - 示例：
 
 ```js
-jstk.isSymbol(Symbol())
+jsToolkit.isSymbol(Symbol())
 // true
 ```
 
@@ -324,7 +324,7 @@ jstk.isSymbol(Symbol())
 - 示例：
 
 ```js
-jstk.isPromise(Promise.resolve())
+jsToolkit.isPromise(Promise.resolve())
 // true
 ```
 
@@ -345,7 +345,7 @@ jstk.isPromise(Promise.resolve())
 - 示例：
 
 ```js
-jstk.isSet(new Set())
+jsToolkit.isSet(new Set())
 // true
 ```
 
@@ -366,15 +366,15 @@ jstk.isSet(new Set())
 - 示例：
 
 ```js
-jstk.isFalse(false)
+jsToolkit.isFalse(false)
 // true
-jstk.isFalse("false")
+jsToolkit.isFalse("false")
 // true
-jstk.isFalse("null")
+jsToolkit.isFalse("null")
 // true
-jstk.isFalse("undefined")
+jsToolkit.isFalse("undefined")
 // true
-jstk.isFalse("NaN")
+jsToolkit.isFalse("NaN")
 // true
 ```
 
@@ -395,7 +395,7 @@ jstk.isFalse("NaN")
 - 示例：
 
 ```js
-jstk.isTrue(true)
+jsToolkit.isTrue(true)
 // true
 ```
 
@@ -416,7 +416,7 @@ jstk.isTrue(true)
 - 示例：
 
 ```js
-jstk.isCardID("350524199010109876")
+jsToolkit.isCardID("350524199010109876")
 // false
 ```
 
@@ -435,7 +435,7 @@ jstk.isCardID("350524199010109876")
 - 示例：
 
 ```js
-jstk.isMobile()
+jsToolkit.isMobile()
 ```
 
 ## isIos
@@ -451,7 +451,7 @@ jstk.isMobile()
 - 示例：
 
 ```js
-jstk.isIos()
+jsToolkit.isIos()
 ```
 
 ## isPC
@@ -467,7 +467,7 @@ jstk.isIos()
 - 示例：
 
 ```js
-jstk.isPC()
+jsToolkit.isPC()
 ```
 
 ## isPcBrowser
@@ -483,7 +483,7 @@ jstk.isPC()
 - 示例：
 
 ```js
-jstk.isPcBrowser()
+jsToolkit.isPcBrowser()
 // true
 ```
 
@@ -500,7 +500,7 @@ jstk.isPcBrowser()
 - 示例：
 
 ```js
-jstk.getMobileEnv()
+jsToolkit.getMobileEnv()
 ```
 
 ## getBrowserType
@@ -516,7 +516,7 @@ jstk.getMobileEnv()
 - 示例：
 
 ```js
-jstk.getBrowserType()
+jsToolkit.getBrowserType()
 ```
 
 ## checkPasswordLevel
@@ -536,7 +536,7 @@ jstk.getBrowserType()
 - 示例：
 
 ```js
-jstk.checkPasswordLevel("123456")
+jsToolkit.checkPasswordLevel("123456")
 // 2
 ```
 
@@ -559,9 +559,9 @@ jstk.checkPasswordLevel("123456")
 - 示例：
 
 ```js
-jstk.checkFormat("15061709876", "phone")
+jsToolkit.checkFormat("15061709876", "phone")
 // true
-jstk.checkFormat("025-1234567", "tel")
+jsToolkit.checkFormat("025-1234567", "tel")
 // true
 // ...
 ```

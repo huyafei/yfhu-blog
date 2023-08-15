@@ -22,7 +22,7 @@
 
 <button onclick="debounceEvent()">防抖</button>
 <script>
-	const debounceEvent = jstk.debounce(function () {
+	const debounceEvent = jsToolkit.debounce(function () {
 		console.log('防抖成功')
 	}, 1000, true)
 </script>
@@ -49,7 +49,7 @@
 
 <button onclick="throttleEvent()">节流</button>
 <script>
-	const throttleEvent = jstk.throttle(function () {
+	const throttleEvent = jsToolkit.throttle(function () {
 		console.log('节流成功')
 	}, 1000)
 </script>

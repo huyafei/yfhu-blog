@@ -4,26 +4,21 @@
 该组件库使用 Vue 2.x 开发
 :::
 
-## npm/yarn
+## 介绍
 
+[@vensst/cli](https://github.com/vensst/cli) 是个人搭建前端项目的脚手架工具
+
+## 安装
+
+### 全局安装
 
 ```shell
-# npm
 npm install -g @vensst/cli 
-# yarn
-yarn add -g @vensst/cli 
+vensst -v
 ```
 
-
-到这 `@vensst/cli` 脚手架工具就安装好了，使用 `vensst -v` 试试是否安装成功
+### 使用
 
 ```shell
-vensst -v
-# 2.0.0
-```
-
-## 使用
-
-``` shell
 vensst create <projectName>
 ```

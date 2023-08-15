@@ -7,6 +7,7 @@
 ## 手动安装
 
 1. 创建并进入一个新目录
+
 ```shell
 mkdir vuepress-demo
 cd vuepress-demo
@@ -14,34 +15,17 @@ cd vuepress-demo
 
 2. 初始化项目
 
-:::: code-group
-::: code-group-item npm
 ```shell
 npm init
 ```
-:::
-::: code-group-item yarn
-```shell
-yarn init
-```
-:::
-::::
 
 3. 安装本地开发依赖
-:::: code-group
-::: code-group-item npm
+
 ```shell
 npm install -D vuepress@next
 ```
-:::
-::: code-group-item yarn
-```shell
-yarn add -D vuepress@next
-```
-:::
-::::
 
-4. 在 `package.json` 中添加一些 `scripts` 
+4. 在 `package.json` 中添加一些 `scripts`
 
 ```json
 {
@@ -63,17 +47,9 @@ yarn add -D vuepress@next
 
 6. 运行
 
-:::: code-group
-::: code-group-item npm
 ```shell
 npm run docs:dev
 ```
-:::
-::: code-group-item yarn
-```shell
-yarn run docs:dev
-```
-:::
-::::
 
-VuePress 会在 [http://localhost:8080](http://localhost:8080) 启动一个热重载的开发服务器。当你修改你的 Markdown 文件时，浏览器中的内容也会自动更新。
+VuePress 会在 [http://localhost:8080](http://localhost:8080) 启动一个热重载的开发服务器。当你修改你的 Markdown
+文件时，浏览器中的内容也会自动更新。

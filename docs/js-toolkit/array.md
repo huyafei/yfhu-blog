@@ -53,7 +53,7 @@ const arr = [
     age: 28,
   },
 ];
-jstk.find(arr, (item) => item.name === "a")
+jsToolkit.find(arr, (item) => item.name === "a")
 // {id: 1, name: 'a'}
 ```
 
@@ -110,7 +110,7 @@ const arr = [
     age: 28,
   },
 ];
-jstk.findIndex(arr, (item) => item.name === "b")
+jsToolkit.findIndex(arr, (item) => item.name === "b")
 ```
 
 ## forEach
@@ -131,7 +131,7 @@ jstk.findIndex(arr, (item) => item.name === "b")
 
 ```js
 let arr = [1, 2, 3]
-jstk.forEach(arr, (item, index) => {
+jsToolkit.forEach(arr, (item, index) => {
   console.log('--forEach--', item, index)
 })
 ```
@@ -182,7 +182,7 @@ const arr1 = [
     age: 28
   },
 ]
-const _arr1 = jstk.map(arr1, (item, index) => {
+const _arr1 = jsToolkit.map(arr1, (item, index) => {
   return {id: item.id, name: item.name}
 })
 console.log('--map--', _arr1)
@@ -209,9 +209,9 @@ console.log('--map--', _arr1)
 - 示例：
 
 ```js
-jstk.join(arr1, ",", "id")
+jsToolkit.join(arr1, ",", "id")
 // 1,2,3,4,4,3,4
-jstk.join([1, 2, 3, 4, 5], "-")
+jsToolkit.join([1, 2, 3, 4, 5], "-")
 // 1-2-3-4-5
 ```
 
@@ -289,10 +289,10 @@ const arr1 = [
     age: 28,
   },
 ];
-jstk.unique([1, 2, 3, 4, 3, 'a', 'a', 'b'])
+jsToolkit.unique([1, 2, 3, 4, 3, 'a', 'a', 'b'])
 // [1, 2, 3, 4, 5, 6]
-jstk.unique(arr1)
-jstk.unique(arr1, 'name')
+jsToolkit.unique(arr1)
+jsToolkit.unique(arr1, 'name')
 ```
 
 ## union
@@ -368,9 +368,9 @@ const arr4 = [
   {id: 4},
   {id: 5},
 ];
-jstk.intersect(arr1, arr2)
-jstk.intersect(arr3, arr4)
-jstk.intersect(arr3, arr4, 'id')
+jsToolkit.intersect(arr1, arr2)
+jsToolkit.intersect(arr3, arr4)
+jsToolkit.intersect(arr3, arr4, 'id')
 ```
 
 ## intersectInMatrix
@@ -456,8 +456,8 @@ const arr4 = [
   },
 ];
 const arr = [arr1, arr2, arr3, arr4];
-jstk.intersectInMatrix(arr)
-jstk.intersectInMatrix(arr, 'id')
+jsToolkit.intersectInMatrix(arr)
+jsToolkit.intersectInMatrix(arr, 'id')
 ```
 
 ## elCount
@@ -479,8 +479,8 @@ jstk.intersectInMatrix(arr, 'id')
 
 ```js
 const arr1 = [1, 2, 3, 2, 3, 4]
-jstk.elCount(arr1, 2)
-jstk.elCount(arr1, item => item === 2)
+jsToolkit.elCount(arr1, 2)
+jsToolkit.elCount(arr1, item => item === 2)
 ```
 
 ## duplicateDataTag
@@ -520,7 +520,7 @@ jstk.elCount(arr1, item => item === 2)
   }, {
     "nodeStr": "span"
   }]
-jstk.duplicateDataTag(arr7, 'nodeStr', 'axh')
+jsToolkit.duplicateDataTag(arr7, 'nodeStr', 'axh')
 // [
 //   {nodeStr: 'div', axh: 1},
 //   {nodeStr: 'span', axh: 1},
@@ -579,7 +579,7 @@ const arr8 = [
         "nodeStr": "span",
         "nodeSize": 8
       }]
-jstk.groupByAttr(arr8, 'nodeStr')
+jsToolkit.groupByAttr(arr8, 'nodeStr')
 ```
 
 ## groupBySize
@@ -628,7 +628,7 @@ const arr8 = [
         "nodeStr": "span",
         "nodeSize": 8
       }]
-jstk.groupBySize(arr8, 4)
+jsToolkit.groupBySize(arr8, 4)
 ```
 
 ## toArray

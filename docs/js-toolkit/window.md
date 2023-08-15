@@ -58,7 +58,7 @@
 </div>
 <script src="https://unpkg.com/@vensst/js-toolkit"></script>
 <script type="module">
-  const {resizeFontSize,initDataView} = window.jstk
+  const {resizeFontSize,initDataView} = window.jsToolkit
 	console.log('--resizeFontSize--', resizeFontSize())
 
   const myDataView = initDataView(document.getElementById('app-main'))

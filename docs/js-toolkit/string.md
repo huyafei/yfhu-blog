@@ -4,7 +4,7 @@
 
 - 说明：
 
-字符串脱敏
+	字符串脱敏
 
 - 添加版本：1.1.0-beta.11
 
@@ -23,9 +23,9 @@
 
 ```js
 const str = " my name is lilei-lei fromChina "
-jstk.desensitization(str, 5, 7)
+jsToolkit.desensitization(str, 5, 7)
 // my n**e is lilei-lei fromChina 
-jstk.desensitization(15063946854, 3, 7, 'x')
+jsToolkit.desensitization(15063946854, 3, 7, 'x')
 // 150xxxx6854
 ```
 
@@ -50,13 +50,13 @@ jstk.desensitization(15063946854, 3, 7, 'x')
 
 ```js
 const str = " my name is lilei-lei fromChina "
-jstk.trim(str, 1)
+jsToolkit.trim(str, 1)
 // mynameislilei-leifromChina
-jstk.trim(str, 2)
+jsToolkit.trim(str, 2)
 // my name is lilei-lei fromChina
-jstk.trim(str, 3)
+jsToolkit.trim(str, 3)
 // my name is lilei-lei fromChina 
-jstk.trim(str, 4)
+jsToolkit.trim(str, 4)
 //  my name is lilei-lei fromChina
 ```
 
@@ -80,7 +80,7 @@ jstk.trim(str, 4)
 
 ```js
 const str = "my name is lilei-lei fromChina "
-jstk.toUpperCaseFirst(str)
+jsToolkit.toUpperCaseFirst(str)
 // My name is lilei-lei fromChina 
 ```
 
@@ -105,11 +105,11 @@ jstk.toUpperCaseFirst(str)
 
 ```js
 const str = " my name is lilei-lei fromChina "
-jstk.toUpperCase(str)
+jsToolkit.toUpperCase(str)
 //  MY NAME IS LILEI-LEI FROMCHINA 
-jstk.toUpperCase(str, 2)
+jsToolkit.toUpperCase(str, 2)
 //  My Name Is Lilei-Lei FromChina 
-jstk.toUpperCase(str, 3)
+jsToolkit.toUpperCase(str, 3)
 //  My Name Is Lilei-Lei Fromchina 
 ```
 
@@ -134,11 +134,11 @@ jstk.toUpperCase(str, 3)
 
 ```js
 const str = " MY NAME IS LILIEI-LEI FROMcHINA "
-jstk.toLowerCase(str)
+jsToolkit.toLowerCase(str)
 //  my name is liliei-lei fromchina 
-jstk.toLowerCase(str, 2)
+jsToolkit.toLowerCase(str, 2)
 //  mY nAME iS lILIEI-lEI fROMcHINA 
-jstk.toLowerCase(str, 3)
+jsToolkit.toLowerCase(str, 3)
 //  mY nAME iS lILIEI-lEI fROMCHINA 
 ```
 
@@ -162,7 +162,7 @@ jstk.toLowerCase(str, 3)
 
 ```js
 let str = "<div>这是一段文字</div>";
-jstk.filterHtmlTag(str)
+jsToolkit.filterHtmlTag(str)
 // &lt;div&gt;这是一段文字&lt;/div&gt;
 ```
 
@@ -184,13 +184,14 @@ jstk.filterHtmlTag(str)
 - 示例：
 
 ```js
-jstk.randomCode()
+jsToolkit.randomCode()
 // F1Fo
 ```
 
 ## findCharCount
 
 - 说明：
+
   查找某个词或字符在字符串中出现次数
 
 - 添加版本：1.1.0-beta.11
@@ -230,7 +231,7 @@ findCharCount(str,'i') // 5
 - 示例：
 
 ```js
-jstk.padStart(9, 2, '0')
+jsToolkit.padStart(9, 2, '0')
 // 09
 ```
 
@@ -255,6 +256,104 @@ jstk.padStart(9, 2, '0')
 - 示例：
 
 ```js
-jstk.padEnd(150, 11, '*')
+jsToolkit.padEnd(150, 11, '*')
 // 150********
+```
+
+## hasUnit
+
+- 说明：
+
+  判断字符串是否包含单位
+
+- 参数：
+
+  - {string} str 字符串
+
+- 添加版本：1.1.0-beta.12
+
+- 返回值：
+
+  {boolean} 是否包含单位
+
+- 示例：
+
+```js
+jsToolkit.hasUnit("10px") // true
+jsToolkit.hasUnit("20") // false
+```
+
+## removeUnit
+
+- 说明：
+
+  去除字符串单位
+
+- 参数：
+
+  - {string} str 字符串
+
+- 添加版本：1.1.0-beta.12
+
+- 返回值：
+
+  {string} 去除单位后的字符串
+
+- 示例：
+
+```js
+jsToolkit.removeUnit("10px") // 10
+jsToolkit.removeUnit("20") // 20
+```
+
+## camelToKebab
+
+- 说明：
+
+  驼峰命名转短横线命名
+
+- 参数：
+
+  - {string} str 字符串 
+  - {string} [separator='-'] 分隔符
+
+- 添加版本：1.1.0-beta.13
+
+- 返回值：
+
+  {string} 转换后的字符串
+
+- 示例：
+
+```js
+jsToolkit.camelToKebab('myName')
+// my-name
+jsToolkit.camelToKebab('myName','_')
+// my_name
+```
+
+## kebabToCamel
+
+- 说明：
+
+  短横线命名转驼峰命名
+
+- 参数：
+
+  - {string} str 字符串
+  - {string} [separator='-'] 分隔符
+
+- 添加版本：1.1.0-beta.13
+
+- 返回值：
+
+  {string} 转换后的字符串
+
+- 示例：
+
+```js
+jsToolkit.kebabToCamel('my-name')
+// myName 
+jsToolkit.kebabToCamel('my_name','_')
+// myName
 ```

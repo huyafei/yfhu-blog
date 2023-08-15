@@ -22,7 +22,7 @@
 - 示例：
 
 ```js
-jstk.scaleImg(500, 300, 600, 400)
+jsToolkit.scaleImg(500, 300, 600, 400)
 // {height: 360, scale: 1.2, width: 600}
 ```
 
@@ -50,7 +50,7 @@ jstk.scaleImg(500, 300, 600, 400)
     '//fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
     '//fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
   ]
-  jstk.imgLoadAll(arr, function () {
+  jsToolkit.imgLoadAll(arr, function () {
     console.log("--imgLoadAll--", "加载完成")
   })
 ```

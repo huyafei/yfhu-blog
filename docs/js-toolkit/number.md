@@ -21,7 +21,7 @@
 - 示例：
 
 ```js
-jstk.random(0, 100)
+jsToolkit.random(0, 100)
 // 79
 ```
 
@@ -46,7 +46,7 @@ jstk.random(0, 100)
 - 示例：
 
 ```js
-jstk.inRange(3, 2, 4) // true
+jsToolkit.inRange(3, 2, 4) // true
 ```
 
 ## toChinese
@@ -66,11 +66,11 @@ jstk.inRange(3, 2, 4) // true
 - 示例：
 
 ```js
-jstk.toChinese(3141592654)
+jsToolkit.toChinese(3141592654)
 // 三十一億四仟一百五十九萬二仟六百五十四 
-jstk.toChinese(31415926.54)
+jsToolkit.toChinese(31415926.54)
 // 三仟一百四十一萬五仟九百二十六点五四 
-jstk.toChinese('abc')
+jsToolkit.toChinese('abc')
 // undefined
 ```
 
@@ -93,9 +93,9 @@ jstk.toChinese('abc')
 - 示例：
 
 ```js
-jstk.toCny(3141592654)
+jsToolkit.toCny(3141592654)
 // 叁拾壹亿肆仟壹佰伍拾玖万贰仟陆佰伍拾肆元整
-jstk.toCny('31415926.54321')
+jsToolkit.toCny('31415926.54321')
 // 叁仟壹佰肆拾壹万伍仟玖佰贰拾陆元伍角肆分
 ```
 
@@ -116,9 +116,9 @@ jstk.toCny('31415926.54321')
 - 示例：
 
 ```js
-jstk.thousandSeparator(3141592654)
+jsToolkit.thousandSeparator(3141592654)
 // 3,141,592,654
-jstk.thousandSeparator(31415926.12233655)
+jsToolkit.thousandSeparator(31415926.12233655)
 // 31,415,926.12233655
 ```
 
@@ -140,7 +140,7 @@ jstk.thousandSeparator(31415926.12233655)
 - 示例：
 
 ```js
-jstk.numberFormatter(3141592654)
+jsToolkit.numberFormatter(3141592654)
 // 3G
 ```
 

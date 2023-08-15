@@ -17,9 +17,9 @@
 - 示例：
 
 ```js
-jstk.$("#id")
-jstk.$(".class")
-jstk.$("div")
+jsToolkit.$("#id")
+jsToolkit.$(".class")
+jsToolkit.$("div")
 ```
 
 ## hasClass
@@ -43,7 +43,7 @@ jstk.$("div")
 
 <div id="e" class="a b"></div>
 <script>
-	jstk.hasClass(jstk.$("#e"), 'a')
+	jsToolkit.hasClass(jsToolkit.$("#e"), 'a')
   // true
 </script>
 ```
@@ -64,7 +64,7 @@ jstk.$("div")
 ```html
 <div id="e" class="a b"></div>
 <script>
-	jstk.addClass(jstk.$("#e"), "c")
+	jsToolkit.addClass(jsToolkit.$("#e"), "c")
 </script>
 ```
 
@@ -85,7 +85,7 @@ jstk.$("div")
 
 <div id="e" class="a b c"></div>
 <script>
-	jstk.removeClass(jstk.$("#e"), "c")
+	jsToolkit.removeClass(jsToolkit.$("#e"), "c")
 </script>
 ```
 
@@ -107,7 +107,7 @@ jstk.$("div")
 
 <div id="e" class="a b c"></div>
 <script>
-	jstk.replaceClass(jstk.$("#e"), "c", "d")
+	jsToolkit.replaceClass(jsToolkit.$("#e"), "c", "d")
 </script>
 ```
 
@@ -128,7 +128,7 @@ jstk.$("div")
 - 示例：
 
 ```js
-jstk.siblings(jstk.$("#e"))
+jsToolkit.siblings(jsToolkit.$("#e"))
 ```
 
 ## getByStyle
@@ -152,7 +152,7 @@ jstk.siblings(jstk.$("#e"))
 
 <div id="e" style="color:red;"></div>
 <script>
-	jstk.getByStyle(jstk.$("#e"), "color")
+	jsToolkit.getByStyle(jsToolkit.$("#e"), "color")
 	// "red"
 </script>
 ```
@@ -171,7 +171,7 @@ jstk.siblings(jstk.$("#e"))
 - 示例：
 
 ```js
-jstk.elInsertAfter(jstk.$("#e"), "<div>123</div>")
+jsToolkit.elInsertAfter(jsToolkit.$("#e"), "<div>123</div>")
 ```
 
 ## elInsertBefore
@@ -188,7 +188,7 @@ jstk.elInsertAfter(jstk.$("#e"), "<div>123</div>")
 - 示例：
 
 ```js
-jstk.elInsertBefore(jstk.$("#e"), "<div>123</div>")
+jsToolkit.elInsertBefore(jsToolkit.$("#e"), "<div>123</div>")
 ```
 
 ## addStyle
@@ -211,7 +211,7 @@ jstk.elInsertBefore(jstk.$("#e"), "<div>123</div>")
 - 示例：
 
 ```js
-jstk.addStyle(jstk.$("#e"), {
+jsToolkit.addStyle(jsToolkit.$("#e"), {
   color: "red",
   fontSize: "12px"
 })

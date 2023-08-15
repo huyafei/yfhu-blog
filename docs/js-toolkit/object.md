@@ -32,16 +32,16 @@
     }
   }
   const arr = [1, 2, 'a', {a: 1}, [{a: 1}]]
-jstk.chainGet(obj, "a.b[0].c")
+jsToolkit.chainGet(obj, "a.b[0].c")
 // 1
-jstk.chainGet(obj, "a.b[0].d")
+jsToolkit.chainGet(obj, "a.b[0].d")
 // undefined
-jstk.chainGet(obj, "a.d.d",0)
+jsToolkit.chainGet(obj, "a.d.d",0)
 // 0
-jstk.chainGet(obj, "a['c']")
+jsToolkit.chainGet(obj, "a['c']")
 // 2
-jstk.chainGet(obj, "a['d']",0)
+jsToolkit.chainGet(obj, "a['d']",0)
 // 0
-jstk.chainGet(arr[3], "a")
+jsToolkit.chainGet(arr[3], "a")
 // 1
 ```

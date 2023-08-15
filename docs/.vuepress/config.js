@@ -7,9 +7,9 @@ const config = {
       items: [
         {text: '@vensst/js-toolkit', link: '/js-toolkit/'},
         {text: '@vensst/vue-widget', link: '/vue-widget/'},
-        {text: 'ven-ui', target: '_blank', link: 'https://vensst.github.io/ven-ui/'},
-        // {text: '@vensst/ven-ui',link: '/ven-ui/'},
+        {text: '@vensst/css-toolkit', link: '/css-toolkit/'},
         {text: '@vensst/cli', link: '/cli/'},
+        {text: 'ven-ui', target: '_blank', link: 'https://vensst.github.io/ven-ui/'},
         {text: '笔记', link: '/record/'},
       ]
     },
@@ -37,6 +37,15 @@ const config = {
           '',
         ],
       },
+    ],
+    '/css-toolkit/': [
+      {
+        title: "css-toolkit文档",
+        collapsable: false,
+        children: [
+          "",
+        ]
+      }
     ],
     '/js-toolkit/': [
       {
@@ -75,9 +84,10 @@ const config = {
             title: "组件",
             collapsable: false,
             children: [
-              "/vue-widget/components/VenDrag.md",
-              "/vue-widget/components/VenCaptchaOrdinary.md",
-              "/vue-widget/components/VenCaptchaSlide.md",
+              "/vue-widget/components/Captcha.md",
+              "/vue-widget/components/Drag.md",
+              "/vue-widget/components/Signature.md",
+              "/vue-widget/components/Table.md",
             ]
           },
           {
@@ -85,6 +95,7 @@ const config = {
             collapsable: false,
             children: [
               "/vue-widget/directives/drag.md",
+              "/vue-widget/directives/lazy.md",
             ]
           }
         ]
@@ -122,7 +133,7 @@ const config = {
         collapsible: false,
         children: [
           '/record/vuepress/',
-          '/record/vuepress/vuepress-guide.md',
+          '/record/vuepress/problem.md',
         ],
       },
       {

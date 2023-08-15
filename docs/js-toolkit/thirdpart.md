@@ -9,9 +9,9 @@
 - 示例：
 
 ```js
-jstk.dayjs().format()
+jsToolkit.dayjs().format()
 // 默认返回的是 ISO8601 格式字符串 '2020-04-02T08:02:17-05:00'
-jstk.dayjs().format("YYYY-MM-DD HH:mm:ss")
+jsToolkit.dayjs().format("YYYY-MM-DD HH:mm:ss")
 // '2020-04-02 08:02:17'
 ```
 
@@ -24,12 +24,12 @@ jstk.dayjs().format("YYYY-MM-DD HH:mm:ss")
 - 示例：
 
 ```js
-jstk.Cookies.set("name", "张三", {expires: 1});
-jstk.Cookies.get("name")
+jsToolkit.Cookies.set("name", "张三", {expires: 1});
+jsToolkit.Cookies.get("name")
 // "张三"
 
-jstk.Cookies.setJSON("userInfo", {name: "张三", age: 18}, {expires: 7, path: ''})
-jstk.Cookies.getJSON("userInfo") // {name: "张三", age: 18}
+jsToolkit.Cookies.setJSON("userInfo", {name: "张三", age: 18}, {expires: 7, path: ''})
+jsToolkit.Cookies.getJSON("userInfo") // {name: "张三", age: 18}
 ```
 
 ## mathjs
@@ -41,7 +41,7 @@ jstk.Cookies.getJSON("userInfo") // {name: "张三", age: 18}
 - 示例：
 
 ```js
-const {math} = jstk
+const {math} = jsToolkit
 
 // 加
 function add(num1, num2) {
@@ -80,7 +80,7 @@ divide(8, 2) //4
 - 示例：
 
 ```js
-const {CryptoJS} = window.jstk
+const {CryptoJS} = window.jsToolkit
 // MD5 加密
 let hash = CryptoJS.MD5("Message");
 console.log(hash.toString());
@@ -104,7 +104,7 @@ console.log(decrypted.toString(CryptoJS.enc.Utf8));
 - 示例：
 
 ```js
-const {v4:uuid} = window.jstk.uuid
+const {v4:uuid} = window.jsToolkit.uuid
 console.log(uuid())
 // 653afd17-e592-4cdc-b32d-ee1909a97194
 ```

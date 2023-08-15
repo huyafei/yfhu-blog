@@ -1,6 +1,6 @@
 # Http
 
-## _ajax
+## ajax
 
 - 说明：
 
@@ -26,7 +26,7 @@
 - 示例：
 
 ```js
-jstk._ajax({
+jsToolkit._ajax({
   method: "post", // 请求方式
   url: "http://baidu.com",  // 请求地址
   async: true, // 是否异步
@@ -43,7 +43,7 @@ jstk._ajax({
 })
 ```
 
-## _fetch
+## fetch
 
 - 说明：
 
@@ -71,7 +71,7 @@ jstk._ajax({
 - 示例：
 
 ```js
-jstk._fetch("http://baidu.com", {
+jsToolkit._fetch("http://baidu.com", {
   method: "post",
   headers: {
     "Content-Type": "application/json" // 设置请求头

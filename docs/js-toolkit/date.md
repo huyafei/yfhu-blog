@@ -18,11 +18,11 @@
 - 示例：
 
 ```js
-jstk.format()
+jsToolkit.format()
 // 2023-08-03 10:05:18
-jstk.format(new Date(), 'YYYY/MM/DD hh:mm:ss WW')
+jsToolkit.format(new Date(), 'YYYY/MM/DD hh:mm:ss WW')
 // 2023/08/03 10:05:18 星期四
-jstk.format('2020-9-9', 'YYYY/M/D')
+jsToolkit.format('2020-9-9', 'YYYY/M/D')
 // 2020/9/9
 ```
 
@@ -48,7 +48,7 @@ jstk.format('2020-9-9', 'YYYY/M/D')
 
 ```js
 // 假设当前时间为 2023-5-18
-jstk.timeAgo('2023-5-17')
+jsToolkit.timeAgo('2023-5-17')
 // 1day
 ```
 
@@ -69,7 +69,7 @@ jstk.timeAgo('2023-5-17')
 - 示例：
 
 ```js
-jstk.getTimeSlotByStep(240)
+jsToolkit.getTimeSlotByStep(240)
 // ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00']
 ```
 
@@ -91,7 +91,7 @@ jstk.getTimeSlotByStep(240)
 - 示例：
 
 ```js
-jstk.sToHms(7200)
+jsToolkit.sToHms(7200)
 // 2时0分0秒
 ```
 
@@ -115,11 +115,11 @@ jstk.sToHms(7200)
 - 示例：
 
 ```js
-jstk.getDaysFromDate()
+jsToolkit.getDaysFromDate()
 // ['2023-08-01', '2023-08-02', '2023-08-03']
-jstk.getDaysFromDate('2023-1-1', 2, 1)
+jsToolkit.getDaysFromDate('2023-1-1', 2, 1)
 // ['2023-01-01', '2023-01-02', '2023-01-03']
-jstk.getDaysFromDate('2023-1-1', 2, 0, 'YYYY/MM/DD')
+jsToolkit.getDaysFromDate('2023-1-1', 2, 0, 'YYYY/MM/DD')
 //['2022/12/30', '2022/12/31', '2023/01/01', '2023/01/02', '2023/01/03']
 ```
 
@@ -140,9 +140,9 @@ jstk.getDaysFromDate('2023-1-1', 2, 0, 'YYYY/MM/DD')
 - 示例：
 
 ```js
-jstk.getDaysInMonth()
+jsToolkit.getDaysInMonth()
 // 31
-jstk.getDaysInMonth('2023-6')
+jsToolkit.getDaysInMonth('2023-6')
 // 30
 ```
 
@@ -163,9 +163,9 @@ jstk.getDaysInMonth('2023-6')
 - 示例：
 
 ```js
-jstk.getDaysInYear()
+jsToolkit.getDaysInYear()
 // 365
-jstk.getDaysInYear(2020)
+jsToolkit.getDaysInYear(2020)
 // 366
 ```
 
@@ -189,11 +189,11 @@ jstk.getDaysInYear(2020)
 - 示例：
 
 ```js
-jstk.getMonthsFromDate()
+jsToolkit.getMonthsFromDate()
 // ['2023-06', '2023-07', '2023-08']
-jstk.getMonthsFromDate('2023-1-1', 2, 1)
+jsToolkit.getMonthsFromDate('2023-1-1', 2, 1)
 // ['2023-01', '2023-02', '2023-03']
-jstk.getMonthsFromDate('2023-1-1', 2, 0, 'YYYY/MM/DD')
+jsToolkit.getMonthsFromDate('2023-1-1', 2, 0, 'YYYY/MM/DD')
 // ['2022/11/01', '2022/12/01', '2023/01/01', '2023/02/01', '2023/03/01']
 ```
 
@@ -215,9 +215,9 @@ jstk.getMonthsFromDate('2023-1-1', 2, 0, 'YYYY/MM/DD')
 - 示例：
 
 ```js
-jstk.getStartMonthOfQuarter()
+jsToolkit.getStartMonthOfQuarter()
 // 2023-07 
-jstk.getStartMonthOfQuarter('2022-2')
+jsToolkit.getStartMonthOfQuarter('2022-2')
 // 2022-01
 ```
 
@@ -238,9 +238,9 @@ jstk.getStartMonthOfQuarter('2022-2')
 - 示例：
 
 ```js
-jstk.getDayOfYear()
+jsToolkit.getDayOfYear()
 // 215
-jstk.getDayOfYear('2022-2-1')
+jsToolkit.getDayOfYear('2022-2-1')
 // 32
 ```
 
@@ -261,9 +261,9 @@ jstk.getDayOfYear('2022-2-1')
 - 示例：
 
 ```js
-jstk.getWeekOfYear()
+jsToolkit.getWeekOfYear()
 // 31
-jstk.getWeekOfYear('2022-2-1')
+jsToolkit.getWeekOfYear('2022-2-1')
 // 5
 ```
 
@@ -286,11 +286,11 @@ jstk.getWeekOfYear('2022-2-1')
 - 示例：
 
 ```js
-jstk.getStartOfWeek()
+jsToolkit.getStartOfWeek()
 // 2023-07-31 
-jstk.getStartOfWeek('2022-01-01', -1)
+jsToolkit.getStartOfWeek('2022-01-01', -1)
 // 2021-12-20 
-jstk.getStartOfWeek('2022-01-01', 1)
+jsToolkit.getStartOfWeek('2022-01-01', 1)
 // 2022-01-03
 ```
 
@@ -313,11 +313,11 @@ jstk.getStartOfWeek('2022-01-01', 1)
 - 示例：
 
 ```js
-jstk.getEndOfWeek()
+jsToolkit.getEndOfWeek()
 // 2023-08-06 
-jstk.getEndOfWeek('2022-01-01', -1)
+jsToolkit.getEndOfWeek('2022-01-01', -1)
 // 2021-12-26 
-jstk.getEndOfWeek('2022-01-01', 1)
+jsToolkit.getEndOfWeek('2022-01-01', 1)
 // 2022-01-09
 ```
 
@@ -340,11 +340,11 @@ jstk.getEndOfWeek('2022-01-01', 1)
 - 示例：
 
 ```js
-jstk.getStartOfMonth()
+jsToolkit.getStartOfMonth()
 // 2023-08-01 
-jstk.getStartOfMonth(new Date('2022-01-01'), -1)
+jsToolkit.getStartOfMonth(new Date('2022-01-01'), -1)
 // 2021-12-01 
-jstk.getStartOfMonth(new Date('2022-01-01'), 1)
+jsToolkit.getStartOfMonth(new Date('2022-01-01'), 1)
 // 2022-02-01
 
 ```
@@ -368,11 +368,11 @@ jstk.getStartOfMonth(new Date('2022-01-01'), 1)
 - 示例：
 
 ```js
-jstk.getEndOfMonth()
+jsToolkit.getEndOfMonth()
 // 2023-08-31
-jstk.getEndOfMonth(new Date('2022-01-01'), -1)
+jsToolkit.getEndOfMonth(new Date('2022-01-01'), -1)
 // 2021-12-31
-jstk.getEndOfMonth(new Date('2022-01-01'), 1)
+jsToolkit.getEndOfMonth(new Date('2022-01-01'), 1)
 // 2022-02-28
 ```
 
@@ -395,11 +395,11 @@ jstk.getEndOfMonth(new Date('2022-01-01'), 1)
 - 示例：
 
 ```js
-jstk.getStartOfQuarter()
+jsToolkit.getStartOfQuarter()
 // 2023-07-01 
-jstk.getStartOfQuarter(new Date('2022-01-01'), -1)
+jsToolkit.getStartOfQuarter(new Date('2022-01-01'), -1)
 // 2021-10-01 
-jstk.getStartOfQuarter(new Date('2022-01-01'), 1)
+jsToolkit.getStartOfQuarter(new Date('2022-01-01'), 1)
 // 2022-04-01
 ```
 
@@ -422,11 +422,11 @@ jstk.getStartOfQuarter(new Date('2022-01-01'), 1)
 - 示例：
 
 ```js
-jstk.getEndOfQuarter()
+jsToolkit.getEndOfQuarter()
 // 2023-07-31 
-jstk.getEndOfQuarter(new Date('2022-01-01'), -1)
+jsToolkit.getEndOfQuarter(new Date('2022-01-01'), -1)
 // 2021-10-31 
-jstk.getEndOfQuarter(new Date('2022-01-01'), 1)
+jsToolkit.getEndOfQuarter(new Date('2022-01-01'), 1)
 // 2022-04-30
 ```
 
@@ -449,9 +449,9 @@ jstk.getEndOfQuarter(new Date('2022-01-01'), 1)
 - 示例：
 
 ```js
-jstk.getStartOfYear()
+jsToolkit.getStartOfYear()
 // 2023-01-01 
-jstk.getStartOfYear('2022-01-01')
+jsToolkit.getStartOfYear('2022-01-01')
 // 2022-01-01
 ```
 
@@ -474,9 +474,9 @@ jstk.getStartOfYear('2022-01-01')
 - 示例：
 
 ```js
-jstk.getEndOfYear()
+jsToolkit.getEndOfYear()
 // 2023-12-31 
-jstk.getEndOfYear('2022-01-01')
+jsToolkit.getEndOfYear('2022-01-01')
 // 2022-12-31
 ```
 
@@ -500,13 +500,13 @@ jstk.getEndOfYear('2022-01-01')
 
 ```js
 // 假设当前时间为 2023-8-3
-jstk.getBeforeDate(new Date())
+jsToolkit.getBeforeDate(new Date())
 // 2023-08-02 
-jstk.getBeforeDate(new Date(), 3)
+jsToolkit.getBeforeDate(new Date(), 3)
 // 2023-07-31 
-jstk.getBeforeDate(new Date(), 7)
+jsToolkit.getBeforeDate(new Date(), 7)
 // 2023-07-27 
-jstk.getBeforeDate(new Date(), 30)
+jsToolkit.getBeforeDate(new Date(), 30)
 // 2023-07-04
 ```
 
@@ -529,7 +529,7 @@ jstk.getBeforeDate(new Date(), 30)
 - 示例：
 
 ```js
-jstk.getDatesBetween('2022-1-1', '2022-1-5')
+jsToolkit.getDatesBetween('2022-1-1', '2022-1-5')
 // ['2022-01-01', '2022-01-02', '2022-01-03', '2022-01-04', '2022-01-05']
 ```
 

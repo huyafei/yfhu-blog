@@ -16,6 +16,7 @@
     "vuepress-plugin-demo-container": "^0.2.0"
   },
   "dependencies": {
-    "@vensst/vue-widget": "^0.1.1"
+    "@vensst/js-toolkit": "^1.1.0-beta.13",
+    "@vensst/vue-widget": "^1.0.0-beta.2"
   }
 }

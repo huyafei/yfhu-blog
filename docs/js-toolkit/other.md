@@ -19,7 +19,7 @@
 ```js
 let arr = [null, undefined, true, new Date(), function () {
 }, 1, "aa", [], {}]
-jstk.deepClone(arr)
+jsToolkit.deepClone(arr)
 // [null, undefined, true, Wed Jun 22 2022 13:53:02 GMT+0800 (中国标准时间), ƒ, 1, 'aa', [], {}]
 ```
 
@@ -36,7 +36,7 @@ jstk.deepClone(arr)
 - 示例：
 
 ```js
- jstk.getRandomColor() // #2a260b
+ jsToolkit.getRandomColor() // #2a260b
 ```
 
 ## addScript
@@ -55,7 +55,7 @@ jstk.deepClone(arr)
 - 示例：
 
 ```js
-jstk.addScript("https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js")
+jsToolkit.addScript("https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js")
 ```
 
 ## downloadByUrl
@@ -73,7 +73,7 @@ jstk.addScript("https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js")
 - 示例：
 
 ```js
-jstk.downloadByUrl("https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js")
+jsToolkit.downloadByUrl("https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js")
 ```
 
 ## btoa
@@ -93,7 +93,7 @@ jstk.downloadByUrl("https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js
 - 示例：
 
 ```js
-jstk.btoa('www.baidu.com?a=1&b=2') // d3d3LmJhaWR1LmNvbSUzRmElM0QxJTI2YiUzRDI=
+jsToolkit.btoa('www.baidu.com?a=1&b=2') // d3d3LmJhaWR1LmNvbSUzRmElM0QxJTI2YiUzRDI=
 ```
 
 ## atob
@@ -113,7 +113,7 @@ jstk.btoa('www.baidu.com?a=1&b=2') // d3d3LmJhaWR1LmNvbSUzRmElM0QxJTI2YiUzRDI=
 - 示例：
 
 ```js
-jstk.atob('d3d3LmJhaWR1LmNvbSUzRmElM0QxJTI2YiUzRDI')
+jsToolkit.atob('d3d3LmJhaWR1LmNvbSUzRmElM0QxJTI2YiUzRDI')
 // www.baidu.com?a=1&b=2
 ```
 

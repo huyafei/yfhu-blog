@@ -18,7 +18,7 @@
 - 示例：
 
 ```js
-jstk.add(0.4, 0.1)
+jsToolkit.add(0.4, 0.1)
 // 0.5
 ```
 
@@ -40,7 +40,7 @@ jstk.add(0.4, 0.1)
 - 示例：
 
 ```js
-jstk.subtract(0.4, 0.1)
+jsToolkit.subtract(0.4, 0.1)
 // 0.3
 ```
 
@@ -62,7 +62,7 @@ jstk.subtract(0.4, 0.1)
 - 示例：
 
 ```js
-jstk.multiply(0.4, 0.1)
+jsToolkit.multiply(0.4, 0.1)
 // 0.04
 ```
 
@@ -84,7 +84,7 @@ jstk.multiply(0.4, 0.1)
 - 示例：
 
 ```js
-jstk.divide(8, 2)
+jsToolkit.divide(8, 2)
 // 4
 ```
 
@@ -106,7 +106,7 @@ jstk.divide(8, 2)
 
 ```js
 let arr = [1, 2, 3]
-jstk.sum(arr)
+jsToolkit.sum(arr)
 // 6
 ```
 
@@ -128,7 +128,7 @@ jstk.sum(arr)
 
 ```js
 let arr = [1, 2, 3]
-jstk.average(arr)
+jsToolkit.average(arr)
 // 2
 ```
 
@@ -150,7 +150,7 @@ jstk.average(arr)
 
 ```js
 let arr = [1, 2, 3]
-jstk.max(arr)
+jsToolkit.max(arr)
 // 3
 ```
 
@@ -172,7 +172,7 @@ jstk.max(arr)
 
 ```js
 let arr = [1, 2, 3]
-jstk.max(arr)
+jsToolkit.max(arr)
 // 1
 ```
 
@@ -194,7 +194,7 @@ jstk.max(arr)
 - 示例：
 
 ```js
-jstk.ceil("23.321523", 2)
+jsToolkit.ceil("23.321523", 2)
 // 23.33
 ```
 
@@ -216,7 +216,7 @@ jstk.ceil("23.321523", 2)
 - 示例：
 
 ```js
-jstk.floor("23.321523", 2)
+jsToolkit.floor("23.321523", 2)
 // 23.32
 ```
 
@@ -238,9 +238,9 @@ jstk.floor("23.321523", 2)
 - 示例：
 
 ```js
-jstk.decimal("23.321523", 2)
+jsToolkit.decimal("23.321523", 2)
 // 23.32
-jstk.decimal("23", 2)
+jsToolkit.decimal("23", 2)
 // 23
 ```
 

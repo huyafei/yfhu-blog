@@ -18,9 +18,9 @@
 
 ```js
 // http://localhost/examples/index.html?name=张三&age=18
-jstk.getUrlParam('name')
+jsToolkit.getUrlParam('name')
 // 张三
-jstk.getUrlParam('sex')
+jsToolkit.getUrlParam('sex')
 // null
 ```
 
@@ -42,7 +42,7 @@ jstk.getUrlParam('sex')
 
 ```js
 // http://localhost/examples/index.html?name=张三&age=18
-jstk.getUrlParams('name')
+jsToolkit.getUrlParams('name')
 // {name: '张三', age: '18'}
 ```
 
@@ -64,7 +64,7 @@ jstk.getUrlParams('name')
 - 示例：
 
 ```js
-jstk.delUrlParam('http://localhost/examples/index.html?name=张三&age=18', 'name')
+jsToolkit.delUrlParam('http://localhost/examples/index.html?name=张三&age=18', 'name')
 // http://localhost/examples/index.html?age=18
 ```
 
@@ -87,6 +87,6 @@ jstk.delUrlParam('http://localhost/examples/index.html?name=张三&age=18', 'nam
 - 示例：
 
 ```js
-jstk.objToUrlParams({a: 1, b: 2})
+jsToolkit.objToUrlParams({a: 1, b: 2})
 // a=1&b=2
 ```
