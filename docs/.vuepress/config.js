@@ -7,7 +7,7 @@ const config = {
       items: [
         {text: '@vensst/js-toolkit', link: '/js-toolkit/'},
         {text: '@vensst/vue-widget', link: '/vue-widget/'},
-        {text: '@vensst/css-toolkit', link: '/css-toolkit/'},
+        // {text: '@vensst/css-toolkit', link: '/css-toolkit/'},
         {text: '@vensst/cli', link: '/cli/'},
         {text: 'ven-ui', target: '_blank', link: 'https://vensst.github.io/ven-ui/'},
         {text: '笔记', link: '/record/'},
@@ -81,13 +81,21 @@ const config = {
         children: [
           "",
           {
-            title: "组件",
+            title: "功能组件",
             collapsable: false,
             children: [
               "/vue-widget/components/Captcha.md",
               "/vue-widget/components/Drag.md",
               "/vue-widget/components/Signature.md",
               "/vue-widget/components/Table.md",
+              "/vue-widget/components/Teleport.md",
+              "/vue-widget/components/ContextMenu.md",
+            ]
+          },
+          {
+            title: "样式组件",
+            collapsable: false,
+            children: [
             ]
           },
           {
@@ -206,12 +214,12 @@ module.exports = {
     // 键名是该语言所属的子路径
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     '/': {
-      lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
+      lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
       title: 'vensst',
       description: '为开发者提供搭建项目模板脚手架、ui组件库、js工具库'
     },
-    '/zh/': {
-      lang: 'zh-CN',
+    '/en/': {
+      lang: 'en-US',
       title: 'vensst',
       description: '为开发者提供搭建项目模板脚手架、ui组件库、js工具库'
     }
@@ -225,20 +233,20 @@ module.exports = {
   //主题
   themeConfig: {
     locales: {
-      // 英文
-      '/': {
-        // 多语言下拉菜单的标题
-        selectText: 'Languages',
-        // 该语言在下拉菜单中的标签
-        label: 'English',
-        ...config
-      },
       // 中文
-      '/zh/': {
+      '/': {
         // 多语言下拉菜单的标题
         selectText: '选择语言',
         // 该语言在下拉菜单中的标签
         label: '简体中文',
+        ...config
+      },
+      // 英文
+      '/en/': {
+        // 多语言下拉菜单的标题
+        selectText: 'Languages',
+        // 该语言在下拉菜单中的标签
+        label: 'English',
         ...config
       },
     },

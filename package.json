@@ -1,6 +1,6 @@
 {
   "name": "vensst",
-  "version": "2.0.0-beta.15",
+  "version": "2.0.0-beta.16",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
@@ -17,6 +17,6 @@
   },
   "dependencies": {
     "@vensst/js-toolkit": "^1.1.0-beta.13",
-    "@vensst/vue-widget": "^1.0.0-beta.2"
+    "@vensst/vue-widget": "^1.0.0-beta.4"
   }
 }

@@ -105,3 +105,108 @@ box-sizing属性可以设置为以下值：
 
 :::
 
+
+
+### 图片添加不规则边框
+[CSS 给图片加上不规则边框](https://blog.csdn.net/tianyu0_0/article/details/111311778)
+::: demo
+
+```vue
+<template>
+  <div class="img">
+    <!-- 边框图片 -->
+<!--    	<img src="/docs/record/css/img/border.png">-->
+    <!-- 使用背景为边框图片 -->
+    <img>
+  </div>
+</template>
+<script>
+export default {
+  data(){
+    return {}
+  }
+}
+</script>
+<style>
+.img {
+  width: 400px;
+  height: 200px;
+  /* 要显示的图片作为背景 */
+  background: url('./img/tp.jpg') no-repeat;
+  background-size: 100% 100%;
+  /* mask所需要的图片  原理是 mask属性会将图片的透明部分不显示，只显示有颜色的部分 */
+  -webkit-mask-image: url('./img/mask.png');
+  -webkit-mask-size: 100% 100%;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  background: url('./img/border.png');
+  background-size: 100% 100%;
+}
+</style>
+```
+
+:::
+
+#### 六边形
+::: demo
+```vue
+<template>
+  <div class="ven-hexagon">
+    <div class="ven-hexagon_box1">
+      <div class="ven-hexagon_box2">
+        <div class="ven-hexagon_box3">
+          <slot></slot>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<style>
+.ven-hexagon {
+  position: relative;
+  visibility: hidden;
+  display: inline-block;
+}
+
+.ven-hexagon_box1,
+.ven-hexagon_box2,
+.ven-hexagon_box3,
+.overlay {
+  width: 280px;
+  height: 220px;
+  overflow: hidden;
+}
+.ven-hexagon_box1,
+.ven-hexagon_box2 {
+  visibility: hidden;
+}
+
+.ven-hexagon_box1 {
+  transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+}
+
+.ven-hexagon_box2 {
+  transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+}
+
+.ven-hexagon_box3 {
+  transform: rotate(-60deg);
+  background:url("./img/6s.png") no-repeat 50% center;
+  background-size: 226% auto;
+  -ms-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  visibility: visible;
+}
+</style>
+```
+:::

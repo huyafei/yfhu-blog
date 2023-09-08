@@ -15,6 +15,8 @@ npm install @vensst/js-toolkit -S
 ```js
 // 全部引用
 import jsToolkit from "@vensst/js-toolkit"
+// 不含第三方依赖的引用方式
+import jsToolkit from "@vensst/js-toolkit/lib/index.js"
 
 jsToolkit.random(1, 100)
 

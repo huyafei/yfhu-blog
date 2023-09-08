@@ -1,6 +1,6 @@
 # js
 
-## js 中 == 和 === 的区别
+## == 和 === 区别
 
 - == 会自动转换类型，再比较值是否相等
 - === 不会转换类型，直接比较值是否相等
@@ -66,7 +66,7 @@ const result = math.add(1, 2)
 console.log('结果为', result)
 ```
 
-## clientWidth/Height/Left/Top、offsetWidth/Height/Left/Top和scrollWidth/Height/Left/Top
+## client、offset和scroll
 
 ::: demo
 
@@ -114,7 +114,7 @@ console.log('结果为', result)
 - 灰色：padding
 - 橙色：content
 
-### clientWidth/Height/Left/Top
+### client
 
 #### clientWidth、clientHeight
 
@@ -132,7 +132,7 @@ clientHeight = height + paddingTop + paddingBottom - 水平滚动条高度;
 
 clientLeft/Top是元素的border-left左边框宽度/border-top上边框宽度，不包括左边框的margin。
 
-### offsetWidth/Height/Left/Top
+### offset
 
 #### offsetWidth、offsetHeight
 
@@ -148,7 +148,7 @@ offsetHeight = height + paddingTop + paddingBottom + borderTop + borderBottom;
 offsetLeft/Top是元素的左上角相对于offsetParent父元素左上角的偏移量，不包括父元素的border。
 如果父元素没有定位，则是相对于body的偏移量。如果父元素有定位，则是相对于父元素的偏移量。
 
-### scrollWidth/Height/Left/Top
+### scroll
 
 #### scrollWidth、scrollHeight
 
