@@ -93,18 +93,17 @@ let decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
 console.log(decrypted.toString(CryptoJS.enc.Utf8));
 ```
 
-## uuid
+## nanoid
 
 - 说明：
 
-  内部引入了uuid，可以使用uuid的方法，详情请查看uuid文档[前往](https://github.com/uuidjs/uuid#readme)
+  内部引入了nanoid，可以使用nanoid的方法，详情请查看nanoid文档[前往](https://github.com/ai/nanoid/blob/HEAD/README.zh-CN.md)
 
 - 添加版本：1.1.0-beta.11
 
 - 示例：
 
 ```js
-const {v4:uuid} = window.jsToolkit.uuid
-console.log(uuid())
-// 653afd17-e592-4cdc-b32d-ee1909a97194
+const {nanoid} = jsToolkit.nanoid
+console.log(nanoid())
 ```

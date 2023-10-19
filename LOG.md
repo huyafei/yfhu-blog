@@ -1,11 +1,18 @@
 # 更新日志
 
+## 2.0.0-beta.17 (2023-10-19)
+
+### Docs
+
+* @vensst/js-toolkit文档更新
+
 ## 2.0.0-beta.16 (2023-9-8)
 
 ### Docs
 
 * @vensst/vue-widget文档修改增加Signature、Table、Teleport、ContextMenu组件说明
-* 
+*
+
 ## 2.0.0-beta.15 (2023-8-4)
 
 ### Docs

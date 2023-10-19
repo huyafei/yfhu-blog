@@ -128,6 +128,7 @@ const config = {
           "/record/css/",
           "/record/js/",
           "/record/vue/",
+          "/record/react/",
           "/record/node/",
           "/record/webpack/",
           "/record/github/",

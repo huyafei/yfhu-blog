@@ -74,6 +74,38 @@
 ```
 :::
 
+## enterFullscreen
+
+- 说明：
+
+  进入全屏
+
+- 添加版本：1.1.0-beta.15
+
+- 参数：
+
+  - {Element} [element=document.documentElement] 进入全屏的元素
+
+- 示例：
+
+```js
+jsToolkit.enterFullscreen()
+```
+
+## exitFullscreen
+
+- 说明：
+
+  退出全屏
+
+- 添加版本：1.1.0-beta.15
+
+- 示例：
+
+```js
+jsToolkit.exitFullscreen()
+```
+
 ## resizeFontSize
 
 - 说明：

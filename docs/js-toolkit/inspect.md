@@ -566,4 +566,20 @@ jsToolkit.checkFormat("025-1234567", "tel")
 // ...
 ```
 
+## isFullScreen
 
+- 说明：
+
+  判断是否是全屏
+
+- 添加版本：1.1.0-beta.15
+
+- 返回值：
+
+  {Element|*}
+
+- 示例：
+
+```js
+jsToolkit.isFullScreen()
+```

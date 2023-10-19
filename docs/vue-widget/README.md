@@ -74,7 +74,7 @@ Vue.directive("drag", drag);
 
 
 
-## 自定义主题
+## 自定义table主题
 与官网一致，你可以通过修改scss变量来自定义主题，具体参考[vxe-table主题](https://vxetable.cn/v3/#/table/start/theme)
 ```scss
    // 修改scss变量

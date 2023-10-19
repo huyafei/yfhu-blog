@@ -1,4 +1,4 @@
-# 数据存储
+# 浏览器
 ::: tip
 **更新时间：2020年2月8日**
 :::
@@ -134,3 +134,10 @@ localStorage.clear()
     
 \</table\>
 
+
+
+## Edge使用Internet Explorer 兼容性测试
+![edge测试ie](/static/images/browser/edge/img_1.png)
+![edge测试ie](/static/images/browser/edge/img_2.png)
+运行输入 `%systemroot%\system32\f12\IEChooser.exe`，按回车后，会打开F12控制台
+![edge测试ie](/static/images/browser/edge/img_3.png)

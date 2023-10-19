@@ -79,22 +79,29 @@
    ```
 
 4. 根目录创建 icons 文件夹,在其中放入 svg 文件夹 和 index.js 文件
-    - icons/svg 文件夹中放入 svg 文件
-    - icons/index.js
+
+- icons/svg 文件夹中放入 svg 文件
+- icons/index.js
+
    ```js
    // index.js
-   import Vue from "vue"
-   import SvgIcon from '@/components/SvgIcon'
-   Vue.component('svg-icon',SvgIcon)
-   
-   const req = require.context('./svg', false, /\.svg$/)
-   const requireAll = requireContext => requireContext.keys().map(requireContext)
-   requireAll(req)
+
+import Vue from "vue"
+import SvgIcon from '@/components/SvgIcon'
+
+Vue.component('svg-icon', SvgIcon)
+
+const req = require.context('./svg', false, /\.svg$/)
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+requireAll(req)
+
    ```
+
 5. 在 main.js 中引入
    ```js
    import './icons'
    ```
+
 6. 使用
    ```vue
     <template>
@@ -450,4 +457,56 @@ vue2.6.11 + vue-cli4.5
 
 1. vue3.0+支持可选链运算符（?.）和空值合并运算符（??），vue2中建议template中不使用高阶运算符语法硬要使用的话用2、3方式解决，js中可以使用babel插件解决。
 
-## vue
+## vite
+
+::: tip 提示
+
+* **HMR** 热模块替换（Hot Module Replacement）它是一种技术，可以在运行时更新应用程序的部分代码而不需要重新加载整个页面或应用程序。
+* **ESM**（ES 模块，或者ES6 Module） 2015年 ES6（ECMAScript 6.0 简称 ES6（ECMAScript 是制定 JavaScript 语言的标准组织））
+  提出的模块化。
+  - 一个js脚本就是一个模块，模块之间可以相互加载，通过 export 和 import 来交换功能，让一个模块可以使用另一个模块的函数或变量。
+  - ESM（服务器和浏览器）取代CommonJS（服务器）和 AMD（浏览器），现代浏览器通过<script type="module"></script>
+    使用，在之前的浏览器不兼容所以使用垫片Polyfill来处理兼容性问题。
+
+:::
+[vite 官网](https://cn.vitejs.dev/guide/why.html)
+
+1. 开发环境编译使用的是 esbuild
+  - 冷启动速度快
+2. 生产环境打包使用的是 rollup
+
+### 了解vite时引发了解其它知识
+
+#### esbuild 和 rollup
+
+esbuild 和 rollup 都是模块打包工具（构建工具）
+
+1. esbuild
+   esbuild 构建工具的核心目标是开创构建工具性能的新时代，同时创建一个易于使用的现代构建工具。
+
+2. rollup
+   Rollup 是一个用于 JavaScript 的模块打包工具，它将小的代码片段编译成更大、更复杂的代码，例如库或应用程序。
+
+- Rollup 基于ESM打包（所以 vite 不只支持commonJs和AMD，要使用得安装插件），打包生成的文件更小。
+- 使用 Tree-shaking 去除未使用的代码，减少打包体积。
+
+#### babel
+
+Babel 是一个 JavaScript 的编译器
+[core.js && babel](https://www.kancloud.cn/cyyspring/webpack/2376167)
+
+1. Babel、Polyfill、core-js区别：
+
+* Babel：只转化新的语法，不负责实现新版本js中新增的api。将es6转es5
+  通过配置 browserslist 需要兼容的浏览器版本，使用Babel将高级语法转化为browserslist中配置的浏览器版本可运行的js语法
+
+* Polyfill：（垫片）实现新版本js中新增的api。
+  开发使用es6 api，而低版本浏览器所支持es3 api，那么需要实现一个该方法使其可用，这个方法就是垫片。
+
+* core-js：它是JavaScript标准库的 polyfill（垫片/补丁） ，新功能的 es 'api' 转换为大部分现代浏览器都可以支持运行的一个'api'
+  补丁包集合。 从 Babel 7.4.0 开始，@babel/polyfill这个包已经被弃用，取而代之的是直接包含core-js/stable。
+
+**备注：**
+
+* js垫片：意思是在低级环境中用高级语法时，在低级环境中手动实现的高级功能，模拟高级环境。（低浏览器没有高浏览器语法，要自己实现或使用第三方插件来解决，使得可以使用高级浏览器语法）
+
