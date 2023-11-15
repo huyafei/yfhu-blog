@@ -1,3 +1,10 @@
+/*
+ * @Author: yfhu
+ * @Date: 2023-10-27 17:23:47
+ * @LastEditors: yfhu
+ * @LastEditTime: 2023-10-27 17:23:50
+ * @Description:
+ */
 const config = {
   //导航
   nav: [
@@ -157,40 +164,40 @@ const config = {
       {
         title: 'Java',
         collapsible: true,
-        children: [
-          '/record/java/',
-          '/record/java/001.md',
-          '/record/java/002.md',
-          '/record/java/003.md',
-          '/record/java/004.md',
-          '/record/java/005.md',
-          '/record/java/006.md',
-          '/record/java/007.md',
-          '/record/java/008.md',
-          '/record/java/009.md',
-          '/record/java/010.md',
-          '/record/java/011.md',
-          {
-            title: '面向对象',
-            collapsible: true,
-            children: [
-              '/record/java/012.md',
-              '/record/java/013.md',
-              '/record/java/014.md',
-              '/record/java/015.md',
-              '/record/java/016.md',
-              '/record/java/017.md',
-              '/record/java/018.md',
-              '/record/java/019.md',
-              '/record/java/020.md',
-              '/record/java/021.md',
-              '/record/java/022.md',
-              '/record/java/023.md',
-              '/record/java/024.md',
-              '/record/java/025.md',
-            ]
-          },
-        ],
+        // children: [
+        //   '/record/java/',
+        //   '/record/java/001.md',
+        //   '/record/java/002.md',
+        //   '/record/java/003.md',
+        //   '/record/java/004.md',
+        //   '/record/java/005.md',
+        //   '/record/java/006.md',
+        //   '/record/java/007.md',
+        //   '/record/java/008.md',
+        //   '/record/java/009.md',
+        //   '/record/java/010.md',
+        //   '/record/java/011.md',
+        //   {
+        //     title: '面向对象',
+        //     collapsible: true,
+        //     children: [
+        //       '/record/java/012.md',
+        //       '/record/java/013.md',
+        //       '/record/java/014.md',
+        //       '/record/java/015.md',
+        //       '/record/java/016.md',
+        //       '/record/java/017.md',
+        //       '/record/java/018.md',
+        //       '/record/java/019.md',
+        //       '/record/java/020.md',
+        //       '/record/java/021.md',
+        //       '/record/java/022.md',
+        //       '/record/java/023.md',
+        //       '/record/java/024.md',
+        //       '/record/java/025.md',
+        //     ]
+        //   },
+        // ],
       },
     ]
   }

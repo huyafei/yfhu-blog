@@ -1273,16 +1273,16 @@
     mathjs "^10.6.1"
     uuid "^9.0.0"
 
-"@vensst/js-toolkit@^1.1.0-beta.13":
-  version "1.1.0-beta.13"
-  resolved "https://registry.yarnpkg.com/@vensst/js-toolkit/-/js-toolkit-1.1.0-beta.13.tgz#6b70877ed39d08b8ae92a21db8a44289321e681a"
-  integrity sha512-9xWyPfKJvmxaUmh5qa22qXn4aqLrrN08JtdoNz5Wn5N2PgZA1fANemzYq529JpVk+O3eInkPXGfKLBHAjf3t/g==
+"@vensst/js-toolkit@^1.1.0-beta.16":
+  version "1.1.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@vensst/js-toolkit/-/js-toolkit-1.1.0-beta.16.tgz#867c6229c6f0268104c9f6609462b8b125440eea"
+  integrity sha512-GugsIfLvVnXfCvhBtz6jcE3OO3I0WEN7mj7XYWmGbxwXY/QuspoBRluHdmbRAIarUsueddmJxX8rY1QBNkfNjg==
   dependencies:
     crypto-js "^4.1.1"
     dayjs "^1.11.2"
     js-cookie "^3.0.1"
     mathjs "^10.6.1"
-    uuid "^9.0.0"
+    nanoid "^4.0.2"
 
 "@vensst/vue-widget@^1.0.0-beta.4":
   version "1.0.0-beta.4"
@@ -6008,6 +6008,11 @@ nanoid@^3.3.6:
   version "3.3.6"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
   integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
+
+nanoid@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-4.0.2.tgz#140b3c5003959adbebf521c170f282c5e7f9fb9e"
+  integrity sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==
 
 nanomatch@^1.2.9:
   version "1.2.13"

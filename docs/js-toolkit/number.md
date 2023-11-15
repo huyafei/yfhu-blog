@@ -10,7 +10,7 @@
 
 - 参数：
 
-    - {{(number|string)} [min=0] 最小值（包含）
+    - {(number|string)} [min=0] 最小值（包含）
     - {(number|string)} [max=1] 最大值（不包含）
     - {boolean} [floating=true] 是否返回浮点数
 
