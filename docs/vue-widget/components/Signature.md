@@ -5,6 +5,7 @@
 ```js
 import Vue from "vue";
 import VueWidget from "@vensst/vue-widget";
+
 Vue.use(VueWidget.Signature);
 ```
 
@@ -18,13 +19,13 @@ Vue.use(VueWidget.Signature);
   </div>
 </template>
 <script>
-export default {
-  methods: {
-    saveImage(data) {
-      console.log(data);
-    },
+  export default {
+    methods: {
+      saveImage(data) {
+        console.log(data);
+      },
+    }
   }
-}
 </script>
   ```
 
@@ -50,6 +51,16 @@ export default {
 
 ## 事件
 
-| 事件名称       | 说明            | 回调参数           |
-|------------|---------------|----------------|
-| save-click | 点击保存事件，默认下载图片 | (value:string) |
+| 事件名称       | 说明     | 回调参数           |
+|------------|--------|----------------|
+| save-click | 点击保存事件 | (value:string) |
+
+## 方法
+
+| 事件名称       | 说明                     | 参数 |
+|------------|------------------------|----|
+| clear      | 清除画布                   | -- |
+| undo       | 撤回                     | -- |
+| redraw     | 清除画布                   | -- |
+| save       | 保存下载图片                 | -- |
+| getDataURL | 返回值canvas.toDataURL()值 | -- |

@@ -7,7 +7,7 @@
 
 ## 使用
 
-表格配置项参考vxe-table[全局参数](https://vxetable.cn/v3/#/table/start/global)
+表格配置项参考 vxe-table[全局参数](https://vxetable.cn/v3/#/table/start/global)
 
 ```js
 import Vue from "vue";
@@ -18,8 +18,8 @@ Vue.use(VueWidget, {
     components: ["Button"], // 按需引入vxe-table里组件
     // components:'all', // 为 all 则会全部引入
     options: {}, // 表格配置项 参考 https://vxetable.cn/v3/#/table/start/global
-  }
-})
+  },
+});
 
 // 按需引入及配置
 // Vue.use(VueWidget.Table, {
@@ -32,22 +32,34 @@ Vue.use(VueWidget, {
 ::: demo
 
 ```vue
-
 <template>
   <div>
+    <h3>带分页用用法</h3>
     <VenTable
-        :tableDataApi="listApi"
-        :formData="formData"
-        :tableColumn="tableColumn"
-        :pageFieldOptions="{
+      :tableDataApi="listApi"
+      :formData="formData"
+      :tableColumn="tableColumn"
+      :pageFieldOptions="{
         dataPath: 'data',
         data: 'records',
       }"
-        @row-click="cellClickEvent"
+      @row-click="cellClickEvent"
     >
       <template #operation="scope">
-        <button @click.stop="getRow(scope)">按钮</button>
-        <button @click.stop="getRow(scope)">按钮</button>
+        <vxe-button @click.stop="getRow(scope)">按钮</vxe-button>
+        <vxe-button @click.stop="getRow(scope)">按钮</vxe-button>
+      </template>
+    </VenTable>
+    <h3>普通用法</h3>
+    <VenTable
+      :tableData="tableData"
+      :tableColumn="tableColumn"
+      ref="tableRef"
+      :isPage="false"
+    >
+      <template #operation="scope">
+        <vxe-button @click.native.stop="getRow(scope)">按钮</vxe-button>
+        <vxe-button @click.native.stop="getRow(scope)">按钮</vxe-button>
       </template>
     </VenTable>
   </div>
@@ -55,11 +67,11 @@ Vue.use(VueWidget, {
 
 <script>
 // 模拟分页请求
-const listApi = function ({size = 10, current = 1}) {
+const listApi = function ({ size = 10, current = 1 }) {
   return new Promise((resolve) => {
     let arr = [];
     for (let i = 0; i < 100; i++) {
-      arr.push({id: i, name: "zs" + i});
+      arr.push({ id: i, name: "zs" + i });
     }
     setTimeout(() => {
       resolve({
@@ -69,7 +81,7 @@ const listApi = function ({size = 10, current = 1}) {
           size: size,
           current: current,
           pages:
-              arr.length % size === 0 ? arr.length / size : arr.length / size + 1,
+            arr.length % size === 0 ? arr.length / size : arr.length / size + 1,
         },
         // data: {
         //   records: [],
@@ -97,10 +109,9 @@ export default {
         dateTime: [],
       },
       listApi,
-      tableData: [],
       tableColumn: [
-        {key: 1, type: "seq", title: "序号", width: 60},
-        {key: 2, field: "name", title: "名称1", minWidth: 160},
+        { key: 1, type: "seq", title: "序号", width: 60 },
+        { key: 2, field: "name", title: "名称1", minWidth: 160 },
         {
           key: 3,
           title: "操作",
@@ -109,14 +120,18 @@ export default {
           slot: "operation",
         },
       ],
+      tableData: [
+        { key: 1, id: "1", name: "2" },
+        { key: 2, id: "2", name: "2" },
+        { key: 3, id: "3", name: "2" },
+        { key: 4, id: "4", name: "2" },
+      ],
     };
   },
   computed: {},
   watch: {},
-  created() {
-  },
-  mounted() {
-  },
+  created() {},
+  mounted() {},
   methods: {
     cellClickEvent(e) {
       console.log(e);
@@ -129,33 +144,33 @@ export default {
 </script>
 
 <style scoped></style>
-
 ```
 
 :::
 
 ## 自定义主题
-与官网一致，你可以通过修改scss变量来自定义主题，具体参考[vxe-table主题](https://vxetable.cn/v3/#/table/start/theme)
-```scss
-   // 修改scss变量
-      $vxe-font-size: 14px;
-      $vxe-font-color: #666;
-      $vxe-primary-color: #409eff;
-      $vxe-table-font-color: $vxe-font-color;
-      $vxe-table-border-color: #e8eaec;
-      $vxe-table-border-radius: 4px;
-      // ...
 
-      @import '@vensst/vue-widget/src/styles/table.scss';
+与官网一致，你可以通过修改 scss 变量来自定义主题，具体参考[vxe-table 主题](https://vxetable.cn/v3/#/table/start/theme)
+
+```scss
+// 修改scss变量
+$vxe-font-size: 14px;
+$vxe-font-color: #666;
+$vxe-primary-color: #409eff;
+$vxe-table-font-color: $vxe-font-color;
+$vxe-table-border-color: #e8eaec;
+$vxe-table-border-radius: 4px;
+// ...
+
+@import "@vensst/vue-widget/src/styles/table.scss";
 ```
 
 ## 属性
 
-除以下属性你还可以使用[vxe-table插件API中的vxe-table的所有Props](https://vxetable.cn/v3/#/table/api)
+除以下属性你还可以使用[vxe-table 插件 API 中的 vxe-table 的所有 Props](https://vxetable.cn/v3/#/table/api)
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------------------|---------------|----------|-----|------|
 | isPage | 是否显示分页 | Boolean | -- | true |
-| isPageLeft | 是否显示分页左侧 | Boolean | -- | true |
 | tableDataApi | 获取表格数据接口函数 | Function | -- | -- |
 | formData | 表单数据（接口参数） | Object | -- | -- |
 | tableData | 表格数据 | Array | -- | -- |
@@ -166,22 +181,32 @@ export default {
 
 ### pageFieldOptions
 
-| 参数                 | 说明            | 类型     | 可选值 | 默认值     |
-|--------------------|---------------|--------|-----|---------|
-| dataPath           | 数据路径，例如：'a.b' | String | --  | --      |
-| data               | 数据字段          | String | --  | data    |
-| total              | 总数字段          | String | --  | total   |
-| size               | 每页条数字段        | String | --  | size    |
-| current            | 当前页字段         | String | --  | current |
-| pages              | 总页数字段         | String | --  | pages   |
-| defaultCurrentPage | 默认当前页值        | Number | --  | 1       |
-| defaultSize        | 默认分页大小值       | Number | --  | 10      |
+| 参数               | 说明                  | 类型   | 可选值 | 默认值  |
+| ------------------ | --------------------- | ------ | ------ | ------- |
+| dataPath           | 数据路径，例如：'a.b' | String | --     | --      |
+| data               | 数据字段              | String | --     | data    |
+| total              | 总数字段              | String | --     | total   |
+| size               | 每页条数字段          | String | --     | size    |
+| current            | 当前页字段            | String | --     | current |
+| pages              | 总页数字段            | String | --     | pages   |
+| defaultCurrentPage | 默认当前页值          | Number | --     | 1       |
+| defaultSize        | 默认分页大小值        | Number | --     | 10      |
 
 ### pageOptions
 
-除以下属性你还可以使用[vxe-table插件API中的vxe-pager的所有Props](https://vxetable.cn/v3/#/pager/api)
+除以下属性你还可以使用[vxe-table 插件 API 中的 vxe-pager 的所有 Props](https://vxetable.cn/v3/#/pager/api)
 
-| 参数         | 说明    | 类型     | 可选值 | 默认值                                                         |
-|------------|-------|--------|-----|-------------------------------------------------------------|
-| background | 背景颜色  | String | --  | --                                                          |
-| layouts    | 自定义布局 | Array  | --  | ["PrevPage", "JumpNumber", "NextPage", "Sizes", "FullJump"] |
+| 参数       | 说明       | 类型   | 可选值 | 默认值                                                      |
+| ---------- | ---------- | ------ | ------ | ----------------------------------------------------------- |
+| background | 背景颜色   | String | --     | --                                                          |
+| layouts    | 自定义布局 | Array  | --     | ["PrevPage", "JumpNumber", "NextPage", "FullJump", "Sizes", "Total"], |
+
+
+## 插槽
+
+| name       | 说明            |
+|------------|---------------|
+| empty | 自定义表格空数据时显示模板 |
+| loading    | 自定义表格加载中模板    |
+| left    | 自定义分页左侧模板     |
+| right    | 自定义分页右侧模板     |

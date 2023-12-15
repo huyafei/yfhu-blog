@@ -132,50 +132,6 @@ jsToolkit.average(arr)
 // 2
 ```
 
-## max
-
-- 说明：
-
-	获取数组中最大值
-
-- 参数：
-
-    - {number[]} arr 数组
-
-- 返回值：
-
-  {number} 最大值
-
-- 示例：
-
-```js
-let arr = [1, 2, 3]
-jsToolkit.max(arr)
-// 3
-```
-
-## min
-
-- 说明：
-
-	获取数组中取最小值
-
-- 参数：
-
-    - {number[]} arr 数组
-
-- 返回值：
-
-  {number} 最小值
-
-- 示例：
-
-```js
-let arr = [1, 2, 3]
-jsToolkit.max(arr)
-// 1
-```
-
 ## ceil
 
 - 说明：
@@ -184,7 +140,7 @@ jsToolkit.max(arr)
 
 - 参数：
 
-    - {number} [num=0] 数字
+    - {number} num 数值
     - {number} [precision=0] 精度
 
 - 返回值：
@@ -206,8 +162,8 @@ jsToolkit.ceil("23.321523", 2)
 
 - 参数：
 
-    - {number} [num=0] 数字
-    - {number} [precision=0] 精度
+    - {number} num 数值
+    - {number} [precision=0] 保留小数位数
 
 - 返回值：
 
@@ -228,8 +184,8 @@ jsToolkit.floor("23.321523", 2)
 
 - 参数：
 
-    - {number} [num=0] 数值
-    - {number} [precision=0] 精度
+    - {number} num 数值
+    - {number} [precision=0] 保留小数位数
 
 - 返回值：
 
@@ -252,8 +208,8 @@ jsToolkit.decimal("23", 2)
 
 - 参数：
 
-    - {number} [num=0] 数值
-    - {number} [precision=0] 保留小数位数，默认保留3位小数
+    - {number} num 数值
+    - {number} [precision=0] 保留小数位数
 
 - 返回值：
 

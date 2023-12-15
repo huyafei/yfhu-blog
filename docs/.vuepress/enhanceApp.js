@@ -12,7 +12,13 @@ export default ({Vue, options, router, siteData, isServer}) => {
     created() {
 
       import('@vensst/vue-widget').then((m) => {
-        Vue.use(m.default);
+        Vue.use(m.default,{
+          table: {
+            components: ["Button"], // 按需引入组件
+            // components:'all', // 为 all 则会全部引入
+            options: {}, // 表格配置项 参考 https://vxetable.cn/v3/#/table/start/global
+          }
+        });
       });
     },
     mounted() {
