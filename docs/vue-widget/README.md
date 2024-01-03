@@ -6,7 +6,7 @@
 
 ## 介绍
 
-[@vensst/vue-widget](https://github.com/vensst/vue-widget) 是个人常用的vue组件库
+[@vensst/vue-widget](https://github.com/vensst/vue-widget) 是个人封装的vue组件库
 
 ## 安装
 

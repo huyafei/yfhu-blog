@@ -216,6 +216,7 @@ module.exports = {
     // @vuepress/pwa 配置  https://developer.mozilla.org/zh-CN/docs/Web/Manifest
     // ['link', {rel: 'manifest', href: '/manifest.json'}],
     ['link', {rel: 'icon', href: '/static/images/logo.png'}],
+    ['script', { src: 'https://unpkg.com/@vensst/js-toolkit'}],
   ],
   // dev 配置
   port: "9523",

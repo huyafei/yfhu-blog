@@ -32,118 +32,277 @@ Vue.use(VueWidget, {
 ::: demo
 
 ```vue
+
 <template>
   <div>
-    <h3>带分页用用法</h3>
     <VenTable
-      :tableDataApi="listApi"
-      :formData="formData"
-      :tableColumn="tableColumn"
-      :pageFieldOptions="{
+        :tableDataApi="listApi"
+        :formData="formData"
+        :tableColumn="tableColumn"
+        :rowConfig="{ isCurrent: false, isHover: true }"
+        :stripe="true"
+        :edit-config="{ trigger: 'click', mode: 'cell' }"
+        :pageFieldOptions="{
         dataPath: 'data',
         data: 'records',
       }"
-      @row-click="cellClickEvent"
+        :mergeRowFields="['age']"
+        @row-click="cellClickEvent"
     >
+      <template #age_edit="{ row }">
+        <vxe-input v-model="row.age"></vxe-input>
+      </template>
       <template #operation="scope">
-        <vxe-button @click.stop="getRow(scope)">按钮</vxe-button>
-        <vxe-button @click.stop="getRow(scope)">按钮</vxe-button>
+        <vxe-button @click="getRow(scope)">按钮</vxe-button>
+        <vxe-button @click="getRow(scope)">按钮</vxe-button>
       </template>
     </VenTable>
-    <h3>普通用法</h3>
     <VenTable
-      :tableData="tableData"
-      :tableColumn="tableColumn"
-      ref="tableRef"
-      :isPage="false"
+        :tableData="tableData"
+        :tableColumn="tableColumn"
+        ref="tableRef"
+        :tree-config="{
+        transform: true,
+        rowField: 'id',
+        parentField: 'parentId',
+      }"
+        :edit-config="{ trigger: 'click', mode: 'cell' }"
+        :isPage="false"
     >
+      <template #age_edit="{ row }">
+        <vxe-input v-model="row.age"></vxe-input>
+      </template>
       <template #operation="scope">
-        <vxe-button @click.native.stop="getRow(scope)">按钮</vxe-button>
-        <vxe-button @click.native.stop="getRow(scope)">按钮</vxe-button>
+        <vxe-button @click="getRow(scope)">按钮</vxe-button>
+        <vxe-button @click="getRow(scope)">按钮</vxe-button>
       </template>
     </VenTable>
   </div>
 </template>
 
 <script>
-// 模拟分页请求
-const listApi = function ({ size = 10, current = 1 }) {
-  return new Promise((resolve) => {
-    let arr = [];
-    for (let i = 0; i < 100; i++) {
-      arr.push({ id: i, name: "zs" + i });
-    }
-    setTimeout(() => {
-      resolve({
-        data: {
-          records: arr.slice((current - 1) * size, (current - 1) * size + size),
-          total: arr.length,
-          size: size,
-          current: current,
-          pages:
-            arr.length % size === 0 ? arr.length / size : arr.length / size + 1,
-        },
-        // data: {
-        //   records: [],
-        //   total: arr.length,
-        //   size: size,
-        //   current: current,
-        //   pages: arr.length % size === 0 ? arr.length / size : arr.length / size + 1,
-        // },
-      });
-    }, Math.floor(Math.random() * 1000));
-  });
-};
+  const {random} = window.jsToolkit
+  // 模拟分页请求
+  const listApi = function ({size = 10, current = 1}) {
+    return new Promise((resolve) => {
+      let arr = [];
+      for (let i = 0; i < 100; i++) {
+        arr.push({
+          id: i,
+          name: "会飞的鱼" + i,
+          name2: "会飞的鱼" + i,
+          name3: "会飞的鱼" + i,
+          age: random(28, 30, false),
+          contact1: "会跑的鱼" + random(0, 5, false),
+          contact2: "会跳的鱼" + random(0, 5, false),
+        });
+      }
+      setTimeout(() => {
+        resolve({
+          data: {
+            records: arr.slice((current - 1) * size, (current - 1) * size + size),
+            total: arr.length,
+            size: size,
+            current: current,
+            pages:
+                arr.length % size === 0 ? arr.length / size : arr.length / size + 1,
+          },
+          // data: {
+          //   records: [],
+          //   total: arr.length,
+          //   size: size,
+          //   current: current,
+          //   pages: arr.length % size === 0 ? arr.length / size : arr.length / size + 1,
+          // },
+        });
+      }, Math.floor(Math.random() * 1000));
+    });
+  };
 
-export default {
-  name: "Table",
-  title: "表格",
-  components: {},
-  mixins: [],
-  props: {},
-  data() {
-    return {
-      formData: {
-        cjmc: "",
-        cjbs: "",
-        dateTime: [],
-      },
-      listApi,
-      tableColumn: [
-        { key: 1, type: "seq", title: "序号", width: 60 },
-        { key: 2, field: "name", title: "名称1", minWidth: 160 },
-        {
-          key: 3,
-          title: "操作",
-          width: 160,
-          fixed: "right",
-          slot: "operation",
+  export default {
+    name: "Table",
+    title: "表格",
+    components: {},
+    mixins: [],
+    props: {},
+    data() {
+      return {
+        formData: {
+          cjmc: "",
+          cjbs: "",
+          dateTime: [],
         },
-      ],
-      tableData: [
-        { key: 1, id: "1", name: "2" },
-        { key: 2, id: "2", name: "2" },
-        { key: 3, id: "3", name: "2" },
-        { key: 4, id: "4", name: "2" },
-      ],
-    };
-  },
-  computed: {},
-  watch: {},
-  created() {},
-  mounted() {},
-  methods: {
-    cellClickEvent(e) {
-      console.log(e);
+        listApi,
+        tableColumn: [
+          {
+            type: "checkbox",
+            width: 60,
+          },
+          {
+            type: "seq",
+            title: "序号",
+            width: 60,
+          },
+          {
+            field: "name",
+            title: "姓名",
+            minWidth: 160,
+            "show-overflow": "ellipsis",
+            "tree-node": true,
+          },
+          {
+            field: "name2",
+            title: "姓名2",
+            minWidth: 160,
+            formatter: function ({cellValue}) {
+              return cellValue + 66;
+            },
+          },
+          {
+            field: "name3",
+            title: "姓名3",
+            minWidth: 160,
+            "show-overflow": "title",
+          },
+          {
+            field: "age",
+            title: "年龄",
+            minWidth: 100,
+            sortable: true,
+            slots: {
+              edit: "age_edit",
+            },
+            "edit-render": {},
+          },
+          {
+            title: "紧急联系人",
+
+            children: [
+              {
+                field: "contact1",
+                title: "名称3",
+                minWidth: 120,
+              },
+              {
+                field: "contact2",
+                title: "名称4",
+                minWidth: 120,
+              },
+            ],
+          },
+          {
+            title: "操作",
+            width: 160,
+            fixed: "right",
+            slots: {
+              default: "operation",
+            },
+          },
+        ],
+        tableData: [
+          {
+            id: "1",
+            parentId: null,
+            name: "张**",
+            name2: "张**",
+            name3: "张**",
+            age: 26,
+            contact1: "王**",
+            contact2: "李**",
+          },
+          {
+            id: "11",
+            parentId: "1",
+            name: "张**",
+            name2: "张**",
+            name3: "张**",
+            age: 26,
+            contact1: "王**",
+            contact2: "李**",
+          },
+          {
+            id: "12",
+            parentId: "1",
+            name: "张**",
+            name2: "张**",
+            name3: "张**",
+            age: 26,
+            contact1: "王**",
+            contact2: "李**",
+          },
+          {
+            id: "2",
+            parentId: null,
+            name: "李**",
+            name2: "李**",
+            name3: "李**",
+            age: 24,
+            contact1: "王**",
+            contact2: "李**",
+          },
+          {
+            id: "21",
+            parentId: "2",
+            name: "李**",
+            name2: "李**",
+            name3: "李**",
+            age: 24,
+            contact1: "王**",
+            contact2: "李**",
+          },
+          {
+            id: "5",
+            parentId: null,
+            name: "溢出省略，李**李**李**李**李**李**李**李**李**李**李**李**李**",
+            name2: "换行，李**李**李**李**李**李**李**李**李**李**李**李**李**",
+            name3:
+                "溢出省略，鼠标悬浮显示tooltip，李**李**李**李**李**李**李**李**李**李**李**李**李**",
+            age: 24,
+            contact1: "王**",
+            contact2: "李**",
+          },
+          {
+            id: "3",
+            parentId: null,
+            name: "王**",
+            name2: "王**",
+            name3: "王**",
+            age: 28,
+            contact1: "王**",
+            contact2: "李**",
+          },
+          {
+            id: "4",
+            parentId: null,
+            name: "赵**",
+            name2: "赵**",
+            name3: "赵**",
+            age: 28,
+            contact1: "王**",
+            contact2: "李**",
+          },
+        ],
+      };
     },
-    getRow(scope) {
-      console.log(scope);
+    computed: {},
+    watch: {},
+    created() {
     },
-  },
-};
+    mounted() {
+    },
+    methods: {
+      cellClickEvent(e) {
+        console.log("点击行", e);
+      },
+      getRow(scope) {
+        console.log("点击操作按钮：", scope);
+      },
+    },
+  };
 </script>
 
 <style scoped></style>
+
 ```
 
 :::
@@ -174,8 +333,8 @@ $vxe-table-border-radius: 4px;
 | tableDataApi | 获取表格数据接口函数 | Function | -- | -- |
 | formData | 表单数据（接口参数） | Object | -- | -- |
 | tableData | 表格数据 | Array | -- | -- |
-| tableColumn | 表格列 | Array | -- | -- |
-| mergeRowFields | 合并行字段 | Array | -- | -- |
+| tableColumn | 表格列配置，参考[vxe-column](https://vxetable.cn/v3/#/column/api)属性 | Array | -- | -- |
+| mergeRowFields | 合并行字段 | Array\<string\> | -- | -- |
 | pageFieldOptions | 分页组件字段配置，参考如下 | Object | -- | -- |
 | pageOptions | 分页组件配置，参考如下 | Object | -- | -- |
 

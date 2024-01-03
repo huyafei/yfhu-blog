@@ -252,7 +252,7 @@
     chalk "^2.4.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.18.4", "@babel/parser@^7.22.15", "@babel/parser@^7.23.6":
+"@babel/parser@^7.18.4", "@babel/parser@^7.22.15", "@babel/parser@^7.23.5", "@babel/parser@^7.23.6":
   version "7.23.6"
   resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.23.6.tgz#ba1c9e512bda72a47e285ae42aff9d2a635a9e3b"
   integrity sha512-Z2uID7YJ7oNvAI20O9X0bblw7Qqs8Q2hFy0R9tAfnfLkp5MW0UH9eUvnDSnFwKZ0AvgS1ucqR4KzvVHgnke1VQ==
@@ -1285,10 +1285,10 @@
     mathjs "^10.6.1"
     nanoid "^4.0.2"
 
-"@vensst/vue-widget@^1.0.0-beta.5":
-  version "1.0.0-beta.5"
-  resolved "https://registry.npmjs.org/@vensst/vue-widget/-/vue-widget-1.0.0-beta.5.tgz#0b5a3e90e997c4b5c588fb068ac25eaaa3adc2eb"
-  integrity sha512-ODmQ7OPQQZFDnOJP+XshqjgDvBQkoB/vzpB5CbPUoPk7IDjEJebY3q508FknJl1Y1uPjO7p8guStdFrNnQaBJg==
+"@vensst/vue-widget@^1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.npmjs.org/@vensst/vue-widget/-/vue-widget-1.0.0-beta.6.tgz#1c2f2e51ccc42031da885719f8108a35945b1585"
+  integrity sha512-3UaGTFwiBZg6k2Jj2jtGMLykthdQ9eIn3Yz5lioDcToxR27H0NBjS5w4mhqhu/OrYt/kluhaMAnmzQ4iuPF0+g==
   dependencies:
     "@vensst/js-toolkit" "^1.1.0-beta.17"
     core-js "^3.6.5"
@@ -1431,6 +1431,17 @@
     "@babel/parser" "^7.18.4"
     postcss "^8.4.14"
     source-map "^0.6.1"
+
+"@vue/compiler-sfc@2.7.16":
+  version "2.7.16"
+  resolved "https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-2.7.16.tgz#ff81711a0fac9c68683d8bb00b63f857de77dc83"
+  integrity sha512-KWhJ9k5nXuNtygPU7+t1rX6baZeqOYLEforUPjgNDBnLicfHCoi48H87Q8XyLZOrNNsmhuwKqtpDQWjEFe6Ekg==
+  dependencies:
+    "@babel/parser" "^7.23.5"
+    postcss "^8.4.14"
+    source-map "^0.6.1"
+  optionalDependencies:
+    prettier "^1.18.2 || ^2.0.0"
 
 "@vue/component-compiler-utils@^3.1.0":
   version "3.3.0"
@@ -7423,9 +7434,9 @@ sass-loader@^8.0.2:
     semver "^6.3.0"
 
 sass@^1.32.6:
-  version "1.69.5"
-  resolved "https://registry.npmjs.org/sass/-/sass-1.69.5.tgz#23e18d1c757a35f2e52cc81871060b9ad653dfde"
-  integrity sha512-qg2+UCJibLr2LCVOt3OlPhr/dqVHWOa9XtZf2OjbLs/T4VPSJ00udtgJxH3neXZm+QqX8B+3cU7RaLqp1iVfcQ==
+  version "1.69.7"
+  resolved "https://registry.npmjs.org/sass/-/sass-1.69.7.tgz#6e7e1c8f51e8162faec3e9619babc7da780af3b7"
+  integrity sha512-rzj2soDeZ8wtE2egyLXgOOHQvaC2iosZrkF6v3EUG+tBwEvhqUCzm0VP3k9gHF9LXbSrRhT5SksoI56Iw8NPnQ==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -8688,12 +8699,20 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.6.10, vue@^2.7.0:
+vue@^2.6.10:
   version "2.7.15"
   resolved "https://registry.npmjs.org/vue/-/vue-2.7.15.tgz#94cd34e6e9f22cd2d35a02143f96a5beac1c1f54"
   integrity sha512-a29fsXd2G0KMRqIFTpRgpSbWaNBK3lpCTOLuGLEDnlHWdjB8fwl6zyYZ8xCrqkJdatwZb4mGHiEfJjnw0Q6AwQ==
   dependencies:
     "@vue/compiler-sfc" "2.7.15"
+    csstype "^3.1.0"
+
+vue@^2.7.0:
+  version "2.7.16"
+  resolved "https://registry.npmjs.org/vue/-/vue-2.7.16.tgz#98c60de9def99c0e3da8dae59b304ead43b967c9"
+  integrity sha512-4gCtFXaAA3zYZdTp5s4Hl2sozuySsgz4jy1EnpBHNfpMa9dK1ZCG7viqBPCwXtmgc8nHqUsAu3G4gtmXkkY3Sw==
+  dependencies:
+    "@vue/compiler-sfc" "2.7.16"
     csstype "^3.1.0"
 
 vuepress-html-webpack-plugin@^3.2.0:
@@ -8743,12 +8762,12 @@ vuepress@^1.9.9:
     update-notifier "^4.0.0"
 
 vxe-table@^3.7.5:
-  version "3.7.6"
-  resolved "https://registry.npmjs.org/vxe-table/-/vxe-table-3.7.6.tgz#e97c27b28d1a577315acf64615a83d50a8351c99"
-  integrity sha512-hcM5wjZChZhIbm4j+teh22U2HMparyJLUpedLBCbLZmEUX0gnKNwn4vm1BFsmmap02AYJmlTPMKtlkCnbKRaRQ==
+  version "3.7.7"
+  resolved "https://registry.npmjs.org/vxe-table/-/vxe-table-3.7.7.tgz#eed05117c8f7def20134ccc0ed13250e14abe12b"
+  integrity sha512-dUl2RRpsU1rFERJxTDYeqaySYRh0K9+SNWirLO8Wm2yz0D6iSjlMoWpXfcZ6J2s5H+KXqCZWDxhOc7h+Q4FtiQ==
   dependencies:
     dom-zindex "^1.0.1"
-    xe-utils "^3.5.13"
+    xe-utils "^3.5.14"
 
 watchpack-chokidar2@^2.0.1:
   version "2.0.1"
@@ -9136,7 +9155,7 @@ xdg-basedir@^4.0.0:
   resolved "https://registry.npmjs.org/xdg-basedir/-/xdg-basedir-4.0.0.tgz#4bc8d9984403696225ef83a1573cbbcb4e79db13"
   integrity sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==
 
-xe-utils@^3.5.13, xe-utils@^3.5.14:
+xe-utils@^3.5.14:
   version "3.5.14"
   resolved "https://registry.npmjs.org/xe-utils/-/xe-utils-3.5.14.tgz#37a983856fc82c8f2d8fcec57a019d3c445d04e0"
   integrity sha512-Xq6mS8dWwHBQsQUEBXcZYSaBV0KnNLoVWd0vRRDI3nKpbNxfs/LSCK0W21g1edLFnXYfKqg7hh5dakr3RtYY0A==
