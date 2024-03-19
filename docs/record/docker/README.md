@@ -1,8 +1,48 @@
-# Docker
+paDocker
+
+## Docker是什么？
+
+- [01-Docker概述 (yuque.com)](https://www.yuque.com/tmfl/cloud/rifotq)
+
+docker 是go语言开发实现的，是一个开源的应用容器引擎，基于 Linux 内核轻量级虚拟机，属于操作系统层面的**容器虚拟化技术**。
+
+docker的组成：
+
+![01](./image/01.jpg)
+
+- 镜像（Image）就是一个**只读**的模板。镜像可以用来创建 Docker 容器，一个镜像可以创建很多容器
+
+- 容器（Container）是用镜像创建的运行实例。类似java中类（镜像）与实例对象（容器）一样。
+
+- 仓库（Repository）是集中存放镜像文件的场所。类似 github 仓库存放 git 项目一样。
+
+  
+
+## 解决什么问题？
+
+部署项目：
+
+​	docker出现前：在虚拟机上配置项目运行环境比如安装mysql+NGINX+Redis+java环境等等，如果分为开发，测试和正式环境，每个都要安装软件和配置环境，可能导致安装软件版本以及配置不一致导出出错，问题多、麻烦、容易出错，换台机器得重来一次，那么安装时原始环境是否可以一并复制过来？
+
+​	docker出现后：开发环境运行正常，将源码、系统、软件及版本、环境配置等等打包成一个镜像文件，**一次使用到处运行**	
+
+Linux容器技术的出现就解决了这样一个问题，而 Docker 就是在它的基础上发展过来的。将应用打成镜像，通过镜像成为运行在Docker容器上面的实例，而 Docker容器在任何操作系统上都是一致的，这就实现了跨平台、跨服务器。只需要一次配置好环境，换到别的机子上就可以一键部署好，大大简化了操作
+
+### 传统虚拟机和容器
+
+传统虚拟机（virtual machine）：
+
+​	传统虚拟机技术基于安装在主操作系统上的虚拟机管理系统（如VirtualBox、VMware等），创建虚拟机（虚拟出各种硬件），在虚拟机上安装从操作系统，在从操作系统中安装部署各种应用。缺点：资源占用多、冗余步骤多、启动慢
+
+Linux容器（Linux Container，简称LXC）：
+
+​	Linux容器是与系统其他部分分隔开的一系列进程，从另一个镜像运行，并由该镜像提供支持进程所需的全部文件。容器提供的镜像包含了应用的所有依赖项，因而在从开发到测试再到生产的整个过程中，它都具有可移植性和一致性。
+
+​		Linux容器不是模拟一个完整的操作系统，而是对进程进行隔离。有了容器，就可以将软件运行所需的所有资源打包到一个隔离的容器中。容器与虚拟机不同，不需要捆绑一整套操作系统，只需要软件工作所需的库资源和设置。系统因此而变得高效轻量并保证部署在任何环境中的软件都能始终如一的运行。
 
 ## 安装
 
-### CentOS 7 安装
+### 在 CentOS 7 上安装
 
 [官方CentOS安装教程](https://docs.docker.com/engine/install/centos/)
 注意步骤4，步骤5
@@ -15,6 +55,7 @@
    # 查看内核版本
    uname -r
    ```
+
 2. 移除旧的版本
 
    ```shell
@@ -30,6 +71,7 @@
 
    **备注：**
    \ 换行符
+
 3. 安装必要系统工具
 
    ```shell
@@ -38,9 +80,10 @@
 
    **备注：**
    安装yum-utils包（提供yum-config-manager 实用程序）
+
 4. 设置镜像仓库
 
-    * 官方仓库【不推荐】
+   * 官方仓库【不推荐】
 
    ```shell
    sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -51,11 +94,13 @@
    ```shell
    sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
    ```
-5. 更新 yum 缓存【？】
+
+5. 更新yum工具
 
    ```shell
    sudo yum makecache fast
    ```
+
 6. 安装 Docker 包
    安装最新版本
 
@@ -71,6 +116,7 @@
     * docker-buildx-plugin：Docker Buildx 插件
     * docker-compose-plugin：Docker Compose 插件
     *
+
 7. 启动 Docker
 
    ```shell
@@ -87,12 +133,20 @@
     - disable 关闭某服务开机自启
     - status 查看服务状态
     - list -units --type=service 列举所有已启动服务
-8. 验证 Docker 是否安装成功
+
+8. 查看 Docker 版本，验证是否启动成功
+
+   ```shell
+   docker version
+   ```
+
+9. 测试
 
    ```shell
    sudo docker run hello-world
    ```
-9. 停止 Docker
+
+10. 停止 Docker
 
    ```shell
    sudo systemctl stop docker
@@ -123,18 +177,20 @@
 国内从 DockerHub 拉取镜像有时会遇到困难，因此需要配置镜像加速器。
 阿里云镜像地址：[https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors](https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors)[参考地址](https://www.runoob.com/docker/docker-mirror-acceleration.html)
 
-1. 登录阿里云，进入容器镜像服务控制台，选择左侧菜单栏的镜像加速器
+1. 登录阿里云，进入容器**镜像服务控制台**，选择左侧菜单栏的**镜像加速器**
 2. 配置镜像加速器
    有两种方式：
+   
     1. 直接复制粘贴
-    2. 在/etc/docker下 创建或编辑 daemon.json 文件
-
+    2. 在/etc/docker下 创建、编辑 daemon.json 文件
+   
        ```shell
+       sudo touch /etc/docker/daemon.txt
        sudo vim /etc/docker/daemon.json
        ```
-
+       
        内容如下：
-
+       
        ```json
        {
          "registry-mirrors": ["https://自己的编码.mirror.aliyuncs.com"]
@@ -171,11 +227,11 @@ sudo docker info
     - docker 具体命令 --help：查看docker具体命令的帮助信息
 - 镜像命令
 
-    - docker images：查看本地镜像
+    - docker images：查看本地镜像，
     - docker search 镜像名：搜索镜像
     - docker pull 镜像名：拉取镜像（ docker pull 镜像名:版本号，没有表示:last拉取最新版本）
     - docker run 镜像名：运行镜像创建一个新容器
-    - docker run [OPTIONS] IMAGE [COMMAND] [ARG...] 运行镜像创建一个新容器
+    - **docker run [OPTIONS] IMAGE [COMMAND] [ARG...] 运行镜像创建一个新容器**
 
         - OPTIONS
         - -d：后台运行容器，并返回容器ID
@@ -200,15 +256,15 @@ sudo docker info
         - -t: 终端。
         - centos : centos 镜像（也可以centos:版本号）。
         - /bin/bash：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 /bin/bash。
-        - 要退出终端，直接输入 exit或者Ctrl+D即可。（使用exit退出容器会停止运行，ctrl+p+q容器不停止）
+        - **要退出终端，直接输入 exit或者Ctrl+D即可。（使用exit退出容器会停止运行，ctrl+p+q容器不停止）**
     - docker rmi 镜像ID：删除镜像(强制单个：docker rmi -f 镜像ID，)
     - docker commit 容器ID 新镜像名：提交容器生成镜像
-    - docker build -t 镜像名 Dockerfile所在目录：根据 Dockerfile 构建镜像
+    - **docker build -t 镜像名 Dockerfile所在目录：根据 Dockerfile 构建镜像**
     - docker push 镜像名：推送镜像到 DockerHub
     - docker tag 镜像ID 新镜像名：给镜像打标签
     - docker history 镜像名：查看镜像的历史记录
     - docker save -o 镜像名.tar 镜像名：导出镜像
-    - docker load -i 镜像名.tar：导入镜像
+    - **docker load -i 镜像名.tar：导入镜像**
     - docker system df：查看镜像占用空间
 - 容器命令
 
@@ -222,7 +278,7 @@ sudo docker info
     - docker kill 容器ID：强制停止容器
     - docker restart 容器ID：重启容器
     - docker attach 容器ID：进入容器（使用exit退出容器会停止）
-    - docker exec -it 容器ID /bin/bash：进入容器【推荐】（使用exit退出容器不会停止，exec是在容器中打开新的终端，并且启动新的进程）
+    - **docker exec -it 容器ID /bin/bash：进入容器【推荐】（使用exit退出容器不会停止，exec是在容器中打开新的终端，并且启动新的进程）**
       redis一般先用 docker run -d IMAGE 启动程序，然后用 docker exec -it CONTAINER /bin/bash 进入容器，然后执行 ps -ef
       查看进程，然后执行 kill -9 PID 杀掉进程，最后执行 exit 退出容器。
     - docker rm 容器ID：删除已停止的容器
@@ -258,7 +314,7 @@ docker pull ubuntu
 2. 运行 ubuntu 镜像
 
 ```shell
-   docker run -it ubuntu /bin/bash
+docker run -it ubuntu /bin/bash
 ```
 
 3. 在容器中安装 vim
@@ -336,14 +392,14 @@ Docker Registry是官方提供的工具，可以用于构建私有镜像仓库
 2. 运行 Docker Registry 生成私有docker hub镜像仓库
    ```shell
     docker run -d -p 5000:5000 -v /vensst/myregistry/:/tmp/registry --privileged=true registry
-    ```
+   ```
    docker inspect 容器ID：查看容器详细信息
 3. 以 ubuntu 安装 ifconfig 命令为例，将镜像推送到私有镜像仓库
     1. 下载并运行ubuntu镜像
    ```shell
     docker pull ubuntu
     docker run -it ubuntu /bin/bash
-    ```
+   ```
 
     2. 安装 ifconfig
    ```shell
@@ -351,7 +407,7 @@ Docker Registry是官方提供的工具，可以用于构建私有镜像仓库
     apt-get install net-tools
     # 验证
     ifconfig
-    ```
+   ```
 
     3. commit 容器生成镜像
    ```shell
@@ -425,6 +481,8 @@ docker pull 81.69.44.160:5000/yfhuubuntu:1.2
 
 ## docker 容器数据卷
 
+Docker容器数据卷（Volumes）是Docker中用于持久化和共享数据的一种机制。在Docker容器的生命周期中，容器内部的文件系统是临时性的，当容器停止或删除时，其所有更改通常都会丢失。为了确保重要数据能够跨容器持久存储，并且能够在多个容器之间共享，Docker引入了数据卷的概念。
+
 docker run -it --privileged=true -v /宿主机绝对路径目录:/容器内目录 镜像名
 
 ## docker 安装 nginx
@@ -491,7 +549,7 @@ docker ps -a
 docker stop nginx-vensst
 # 删除该容器
 docker rm nginx-vensst
- ```
+```
 
 创建容器
 

@@ -29,8 +29,8 @@
 
 ## Linux命令
 
-- yum命令 - 管理服务软件 (Yellow dog Updater Modified)  
-  `yum install **`  
+- yum命令 - 管理服务软件 (Yellow dog Updater Modified) ，主要适用于基于Red Hat的Linux发行版，如Fedora、CentOS和Red Hat Enterprise Linux，它使用RPM软件包格式，能够自动处理依赖性关系，一次安装所有依赖的软件包  
+  `yum install **`   
   例如：yum install nginx  
   参数：
   ![yum参数](/static/images/linux/yum_params.png)
@@ -58,13 +58,17 @@
 - 删除文件夹  
   `rm -rf */`
 
+- 创建文件
+  
+  touch *
+  
 - 重命名文件夹  
   `mv ** **`
 
 - 解压文件  
   `tar -zxvf **.tar.gz`  
   例如：tar -zxvf nginx-1.20.1.tar.gz
--
+  -
 - 查看所有端口占用情况  
   `netstat -ntulp`  或者 `netstat -tln`
   查看某一个端口号的情况：  
@@ -74,7 +78,7 @@
   `which **`
   例如：which git
 
-- apt-get命令 – 管理服务软件 (Advanced Package Tool get)
+- apt-get命令 – 管理服务软件 (Advanced Package Tool get)，适用于基于Debian的Linux发行版，如Ubuntu、Debian和Linux Mint，它使用DEB软件包格式
 
   语法格式：apt-get [参数] 软件名  
   例如安装vim：
@@ -104,6 +108,10 @@ apt-get install vim
 
 1. '|'  
    中间的|是管道命令，是指两个命令同时执行，例如：ps -ef | grep nginx，指ps命令与grep同时执行
+2. yum 和 apt-get 区别
+   1. yum。主要适用于基于Red Hat的Linux发行版，如Fedora、CentOS和Red Hat Enterprise Linux，它使用RPM软件包格式，能够自动处理依赖性关系，一次安装所有依赖的软件包。
+   2. apt-get。适用于基于Debian的Linux发行版，如Ubuntu、Debian和Linux Mint，它使用DEB软件包格式。
+
 
 ## 如何配置全局环境变量
 
@@ -117,6 +125,20 @@ export NODE_HOME=/usr/local/node/node-v14.16.1-linux-x64
 export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$NODE_HOME/bin:$PATH
 ```
+
+## 安装 net-tools
+
+查看ip地址
+
+```shell
+sudo yum install net-tools
+```
+
+
+
+## 安装 VIM
+
+
 
 ## 安装 java
 
@@ -151,7 +173,7 @@ CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
 PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 
 export JAVA_HOME JRE_HOME CLASSPATH PATH
-``` 
+```
 
 - 执行source才能使用环境变量立即有效
     - source /etc/profile
@@ -194,7 +216,7 @@ MAVEN_HOME=/usr/share/maven
 PATH=$PATH:$MAVEN_HOME/bin
 
 export JAVA_HOME JRE_HOME CLASSPATH PATH
-``` 
+```
 
 - 执行source才能使用环境变量立即有效
     - source /etc/profile
