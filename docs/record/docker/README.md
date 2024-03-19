@@ -8,7 +8,7 @@ docker 是go语言开发实现的，是一个开源的应用容器引擎，基�
 
 docker的组成：
 
-![01](./image/01.jpg)
+![01](/static/images/docker/01.jpg)
 
 - 镜像（Image）就是一个**只读**的模板。镜像可以用来创建 Docker 容器，一个镜像可以创建很多容器
 

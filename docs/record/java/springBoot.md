@@ -6,9 +6,9 @@
 
 [步骤参考链接](https://blog.csdn.net/m0_52861000/article/details/129328147)
 
-![](./image/1.jpg)
+![](/static/images/java/springboot/1.jpg)
 
-![](./image/2.jpg) 
+![](/static/images/java/springboot/2.jpg) 
 
 SpringBoot 3.x	使用JDK17，SpringBoot2.x使用JDK8、11
 
@@ -16,7 +16,7 @@ SpringBoot 3.x	使用JDK17，SpringBoot2.x使用JDK8、11
 
 #### Application 同级目录新建基础包 [参考1](https://www.cnblogs.com/phoenixy/p/16771332.html) [参考2](https://www.cnblogs.com/ShineLeBlog/p/16476702.html)
 
-![](./image/3.jpg)
+![](/static/images/java/springboot/3.jpg)
 
 1. controller 控制层，定义前端请求与后端接口间的映射关系，这里只是映射，具体的业务逻辑方法在services包中说明
 
@@ -236,9 +236,9 @@ mybatis:
 
 ## MySql
 
-![image-20240205143833572](./image/MySql/image-20240205143833572.png)
+![image-20240205143833572](/static/images/java/springboot/MySql/image-20240205143833572.png)
 
-![image-20240205143904583](./image/MySql/image-20240205143904583.png)
+![image-20240205143904583](/static/images/java/springboot/MySql/image-20240205143904583.png)
 
 ### 主键、外键和索引
 
@@ -273,7 +273,7 @@ id自增的情况下，设置 useGeneratedKeys="true" keyProperty="id" 通过这
 </insert>
 ```
 
-![4](./image/4.jpg)
+![4](/static/images/java/springboot/4.jpg)
 
 ### 日期时间问题
 

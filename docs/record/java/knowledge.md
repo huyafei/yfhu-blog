@@ -16,7 +16,7 @@
 
 [一文理解什么是DTO、VO、BO、PO、DO，并推荐一款IDEA转换插件_dto vo po bo-CSDN博客](https://blog.csdn.net/MacWx/article/details/122618986)
 
-![01](./image/01.png)
+![01](/static/images/java/springboot/01.png)
 
 接收前端参数使用dto 可以添加一些验证，传给前端使用vo
 
