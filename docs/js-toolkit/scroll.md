@@ -130,7 +130,7 @@
 
     ScrollView,
     initScrollView,
-  }  = window.jsToolkit
+  }  = jsToolkit
 
   const els = document.querySelectorAll('.dir > div')
   els.forEach(item => {

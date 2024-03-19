@@ -81,7 +81,8 @@ Vue.use(VueWidget, {
 </template>
 
 <script>
-  const {random} = window.jsToolkit
+  const {random} = require("@vensst/js-toolkit");
+
   // 模拟分页请求
   const listApi = function ({size = 10, current = 1}) {
     return new Promise((resolve) => {

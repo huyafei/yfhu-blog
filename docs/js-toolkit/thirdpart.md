@@ -80,7 +80,7 @@ divide(8, 2) //4
 - 示例：
 
 ```js
-const {CryptoJS} = window.jsToolkit
+const {CryptoJS} = jsToolkit
 // MD5 加密
 let hash = CryptoJS.MD5("Message");
 console.log(hash.toString());
