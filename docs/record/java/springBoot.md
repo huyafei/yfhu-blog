@@ -273,7 +273,7 @@ id自增的情况下，设置 useGeneratedKeys="true" keyProperty="id" 通过这
 </insert>
 ```
 
-![4](/Users/huyafei/workspace/my/004-java/idea新建spring boot项目/image/4.jpg)
+![4](./image/4.jpg)
 
 ### 日期时间问题
 
