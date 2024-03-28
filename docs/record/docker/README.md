@@ -1,22 +1,15 @@
 # Docker
 
+- [Docker学习中文文档大全、docker&docker-compose实战](https://blog.csdn.net/MacWx/article/details/115670554)
+- [Docker 从入门到实践](https://vuepress.mirror.docker-practice.com/)
+
 ## Docker是什么？
 
 - [01-Docker概述 (yuque.com)](https://www.yuque.com/tmfl/cloud/rifotq)
 
 docker 是go语言开发实现的，是一个开源的应用容器引擎，基于 Linux 内核轻量级虚拟机，属于操作系统层面的**容器虚拟化技术**。
 
-docker的组成：
-
-![01](/static/images/docker/01.jpg)
-
-- 镜像（Image）就是一个**只读**的模板。镜像可以用来创建 Docker 容器，一个镜像可以创建很多容器
-
-- 容器（Container）是用镜像创建的运行实例。类似java中类（镜像）与实例对象（容器）一样。
-
-- 仓库（Repository）是集中存放镜像文件的场所。类似 github 仓库存放 git 项目一样。
-
-  
+docker是虚拟化容器技术。
 
 ## 解决什么问题？
 
@@ -148,9 +141,11 @@ Linux容器（Linux Container，简称LXC）：
 
 10. 停止 Docker
 
-   ```shell
-   sudo systemctl stop docker
-   ```
+    ```shell
+    sudo systemctl stop docker
+    ```
+
+
 
 ## 卸载
 
@@ -158,11 +153,13 @@ Linux容器（Linux Container，简称LXC）：
    ```shell
    sudo yum remove docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    ```
+   
 2. 删除镜像、容器、配置文件等内容
    ```shell
    sudo rm -rf /var/lib/docker
    sudo rm -rf /var/lib/containerd
    ```
+   
 3. docker 文件位置及作用
 
     * /var/lib/docker：docker 镜像、容器、网络、卷等数据的保存目录
@@ -171,6 +168,16 @@ Linux容器（Linux Container，简称LXC）：
     * /usr/bin/docker：docker 的二进制可执行文件
     * /usr/lib/systemd/system/docker.service：docker 的 systemd 配置文件
     * /var/run/docker.sock：docker 的 socket 文件
+
+## docker的组成/核心
+
+![01](/static/images/docker/01.jpg)
+
+- 镜像（Image）一个镜像代表一个应用环境，是一个**只读**的模板。镜像用来创建 Docker 容器，一个镜像可以创建多个容器。比如nginx、jekins镜像等。
+- 容器（Container）是用镜像创建出来的运行实例可读可写。与镜像的关系类似java中类（镜像）与实例对象（容器）一样。
+- 仓库（Repository）是集中存放镜像文件的场所。类似 github 仓库存放 git 项目一样。
+- `dockerFile:`docker生成镜像配置文件,用来书写自定义镜像的一些配置
+- `tar:`一个对镜像打包的文件,日后可以还原成镜像
 
 ## 镜像加速
 
@@ -185,7 +192,7 @@ Linux容器（Linux Container，简称LXC）：
     2. 在/etc/docker下 创建、编辑 daemon.json 文件
    
        ```shell
-       sudo touch /etc/docker/daemon.txt
+       sudo touch /etc/docker/daemon.json
        sudo vim /etc/docker/daemon.json
        ```
        
@@ -211,89 +218,134 @@ sudo docker info
 
 ## Docker 常用命令
 
-- docker 启动类命令
+### 启动类命令
 
-    - systemctl start docker：启动 Docker
-    - systemctl stop docker：停止 Docker
-    - systemctl restart docker：重启 Docker
-    - systemctl status docker：查看 Docker 状态
-    - systemctl enable docker：设置 Docker 开机自启
-    - systemctl disable docker：取消 Docker 开机自启
-- docker 信息类命令
+- systemctl start docker：启动 Docker
+- systemctl stop docker：停止 Docker
+- systemctl restart docker：重启 Docker
+- systemctl status docker：查看 Docker 状态
+- systemctl enable docker：设置 Docker 开机自启
+- systemctl disable docker：取消 Docker 开机自启
 
-    - docker version：查看 Docker 版本信息
-    - docker info：查看 Docker 系统信息
-    - docker help：查看 Docker 帮助信息
-    - docker 具体命令 --help：查看docker具体命令的帮助信息
-- 镜像命令
+### 信息类命令
 
-    - docker images：查看本地镜像，
-    - docker search 镜像名：搜索镜像
-    - docker pull 镜像名：拉取镜像（ docker pull 镜像名:版本号，没有表示:last拉取最新版本）
-    - docker run 镜像名：运行镜像创建一个新容器
-    - **docker run [OPTIONS] IMAGE [COMMAND] [ARG...] 运行镜像创建一个新容器**
+- docker version：查看 Docker 版本信息
+- docker info：查看 Docker 系统信息
+- docker help：查看 Docker 帮助信息
+- docker 具体命令 --help：查看docker具体命令的帮助信息
 
-        - OPTIONS
-        - -d：后台运行容器，并返回容器ID
-        - -i：以交互模式运行容器，通常与 -t 同时使用
-        - -t：为容器重新分配一个伪输入终端，通常与 -i 同时使用
-        - -p：端口映射，格式为：主机(宿主)端口:容器端口
-        - -v：挂载数据卷，格式为：主机(宿主)目录:容器目录
-        - --name=容器名称：为容器指定一个名称
-        - -rm：容器退出时自动删除容器文件
-        - -e：设置环境变量
-        - -link：链接到另一个容器
-          例如：
+### 镜像命令
 
-      ```shell
-      # 使用镜像centos:latest以交互模式启动一个容器,在容器内执行/bin/bash命令
-      # Docker 以 centos 镜像创建一个新容器，然后在容器里执行 /bin/bash 命令
-      docker run -it centos /bin/bash
-      ```
+- docker images：查看本地镜像。-a 所有镜像 ，-q 只显示镜像id，例如：docker images -a
 
-      参数说明：- -i: 交互式操作。
+- docker search 镜像名：搜索镜像
 
-        - -t: 终端。
-        - centos : centos 镜像（也可以centos:版本号）。
-        - /bin/bash：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 /bin/bash。
-        - **要退出终端，直接输入 exit或者Ctrl+D即可。（使用exit退出容器会停止运行，ctrl+p+q容器不停止）**
-    - docker rmi 镜像ID：删除镜像(强制单个：docker rmi -f 镜像ID，)
-    - docker commit 容器ID 新镜像名：提交容器生成镜像
-    - **docker build -t 镜像名 Dockerfile所在目录：根据 Dockerfile 构建镜像**
-    - docker push 镜像名：推送镜像到 DockerHub
-    - docker tag 镜像ID 新镜像名：给镜像打标签
-    - docker history 镜像名：查看镜像的历史记录
-    - docker save -o 镜像名.tar 镜像名：导出镜像
-    - **docker load -i 镜像名.tar：导入镜像**
-    - docker system df：查看镜像占用空间
-- 容器命令
+- docker pull 镜像名：拉取镜像（ docker pull 镜像名:版本号，没有表示:last拉取最新版本）
 
-    - docker ps：查看正在运行的容器
-    - docker ps -a：查看所有容器，列出当前所有正在运行的容器+历史上运行过的容器
-        - -l :显示最近创建的容器。
-        - -n：显示最近n个创建的容器。
-        - -q :静默模式，只显示容器编号。
-    - docker start 容器ID：启动容器
-    - docker stop 容器ID：停止容器
-    - docker kill 容器ID：强制停止容器
-    - docker restart 容器ID：重启容器
-    - docker attach 容器ID：进入容器（使用exit退出容器会停止）
-    - **docker exec -it 容器ID /bin/bash：进入容器【推荐】（使用exit退出容器不会停止，exec是在容器中打开新的终端，并且启动新的进程）**
-      redis一般先用 docker run -d IMAGE 启动程序，然后用 docker exec -it CONTAINER /bin/bash 进入容器，然后执行 ps -ef
-      查看进程，然后执行 kill -9 PID 杀掉进程，最后执行 exit 退出容器。
-    - docker rm 容器ID：删除已停止的容器
-        - docker rm -f $(docker ps -aq)：删除所有容器
-        - docker rm -f $(docker ps -a -q)：删除所有容器
-    - docker logs 容器ID：查看容器日志
-    - docker inspect 容器ID：查看容器详细信息
-    - docker top 容器ID：查看容器内运行的进程
-    - docker cp 容器ID:容器内路径 主机路径：将容器内文件拷贝到主机
-    - 导入和导出容器
-        - docker export 容器ID > 容器.tar：导出容器
-        - docker import 容器.tar 镜像名：导入容器
-    - docker port 容器ID：查看容器端口映射
-    - docker stats 容器ID：查看容器资源占用情况
-    - docker diff 容器ID：查看容器文件变化
+- docker run 镜像名：运行镜像创建一个新容器。 例如：docker run -it --name myTomcat -p 8888:8080 tomcat
+
+- **docker run [OPTIONS] IMAGE [COMMAND] [ARG...] 运行镜像创建一个新容器**
+
+  - OPTIONS
+  - -d：后台运行容器，并返回容器ID
+  - -i：以交互模式运行容器，通常与 -t 同时使用
+  - -t：为容器重新分配一个伪输入终端，通常与 -i 同时使用
+  - -p：端口映射，格式为：主机(宿主)端口:容器端口
+  - -v：挂载数据卷，格式为：主机(宿主)目录:容器目录
+  - --name=容器名称：为容器指定一个名称
+  - -rm：容器退出时自动删除容器文件
+  - -e：设置环境变量
+  - -link：链接到另一个容器
+    例如：
+
+  ```shell
+  # 使用镜像centos:latest以交互模式启动一个容器,在容器内执行/bin/bash命令
+  # Docker 以 centos 镜像创建一个新容器，然后在容器里执行 /bin/bash 命令
+  docker run -it centos /bin/bash
+  ```
+
+  参数说明：
+
+  - -i: 交互式操作。
+
+    - -t: 终端。
+    - centos 表示镜像。centos 镜像（也可以centos:版本号）。
+    - /bin/bash：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 /bin/bash。
+    - **要退出终端，直接输入 exit 或者 Ctrl+D 即可。（使用exit退出容器会停止运行，ctrl+p+q容器不停止）**
+
+- docker rmi 镜像ID：删除镜像(强制单个：docker rmi -f 镜像ID，)
+
+- docker commit 容器ID 新镜像名：提交容器生成镜像
+
+- **docker build -t 镜像名 Dockerfile所在目录：根据 Dockerfile 构建镜像**
+
+- docker push 镜像名：推送镜像到 DockerHub
+
+- docker tag 镜像ID 新镜像名：给镜像打标签
+
+- docker history 镜像名：查看镜像的历史记录
+
+- **docker save -o 镜像名.tar 镜像名  ** ：导出镜像1
+
+- **docker save 镜像名 > 镜像名.tar** ：导出镜像2
+
+- **docker load -i 镜像名.tar** ：导入镜像
+
+- docker system df：查看镜像占用空间
+
+### 容器命令
+
+- docker ps：查看正在运行的容器
+
+- docker ps [OPTIONS] ：查看所有容器，列出当前所有正在运行的容器+历史上运行过的容器
+    
+    - -a：运行容器和历史容器
+    - -q :  静默模式，只显示容器编号。
+    - -l :   显示最近创建的容器。
+    - -n：显示最近n个创建的容器。
+    
+- docker start 容器名/容器ID：启动容器
+
+- docker stop 容器名/容器ID：停止容器
+
+- docker kill 容器名/容器ID：强制停止容器
+
+- docker restart 容器名/容器ID：重启容器
+
+- docker attach 容器ID：进入容器（使用exit退出容器会停止）
+
+- **docker exec -it 容器ID /bin/bash：进入容器【推荐】（使用exit退出容器不会停止，exec是在容器中打开新的终端，并且启动新的进程）**
+
+  - -i  以交互模式运行容器，通常与-t一起使用   
+
+  - -t  分配一个伪终端    shell窗口   bash 
+
+    redis一般先用 docker run -d IMAGE 启动程序，然后用 docker exec -it CONTAINER /bin/bash 进入容器，然后执行 ps -ef
+    查看进程，然后执行 kill -9 PID 杀掉进程，最后执行 exit 退出容器。
+
+- docker rm 容器ID：删除已停止的容器
+    - docker rm -f $(docker ps -aq)：删除所有容器
+    - docker rm -f $(docker ps -a -q)：删除所有容器
+
+- docker logs [OPTIONS] 容器名/容器ID：查看容器日志
+
+- docker inspect 容器ID：查看容器详细信息
+
+- docker top 容器名/容器ID：查看容器内运行的进程
+
+- docker cp 容器ID:容器内路径 主机路径：将容器内文件拷贝到主机
+
+    - docker cp 主机路径 容器ID:容器内路径：将宿主机复制到容器内部		
+
+- 导入和导出容器
+    - docker export 容器ID > 容器.tar：导出容器
+    - docker import 容器.tar 镜像名：导入容器
+
+- docker port 容器ID：查看容器端口映射
+
+- docker stats 容器ID：查看容器资源占用情况
+
+- docker diff 容器ID：查看容器文件变化
 
 ## docker生成镜像
 
@@ -357,6 +409,10 @@ docker run -it ubuntu /bin/bash
 ```shell
     vim a.text
 ```
+
+**备注：**
+
+- 慎用 docker commit，此操作为黑箱操作，因为只有制作此镜像的人才知道执行过什么命令，时间久会忘记。使用 Dockerfile 定制镜像
 
 ## 本地镜像发布到阿里云
 
@@ -489,13 +545,16 @@ docker run -it --privileged=true -v /宿主机绝对路径目录:/容器内目�
 
 ### 下载镜像前配置
 
-目的是将nginx的配置文件、日志文件、网站文件挂载到宿主机的目录
+目的是将nginx的配置文件、日志文件、网站文件、证书文件挂载到宿主机的目录
 
 ```shell
 # 创建挂载目录 -p 递归创建
 mkdir -p /vensst/nginx/conf
 mkdir -p /vensst/nginx/log
 mkdir -p /vensst/nginx/html
+mkdir -p /vensst/nginx/ssl
+# 或者
+mkdir -p /vensst	/nginx/{conf,html,log,ssl}
 ```
 
 ### 拉取镜像
@@ -512,34 +571,52 @@ docker run -d -p 9001:80 --name nginx-vensst nginx
 
 **备注：**
 
-- nginx 文件位置说明
-    - nginx镜像默认的配置文件在容器的`/etc/nginx/nginx.conf`
-    - nginx镜像默认的配置文件在容器的`/etc/nginx/conf.d`
-    - nginx镜像默认的网站文件在容器的`/usr/share/nginx/html`
-    - nginx镜像默认的日志文件在容器的`/var/log/nginx`
-    - nginx镜像默认的端口是80
-- 查看方式
-    - 进入容器  
-      docker exec -it nginx-vensst /bin/bash
-    - 修改nginx配置文件  
-      vim /etc/nginx/nginx.conf
-    - 重启nginx  
-      nginx -s reload
+- nginx 镜像默认的端口是80
 
-### 拷贝容器文件到宿主机
+- nginx 镜像内文件位置说明
+  - 默认的配置文件在容器的`/etc/nginx/nginx.conf`
+  - 默认的配置文件夹在容器的`/etc/nginx/conf.d`
+  - 默认的网站文件在容器的`/usr/share/nginx/html`
+  - 默认的日志文件在容器的`/var/log/nginx`
+
+### 配置 nginx.conf（可忽略）
+
+- 进入容器  
+  docker exec -it nginx-vensst /bin/bash
+
+- 查找 nginx 目录
+
+  whereis nginx
+
+- 修改nginx配置文件  
+  vim /etc/nginx/nginx.conf
+
+- 重启nginx  
+  nginx -s reload
+
+- 退出容器
+
+  exit
+
+### 拷贝容器内配置文件到宿主机
 
 ```shell
+# docker cp 容器id|容器名称:/etc/nginx/nginx.conf 宿主机目录
 # 将容器nginx.conf文件复制到宿主机
-docker cp nginx-vensst:/etc/nginx/nginx.conf /vensst/nginx/nginx.conf
+docker cp nginx-vensst:/etc/nginx/nginx.conf /vensst/nginx/conf/nginx.conf
 # 将容器conf.d文件夹下内容复制到宿主机
-docker cp nginx-vensst:/etc/nginx/conf.d /vensst/nginx/conf.d
+docker cp nginx-vensst:/etc/nginx/conf.d /vensst/nginx/conf/
 # 将容器中的html文件夹复制到宿主机(部署项目放到这里)
 docker cp nginx-vensst:/usr/share/nginx/html /vensst/nginx/
 ```
 
-### 创建容器
+**备注：**
 
-删除容器,或者使用命令 docker rm -f nginx-vensst 直接删除正在运行的 nginx-vensst 容器
+- nginx.conf` 主配置文件中包含了一个 include 指令，指向此目录下的所有 .conf 文件
+
+### 删除容器
+
+或者使用命令 docker rm -f nginx-vensst 直接删除正在运行的 nginx-vensst 容器
 
 ```shell
 # 直接执行docker rm nginx或者以容器id方式关闭容器
@@ -551,11 +628,23 @@ docker stop nginx-vensst
 docker rm nginx-vensst
 ```
 
-创建容器
+### 重新运行容器
+
+此时将宿主机上的配置文件和文档根目录挂载到容器上，后续改配置就在宿主机上改自动映射到容器内。
 
 ```shell
-docker run -d -p 9001:80 --name nginx-vensst --privileged=true -v /vensst/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /vensst/nginx/conf/conf.d:/etc/nginx/conf.d -v /vensst/nginx/html:/usr/share/nginx/html -v /vensst/nginx/log:/var/log/nginx nginx
+docker run --name nginx-vensst \
+-p 9001:80 \
+--privileged=true \
+-v /vensst/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \
+-v /vensst/nginx/conf/conf.d:/etc/nginx/conf.d \
+-v /vensst/nginx/html:/usr/share/nginx/html \
+-v /vensst/nginx/log:/var/log/nginx \
+-v /vensst/nginx/ssl:/etc/nginx/ssl/ \
+-d nginx
 ```
+
+- --privileged=true :  访问权限
 
 ## docker 安装 jenkins
 
@@ -597,6 +686,7 @@ docker run -d -p 7227:8080 -p 50000:50000 --name jenkins-vensst --privileged=tru
 ### 获取密码登录（首次登录）
 
 ```shell
+# 容器在 /var/jenkins_home/secrets/initialAdminPassword 位置，下面是挂载在外部目录位置
 vim /vensst/jenkins/jenkins_home/secrets/initialAdminPassword
 ```
 
@@ -605,6 +695,13 @@ vim /vensst/jenkins/jenkins_home/secrets/initialAdminPassword
 - 插件安装失败
   - 原因：一般是因为jenkins与插件版本不适应 
   - 解决：系统管理->插件管理->高级->升级站点->修改对应的url（[查询地址](https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/)）->提交->重启jenkins
+
+- 重启
+
+  - 安全重启：`http://[jenkins-server]/safeRestart`
+  - 立即重启：`http://[jenkins-server]/restart`
+
+  请将 `[jenkins-server]` 替换为您的 Jenkins 服务器地址
 
 
 ### 在jenkins中安装jdk
@@ -617,3 +714,165 @@ vim /vensst/jenkins/jenkins_home/secrets/initialAdminPassword
 
 - 系统管理->全局工具配置->Maven->新增Maven->自动安装->选择版本->保存
 
+### 设置中文
+
+- 安装插件 Locale 
+
+## Dokcerfile
+
+Dokcerfile 是用来构建 Docker 镜像的文本文件，有一条条构建镜像的所需的指令和参数构成的脚本。
+
+### 构建 Dokcerfile 步骤
+
+- 编写 Dokcerfile 文件
+
+- docker build 命令构建镜像
+
+  ```shell
+  # 要起镜像名字和版本标签， TAG后面还有个点指 Dcokerfile 位置，点表示当前
+  docker build 新镜像名:TAG .
+  ```
+
+- docker run 运行镜像创建容器实例，参考：
+
+  ```shell
+  docker run -it 新镜像名:TAG /bin/bash
+  ```
+
+  
+
+### Dokcerfile 基础知识
+
+- 保留字必须大写 且至少有一个参数
+- 指令从上倒下，按顺序执行
+- \# 注释
+- 每条指令都会创建一个新的镜像层并对进行提交
+
+### Dokcerfile 执行流程
+
+- docker 从基础镜像运行一个容器
+
+### 保留字指令
+
+[Dockerfile 参考 |Docker 文档](https://docs.docker.com/reference/dockerfile/)
+
+| 保留字         | 作用                                                                                                                                                                                                                                                                |
+| -------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **FROM**       | **当前镜像是基于哪个镜像的** `第一个指令必须是FROM`。\<br /\>语法：FROM \<image\>[:\<tag\>]                                                                                                                                                                                               |
+| MAINTAINER     | **镜像维护者的姓名和邮箱地址。** \<br /\>语法：MAINTAINER \<name\>                                                                                                                                                                                                                 |
+| **RUN**        | **容器构建时需要运行的指令。**\<br /\>语法：RUN \<命令行命令\> 或者 RUN ["/bin/bash", "-c", "echo hello"] 写法等价 RUN /bin/bash -c echo hello                                                                                                                                               |
+| **EXPOSE**     | **当前容器对外暴露出的端口号，TCP（默） 或 UDP。**\<br /\>语法：EXPOSE 80/tcp                                                                                                                                                                                                           |
+| **WORKDIR**    | **指定在创建容器后，终端默认登录进来的工作目录，一个落脚点。** docker run 之后默认目录位置\<br /\>语法：WORKDIR 路径 \<br /\>例如：WORKDIR /usr/var                                                                                                                                                            |
+| **ENV**        | **用来在构建镜像过程中设置环境变量**。\<br /\>语法：ENV \<key\> \<value\> 或者 ENV \<key\>=\<value\>  \<br /\>例如：ENV MY_PATH /usr/mytest 也可以在其它指令使用，比如：WORKDIR $MY_PATH                                                                                                                 |
+| **ADD**        | **将宿主机目录下的文件拷贝进镜像且ADD命令会自动处理URL和解压tar包。** \<br /\>语法：ADD 宿主机文件路径 容器路径\<br /\>例如：ADD hom* /mydir/       通配符添加多个文件                                                                                                                                                  |
+| **COPY**       | **类似于ADD，拷贝文件和目录到镜像中 将从构建上下文目录中<原路径>的文件/目录复制到新的一层的镜像内的\<目标路径\>位置**\<br /\>语法：COPY src dest 或者 COPY ["src","dest"] src：源路径 dest：目标路径                                                                                                                               |
+| **VOLUME**     | **容器数据卷，用于数据保存和持久化工作，用于容器运行时可以挂在到宿主机的目录**\<br /\>语法：VOLUME ["/data"]                                                                                                                                                                                              |
+| **CMD**        | **指定一个容器启动时要运行的命令 Dockerfile 中可以有多个CMD指令，但只有最后一个生效，CMD 会被 docker run 之后的参数替换。** RUN 是在build时运行，CMD 是在 dokcer run 时运行。注意 ENTRYPOINT 存在时，CMD 就是传参 CMD ["参数1","参数2",...]\<br /\> 语法：两种格式 shell 和 exec：CMD \<命令\> 或 CMD ["可执行文件","参数1","参数2",...]                     |
+| **ENTRYPOINT** | **指定一个容器启动时要运行的命令 ENTRYPOINT 的目的和 CMD 一样，都是在指定容器启动程序及其参数。ENTRYPOINT可以和CMD一起用，一般是变参才会使用 CMD ，这里的 CMD 等于是在给 ENTRYPOINT 传参**\<br /\> ENTRYPOINT 不会被 docker run 之后的参数替换。\<br /\>语法：ENTRYPOINT  ["executable", "param1", "param2"] 或者 ENTRYPOINT command param1 param2 |
+
+**注意：**
+
+- CMD
+
+  理解：Dockerfile中可以有多个CMD指令，但只有最后一个生效，CMD会被docker run之后的参数替换。
+
+  比如 tomcat 镜像的 DockerFile 最后部分如下：
+
+  ```dockerfile
+  EXPOSE 8080
+  CMD ["catalina.sh", "run"]
+  ```
+
+  正常运行命令：**docker run -it -p 8080:8080 镜像id  **，但是如果加参数运行命令：**docker run -it -p 8080:8080 镜像id  /bin/bash**
+
+  那么  **CMD ["catalina.sh", "run"]**  会被 **/bin/bash **替换，相当于加了如下代码：
+
+  ```dockerfile
+  EXPOSE 8080
+  CMD ["catalina.sh", "run"]
+  # 加了如下代码，也就应证了，Dockerfile 中可以有多个CMD指令，但只有最后一个生效
+  CMD ["/bin/bash", "run"]
+  ```
+
+  
+
+- ENTRYPOINT
+
+  ![1711024229960](/static/images/docker/1711024229960.jpg)
+
+  ```dockerfile
+  ENTRYPOINT ["nginx","-c"] # 定参
+  CMD ["/etc/nginx/nginx.conf"] # 变参
+  ```
+
+  
+
+| 是否传参         | 按照dockerfile编写执行         | 传参运行                                     |
+| ---------------- | ------------------------------ | -------------------------------------------- |
+| Docker命令       | docker run nginx:test          | docker run nginx:test -c /etc/nginx/new.conf |
+| 衍生出的实际命令 | nginx -c /etc/nginx/nginx.conf | nginx -c /etc/nginx/new.conf                 |
+
+docker run nginx:test -c /etc/nginx/new.conf  运行后变为如下代码：
+
+```dockerfile
+ENTRYPOINT ["nginx","-c"] # 定参
+CMD ["/etc/nginx/nginx.conf"] # 变参
+# 增加以下代码（CMD 会被docker run 之后的参数替换）
+CMD ["/etc/nginx/new.conf"] # 变参
+```
+
+那么原来 nginx -c /etc/nginx/nginx.conf 就变为 nginx -c /etc/nginx/new.conf
+
+## Dockerfile 部署 springboot 项目到docker
+
+1. 编译 jar 包
+2. 编写 Dockerfile
+3. 
+
+## Docker 转移所有环境到 新服务器
+
+1. 查看所有容器
+
+   ```shell
+   docker ps
+   ```
+
+   
+
+2. 查看所有镜像
+
+   ```shell
+   docker images
+   ```
+
+3. 将需要转移的容器保存为镜像
+
+   ```shell
+   # 参考之前指令
+   docker commit 容器名或id 新镜像名
+   ```
+
+4. 将已有镜像保存为 tar 文件，使用docker save 命令
+
+   ```shell
+   # 方式一
+   docker save -o 文件名.tar 新镜像
+   # 方式二
+   docker save 新镜像 > 文件名.tar 
+   # 多个
+   docker save 新镜像1 新镜像2 > 文件名.tar
+   ```
+
+   保存成功（没有提示），`ls` 命令查看是否生成 tar 文件
+
+5. 将 tar 文件转到新的服务器上（使用Termius（Mac）、WinScp（Window）等工具）
+
+6. 执行命令加载 tar 包和运行镜像
+
+   ```shell
+   docker load < xxx.tar
+   # 或
+   docker load -i xxx.tar
+   ```
+
+   

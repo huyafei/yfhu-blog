@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@vensst/js-toolkit": "^1.1.0-beta.17",
-    "@vensst/vue-widget": "^1.0.0-beta.6"
+    "@vensst/vue-widget": "^1.0.0-beta.7",
+    "echarts": "^5.5.0"
   }
 }

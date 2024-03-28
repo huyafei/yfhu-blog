@@ -461,13 +461,7 @@ public class Dic {
 
   
 
-
-
-
-
-
-
-### 问题
+## 疑问
 
 1. 如果选择依赖项有数据库，要先在application.properties 或 application.yml中配置，不然会报错
 

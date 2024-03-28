@@ -98,6 +98,8 @@ const config = {
               "/vue-widget/components/Teleport.md",
               "/vue-widget/components/ContextMenu.md",
               "/vue-widget/components/Speech.md",
+              "/vue-widget/components/Empty.md",
+              "/vue-widget/components/Chart.md",
             ]
           },
           // {
@@ -272,5 +274,11 @@ module.exports = {
     '@vuepress/nprogress',
     'demo-container', // https://docs.chenjianhui.site/vuepress-plugin-demo-container/zh/
     // '@vuepress/pwa',
-  ]
+  ],
+  configureWebpack: {
+    node: {
+      global: true,
+      process: true
+    },
+  }
 }
