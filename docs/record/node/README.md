@@ -153,21 +153,23 @@ resolutions 来升级packageB包升级。
    最下面 [nvm-setup.zip](https://github.com/coreybutler/nvm-windows/releases/download/1.1.11/nvm-setup.zip)
 
 2. 安装
-  - 解压后运行安装包 nvm-setup.exe
-  - 安装路径不要有中文或空格
-  - 选择nodejs路径
-  - 安装完成后，打开cmd，输入 nvm -v 查看版本号，如果出现版本号，则安装成功
+
+- 解压后运行安装包 nvm-setup.exe
+- 安装路径不要有中文或空格
+- 选择nodejs路径
+- 安装完成后，打开cmd，输入 nvm -v 查看版本号，如果出现版本号，则安装成功
 
 3. 常用命令
-   - `nvm list` 查看已安装的node版本
-   - `nvm install 10.16.0` 安装指定版本的node
-   - `nvm use 10.16.0` 切换node版本
-   - `nvm uninstall 10.16.0` 卸载指定版本的node
-   - `nvm on` 开启node版本管理
-   - `nvm off` 关闭node版本管理
-   - `nvm proxy` 设置代理
-   - `nvm node_mirror` 设置镜像
-   - `nvm npm_mirror` 设置npm镜像
+
+- `nvm list` 查看已安装的node版本
+- `nvm install 10.16.0` 安装指定版本的node
+- `nvm use 10.16.0` 切换node版本
+- `nvm uninstall 10.16.0` 卸载指定版本的node
+- `nvm on` 开启node版本管理
+- `nvm off` 关闭node版本管理
+- `nvm proxy` 设置代理
+- `nvm node_mirror` 设置镜像
+- `nvm npm_mirror` 设置npm镜像
 
 ## 搭建本地服务
 
@@ -287,7 +289,7 @@ resolutions 来升级packageB包升级。
 
 ## 发布包到 npm
 
-### 简约版
+### 手动发布
 
 1. 注册 npm 账号
 2. 登录 npm 账号
@@ -317,6 +319,74 @@ resolutions 来升级packageB包升级。
     ```shell
     npm view [package]@[version]
     ```
+
+### github 自动发布
+
+在 npm 官网上生成自动化授权 token：
+
+- npm 登录账号。
+- 点击头像，选择 `Access Tokens` 选项。
+- 点击 `Generate New Token` 按钮，选择 `Classic Token` 选项。
+- 输入名称，不限制，例如：NPM_TOKEN；单选选择 Automation 选项。
+- 点击 `Generate Token` 按钮生成 token，复制保存生成的 token，防止丢失，不要泄漏出去。
+
+在 Github 项目上配置 Secrets：
+
+- 登录 Github 选择要发布的项目仓库。
+- 点击 `Settings` 选项。
+- 新创建的项目，默认是开启 Actions 功能的，如果没有开启，需要手动在 Settings 里的 Actions > General 选项开启。
+- 点击 `Secrets and variables` 下的 `Actions` 选项，点击 `New repository secret` 按钮。
+- name：输入 NPM_TOKEN，value：输入刚才生成的 token，点击 `Add secret` 按钮保存。
+  ![github配置](/static/images/node/github_setting.png)
+
+创建 GitHub action：
+
+- 在项目根目录下创建 .github/workflows 目录。
+- 在 .github/workflows 目录下创建 publish.yml 文件。
+- publish.yml 文件内容参考如下（具体根据自身需求）：
+
+```yml
+# 工作流名称，不设置的话默认取配置文件名
+name: npm-publish
+
+# 触发部署的条件 当 master 分支, 有 push 的操作, 即可触发。
+on:
+  # 在推或拉请求事件上触发工作流，但仅用于主分支
+  push:
+    tags:
+      - 'v*'
+      # branches: # 此处不仅限于监听分支, 还可监听 tag
+      # - master
+# 一个工作流运行由一个或多个任务组成，这些任务可以顺序地或并行地运行
+jobs:
+  # 任务名称
+  publish-npm:
+    # 任务运行的容器类型（虚拟机环境）
+    runs-on: ubuntu-latest
+    # 任务执行的步骤
+    steps:
+      # 步骤名称
+      - name: Checkout
+        # 使用的操作 actions，可以使用公共仓库，本地仓库，别人的仓库的action
+        # 拉取代码
+        uses: actions/checkout@v2
+      # 打包构建
+      - name: Build
+        uses: actions/setup-node@v1
+        # 参数
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: npm run build
+      # npm ERR! 402 Payment Required - PUT https://registry.npmjs.org/@vensst/js-tookit - You must sign up for private packages
+      # @xxx/xxxx   npm会认为要发布私包，私包需要收费，需将发布命令改成： npm publish --access public
+      - name: publish-npm
+        run: npm publish --access public
+        env:
+          # 配置的密钥
+          NODE_AUTH_TOKEN: ${{secrets.NPM_EXPORT_FILE_PUBLISH_TOKEN}}
+```
 
 ### 搭建 cli 脚手架 发布到 npm 教程
 

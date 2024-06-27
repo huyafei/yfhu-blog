@@ -12,9 +12,10 @@ const config = {
     {
       text: '插件',
       items: [
+        // {text: '@vensst/css-toolkit', link: '/css-toolkit/'},
         {text: '@vensst/js-toolkit', link: '/js-toolkit/'},
         {text: '@vensst/vue-widget', link: '/vue-widget/'},
-        // {text: '@vensst/css-toolkit', link: '/css-toolkit/'},
+        {text: '@vensst/export-file', target: '_blank',  link: 'https://www.npmjs.com/package/@vensst/export-file'},
         {text: '@vensst/cli', link: '/cli/'},
         {text: 'ven-ui', target: '_blank', link: 'https://vensst.github.io/ven-ui/'},
         {text: '笔记', link: '/record/'},
@@ -145,6 +146,7 @@ const config = {
           "/record/linux/",
           "/record/nginx/",
           "/record/docker/",
+          "/record/harmonyOS/",
         ],
       },
       {

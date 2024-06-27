@@ -75,7 +75,7 @@
         overflow: hidden;
       }
       </style>
-
+   
    ```
 
 4. 根目录创建 icons 文件夹,在其中放入 svg 文件夹 和 index.js 文件
@@ -109,7 +109,7 @@ requireAll(req)
          <svg-icon icon-class="icon-xxx"></svg-icon>
       </div>
     </template>
-    ```
+   ```
 
 ## vue 数据可视化大屏解决方案
 
@@ -510,3 +510,205 @@ Babel 是一个 JavaScript 的编译器
 
 * js垫片：意思是在低级环境中用高级语法时，在低级环境中手动实现的高级功能，模拟高级环境。（低浏览器没有高浏览器语法，要自己实现或使用第三方插件来解决，使得可以使用高级浏览器语法）
 
+
+
+## 大文件分片上传
+
+- [vue3 + node大文件分片上传(前后端, 包括文件秒传、断点续传)-CSDN博客](https://blog.csdn.net/liyixuanstay/article/details/136660752)
+
+```vue
+<template>
+  <div class="upload" @click="">
+    <input class="upload__input" type="file" @change="handleChange" />
+    <button @click="handleUpload">上传</button>
+  </div>
+</template>
+
+<script>
+import SparkMD5 from "spark-md5";
+
+export default {
+  name: "UploadFile",
+  components: {},
+  props: {},
+  data() {
+    return {
+      file: "",
+      chunkSize: 1 * 1024 * 1024, // 1M
+      maxUploadNum: 5, // 最大上传数
+      progressNum: 0,
+    };
+  },
+  mounted() {
+    console.log(this.$refs);
+  },
+  methods: {
+    /**
+     * 验证文件是否已经上传，返回状态
+     */
+    checkFile(fileHash, fileName) {
+      // 这里请求接口代码
+
+      //  后端需要的参数（协定），修改位置1
+      const data = {
+        fileHash,
+        fileName,
+      };
+      //
+      return {
+        isUpload: false, // 是否已经上传
+        existChunks: [], // 已上传的分片
+      };
+    },
+    /**
+     * 合并分片
+     */
+    mergeChunk() {
+      // 发送请求合并分片
+
+      // 后端需要的参数（协定），修改位置2
+      const data = {
+        fileHash: "",
+        fileName: "",
+        size: "",
+      };
+    },
+
+    async handleUpload() {
+      if (!this.file) {
+        return;
+      }
+      // 分片
+      const chunks = this.createChunks(this.file, this.chunkSize);
+      console.log(chunks);
+      // 计算文件哈希值
+      const fileHash = await this.hash(chunks); // 进行哈希加密得到16位字符
+      console.log(fileHash);
+      // 发送请求，根据文件 hash 值验证文件是否已经上传
+      const { isUpload, existChunks } = await this.checkFile(
+        fileHash,
+        this.file.name
+      );
+      if (isUpload) {
+        this.uploadFile(fileHash, chunks, existChunks);
+      }
+      this.uploadFile(fileHash, chunks);
+    },
+    /**
+     * 上传文件
+     * @param fileHash {string} 文件的hash
+     * @param chunks {Array<Blob>} 文件分片
+     * @param existChunks 已上传的分片
+     */
+    async uploadFile(fileHash, chunks, existChunks) {
+      //
+      const newChunks = chunks.map((chunk, chunkIndex) => {
+        return {
+          fileHash: fileHash, // 文件的hash: 区分上传的是哪个文件
+          chunkHash: fileHash + "-" + chunkIndex, // 切片的 hash
+          chunk, // Blob 对象
+        };
+      });
+
+      /*
+       * 每个切片都要有formData对象
+       * 过滤过滤掉已上传的切片
+       */
+      const formDataList = newChunks
+        .filter((item) => !existChunks.includes(item.chunkHash))
+        .map((item) => {
+          const formData = new FormData();
+          // 传给后端的 formData 数据（协定）
+          formData.append("fileHash", item.fileHash);
+          formData.append("chunkHash", item.chunkHash);
+          formData.append("chunk", item.chunk);
+
+          return formData;
+        });
+
+      const taskPool = [];
+      let num = 0; //当前上传的数量
+
+      for (let i = 0; i < formDataList.length; i++) {
+        // i: 用来标识当前上传到第几个
+        // task: Promise，修改位置2
+        const task = fetch("http://127.0.0.1:3000/upload", {
+          method: "POST",
+          body: formDataList[i],
+        });
+
+        // 请求完成从请求池移除
+        task.then(() => {
+          num++;
+          // 进度
+          this.progressNum =
+            (Math.round((num / formDataList.length) * 100) / 100) * 100;
+          taskPool.splice(taskPool.findIndex((item) => item === task));
+        });
+
+        taskPool.push(task); // 将每个请求放入请求池数组中
+
+        // 请求池已经达到最大请求数, 需要等待请求池中要有完成的请求(完成一个就行)
+        if (taskPool.length === this.maxUploadNum) {
+          await Promise.race(taskPool); // 一个完成 promise状态为成功
+        }
+      }
+
+      // 为了保证请求池中的请求全部完成
+      await Promise.all(taskPool);
+
+      // 全部完成后, 通知服务器去合并分片
+      this.mergeChunk();
+    },
+
+    async handleChange(e) {
+      this.file = e.target.files[0];
+    },
+    /**
+     * 计算文件哈希值
+     * @param chunks 文件分片
+     * @returns {Promise<unknown>}
+     */
+    hash(chunks) {
+      return new Promise((resolve) => {
+        const spark = new SparkMD5(); //创建SparkMD5的实例
+        const _read = (i) => {
+          if (i >= chunks.length) {
+            resolve(spark.end()); // 计算结束
+            return; // 读取完成
+          }
+          const blob = chunks[i]; // 获取每一项
+          const reader = new FileReader(); // 解析每一块数据
+          reader.onload = (e) => {
+            const bytes = e.target.result; // 读取到的字节数组
+            spark.append(bytes);
+            _read(i + 1);
+          };
+          reader.readAsArrayBuffer(blob);
+        };
+        _read(0);
+      });
+    },
+    /**
+     * 切片,对上传文件进行切片
+     * @param file {File} 上传的文件
+     * @param chunkSize {number} 切片大小
+     * @returns {*[]}
+     */
+    createChunks(file, chunkSize) {
+      const result = [];
+      for (let i = 0; i < file.size; i += chunkSize) {
+        result.push(file.slice(i, i + chunkSize));
+      }
+      return result;
+    },
+  },
+};
+</script>
+
+<style scoped>
+.upload__input {
+  //display: none;
+}
+</style>
+```
