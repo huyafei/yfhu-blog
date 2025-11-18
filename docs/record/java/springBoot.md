@@ -50,6 +50,17 @@ Tips：
 
 　　html、js　　-->　　Controller　　-->　　interfaceService　　-->　　Service　　-->　　mapper　　-->　　model
 
+## SpringBoot 配置 多环境
+
+- 文件名改为 application-{profile}.properties/yml，例如：开发环境 application-dev.yml
+- 在 application.yml 中配置 profile
+   ```yml
+    spring:
+     profiles:
+       active: dev   
+  ```
+
+
 ### mybatis配置 （2种**只能二选一**）
 
 [参考：SpringBoot配置Mybatis的两种方式（通过XML配置和通过YML配置文件配置）](https://blog.csdn.net/weixin_43966635/article/details/112342116)
@@ -161,33 +172,31 @@ mybatis:
    username=
    password=
    ```
-
    
-
    ```xml-dtd
-   <?xml version="1.0" encoding="UTF-8" ?>
-   <!DOCTYPE configuration
-     PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
-     "http://mybatis.org/dtd/mybatis-3-config.dtd">
-   <configuration>
-   	<!-- 读取配置文件 -->
-   	<properties resource="db.properties"></properties>	
-     <environments default="development">
-       <environment id="development">
-         <transactionManager type="JDBC"/>
-         <dataSource type="POOLED">
-           <property name="driver" value="${driver}"/>
-           <property name="url" value="${url}"/>
-           <property name="username" value="${username}"/>
-           <property name="password" value="${password}"/>
-         </dataSource>
-       </environment>
-     </environments>
-     <mappers>
-   		<!-- 映射，映射文件地址，这里的配置就像 上面 mybatis配置 第一种配置的  mapper-locations: classpath:mapper/*.xml 一样-->
-       <mapper resource="mapper/DicMapper.xml"/>
-     </mappers>
-   </configuration>
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+      <configuration>
+       <!-- 读取配置文件 -->
+       <properties resource="db.properties"></properties>	
+        <environments default="development">
+          <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+              <property name="driver" value="${driver}"/>
+              <property name="url" value="${url}"/>
+              <property name="username" value="${username}"/>
+              <property name="password" value="${password}"/>
+            </dataSource>
+          </environment>
+        </environments>
+        <mappers>
+         <!-- 映射，映射文件地址，这里的配置就像 上面 mybatis配置 第一种配置的  mapper-locations: classpath:mapper/*.xml 一样-->
+          <mapper resource="mapper/DicMapper.xml"/>
+        </mappers>
+      </configuration>
    ```
 
 3. 创建实体类 ，例如：在com.vensst.mother_helper.entity 包下创建 Dic 实体类
@@ -253,12 +262,6 @@ mybatis:
 索引(index) ：
 
 是用来快速地寻找那些具有特定值的记录。主要是为了检索的方便，是为了加快访问速度， 按一定的规则创建的，一般起到排序作用。所谓唯一性索引，这种索引和前面的“普通索引”基本相同，但有一个区别：索引列的所有值都只能出现一次，即必须唯一
-
-
-
-
-
-
 
 ## 开发过程中的问题
 
@@ -437,10 +440,6 @@ public class Dic {
 
 默认验证注解功能不满足，可以自定义验证注解，暂时不会，待学
 
-
-
-
-
 ## 说明
 
 ### @Mapper 和 @MapperScan()
@@ -538,7 +537,7 @@ public class Dic {
    4. 是否重新连接，autoReconnect=true&failOverReadOnly=false，`failOverReadOnly` 自动重连成功后，连接是否设置为只读
    5. 兼容更高版本的数据库，useSSL=false，默认false
 
-6. idea 开发springboot项目热加载
+6. idea 开发 springboot 项目热加载
 
    * 在 pom.xml添加
 

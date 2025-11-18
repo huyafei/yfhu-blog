@@ -147,6 +147,7 @@ const config = {
           "/record/nginx/",
           "/record/docker/",
           "/record/harmonyOS/",
+          "/record/ai/",
         ],
       },
       {
