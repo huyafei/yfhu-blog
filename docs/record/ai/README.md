@@ -26,6 +26,9 @@
 - 下载和安装[Ollama](https://ollama.com/)
   - 进入终端 输入 `ollama` 有结果表示成功
 - 输入命令 `ollama serve` 浏览器 `http://localhost:11434` 打开显示 running 说明启动成功
+  - `ollama list` 列出所有模型
+  - `ollama rm deepseek-r1` 删除模型
+  - windows 安装 ollama到指定位置，OllamaSetup.exe /DIR="D:\Ollama"
 - 选择 [DeepSeek-R1](https://ollama.com/library/deepseek-r1:671b) 语言模型
   - 根据自身电脑硬件选择模型大小
 - 复制安装指令到终端安装 deepseek
@@ -108,3 +111,40 @@ CrewAI 是一个用于构建和协调多个 AI 智能体协作的开源框架
 deepseek 底层生成能力，例如：生成文章、回答问题，如果要扩展能力比如绘图、发邮件就需要集成其它 agent 实现功能
 manus 主要表现为执行能力，manus 相当于在其它厂商 大模型（例如：deepseek） 基础上，通过多智能体功能协作完成工作
 两者互补关系
+
+## 本地部署 openclaw
+
+npm install -g openclaw
+openclaw onboard --install-daemon
+- node >=22
+
+### 飞书配置
+
+1. 创企业自建应用
+2. 添加应用能力 -> 机器人
+3. 权限管理 --> 开通权限 搜索 im 全选 --> 确认开通权限
+4. [配置订阅方式（任选其一）](https://open.feishu.cn/document/server-docs/event-subscription-guide/event-subscription-configure-/request-url-configuration-case#1c227849)
+   - 替换 "YOUR_APP_ID"和 "YOUR_APP_SECRET" 对应为 凭证与基本信息中的 App ID、App Secret
+   - 替换 "这里填入你要自定义订阅的 event 的 key，例如 out_approval" 改为自己自定义的 例如："out_approval"
+
+6. 事件配置 --> 添加事件 接收消息
+7. 创建版本并发布
+### openclaw 配置
+1. 安装飞书插件 `openclaw plugins install @openclaw/feishu`
+2. openclaw channels add
+   - 填写应用的App Secret（这个先填，看提示）、App ID
+
+### 飞书打开应用
+  - 第一次需要配对
+  - openclaw pairing approve feishu <<配对码>>
+
+
+### 网关指令
+
+```shell
+openclaw gateway status
+openclaw gateway install
+openclaw gateway stop
+openclaw gateway restart
+openclaw logs --follow
+```
